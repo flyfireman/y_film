@@ -1,0 +1,30 @@
+<h1>电影列表</h1>
+<div class="digg_pagination">
+  <%= will_paginate @photos %>
+</div>
+<table>
+  <tr>
+    <th>所有人</th>
+    <th>是否作为头像</th>
+    <th>预览</th>
+    <th></th>
+    <th></th>
+  </tr>
+<% @photos.each do |photo| %>
+  <tr>
+    <td><%=h photo.user.login %></td>
+    <td><%= photo.is_avatar ? "是":"否" %></td>
+    <td><%= link_to ([image_tag photo.image.url(:thumb) ,:alt =>"被GFW和谐了！"],photo)%></td>
+    <td><%= link_to "<img src='/images/icon_edit.gif' border='0' alt='编辑'/>", edit_photo_path(photo) %></td>
+    <td><%= link_to "<img src='/images/icon_delete.png' border='0' alt='删除'>", photo, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+  <p>
+<% end %>
+</table>
+<div class="digg_pagination">
+  <%= will_paginate @photos %>
+</div>
+
+<br />
+
+<%= link_to  "<img src='/images/post.gif' border='0' alt='发表新帖'/>", new_photo_path %>

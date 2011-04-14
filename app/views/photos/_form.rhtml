@@ -1,0 +1,64 @@
+<% form_for @photo, :html => { :multipart => true } do |f| %>
+  <%= f.error_messages %>
+  <% if logged_in? %>
+    <%= f.hidden_field :user_id,:value => current_user.id %>
+  <% end %>
+  <% if action_name == "new" %>
+    <p>
+      <%= f.label :is_avatar,"是否作为头像" %>
+      <%= f.check_box :is_avatar %>
+    </p>
+  <% end %>
+  <p>
+    <%= f.file_field :image %><br />
+    或者通过URL<%= f.text_field :image_url %>
+  </p>
+  <%- unless @photo.new_record? || !@photo.image? -%>
+    <div>
+      <%= image_tag(@photo.image.url(:gallery), :alt => 'Photo', :title => '当前图片') %>
+      <p>
+        <%= f.label(:delete_image, '删除图片') %>
+        <%= f.check_box(:delete_image) %>
+      </p>
+    </div>
+  <%- end -%>
+   <p>
+    <%= f.label :title %><br />
+    <%= f.text_field :title %>
+  </p>
+  <p>
+    <%= f.label :description %><br />
+    <%= f.text_area :description %>
+  </p>
+  <p>
+    <%= f.label :director_id %><br />
+    <%= f.text_field :director_id %>
+  </p>
+  <p>
+    <%= f.label :country_id %><br />
+    <%= f.text_field :country_id %>
+  </p>
+  <p>
+    <%= f.label :language %><br />
+    <%= f.text_field :language %>
+  </p>
+  <p>
+    <%= f.label :published_at %><br />
+    <%= f.datetime_select :published_at %>
+  </p>
+  <p>
+    <%= f.label :length %><br />
+    <%= f.text_field :length %>
+  </p>
+  <p>
+    <%= f.label :starring %><br />
+    <%= f.text_field :starring %>
+  </p>
+  <p>
+    <%= f.label :screenwrite %><br />
+    <%= f.text_field :screenwrite %>
+  </p>
+  <p>
+    <button type="submit"><%= button_name  %></button>
+  </p>
+<% end %>

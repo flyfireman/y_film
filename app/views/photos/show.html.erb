@@ -1,0 +1,51 @@
+<div class="figure">
+  <%= image_tag @photo.image.url ,:alt =>"被GFW和谐了！" %>
+  <div class="legend">所有人：<%=h @photo.user.login %>；是否为头像：<%= @photo.is_avatar %></div>
+  <p>
+    <b>Title:</b>
+    <%=h @photo.title %>
+  </p>
+
+  <p>
+    <b>Description:</b>
+    <%=h @photo.description %>
+  </p>
+
+  <p>
+    <b>Director:</b>
+    <%=h @photo.director_id %>
+  </p>
+
+  <p>
+    <b>Country:</b>
+    <%=h @photo.country_id %>
+  </p>
+
+  <p>
+    <b>Language:</b>
+    <%=h @photo.language %>
+  </p>
+
+  <p>
+    <b>Published at:</b>
+    <%=h @photo.published_at %>
+  </p>
+
+  <p>
+    <b>Length:</b>
+    <%=h @photo.length %>
+  </p>
+
+  <p>
+    <b>Starring:</b>
+    <%=h @photo.starring %>
+  </p>
+
+  <p>
+    <b>Screenwrite:</b>
+    <%=h @photo.screenwrite %>
+  </p>
+
+</div>
+<%= link_to '编辑', [:edit,@photo],:class => "button" %>
+<%= link_to '返回', photos_path,:class => "button"   %>

@@ -1,0 +1,689 @@
+# Logfile created on Fri Apr 08 20:55:34 +0800 2011 by /
+Will use local index.
+Will use local index.
+Will use local index.
+Will use local index.
+Will use local index.
+using index in d:/rbor/album/index/development/topic
+[topic] rebuild index with models: []
+[topic] reopening index at d:/rbor/album/index/development/topic
+[topic] register class Topic with index topic
+[topic] default field list for index topic: [:body, :author, :title]
+[topic] register class Topic with index topic
+[topic] refusing re-registration of class Topic
+[topic] register class Topic with index topic
+[topic] refusing re-registration of class Topic
+[topic] register class Topic with index topic
+[topic] refusing re-registration of class Topic
+[topic] register class Topic with index topic
+[topic] refusing re-registration of class Topic
+[topic] register class Topic with index topic
+[topic] refusing re-registration of class Topic
+[topic] register class Topic with index topic
+[topic] refusing re-registration of class Topic
+[topic] register class Topic with index topic
+[topic] refusing re-registration of class Topic
+[topic] register class Topic with index topic
+[topic] refusing re-registration of class Topic
+[topic] register class Topic with index topic
+[topic] refusing re-registration of class Topic
+[topic] register class Topic with index topic
+[topic] refusing re-registration of class Topic
+[topic] register class Topic with index topic
+[topic] refusing re-registration of class Topic
+[topic] register class Topic with index topic
+[topic] refusing re-registration of class Topic
+[topic] register class Topic with index topic
+[topic] refusing re-registration of class Topic
+[topic] register class Topic with index topic
+[topic] refusing re-registration of class Topic
+[topic] register class Topic with index topic
+[topic] refusing re-registration of class Topic
+[topic] register class Topic with index topic
+[topic] refusing re-registration of class Topic
+[topic] register class Topic with index topic
+[topic] refusing re-registration of class Topic
+[topic] register class Topic with index topic
+[topic] refusing re-registration of class Topic
+using index in d:/rbor/album/index/development/post
+[post] rebuild index with models: []
+[post] reopening index at d:/rbor/album/index/development/post
+[post] register class Post with index post
+[post] default field list for index post: [:body, :author, :title]
+[topic] register class Topic with index topic
+[topic] refusing re-registration of class Topic
+[post] register class Post with index post
+[post] refusing re-registration of class Post
+[topic] register class Topic with index topic
+[topic] refusing re-registration of class Topic
+[post] register class Post with index post
+[post] refusing re-registration of class Post
+[topic] register class Topic with index topic
+[topic] refusing re-registration of class Topic
+index_for [Topic(id: integer, title: string, body: text, created_at: datetime, updated_at: datetime)]
+options: {:offset=>nil, :limit=>nil}
+ar_options: {}
+[topic] stored_fields: nil
+[topic] query: rails
+-->+(body:rails author:rails title:rails) +(class_name:Topic)
+[topic] now retrieving records from AR with options: {}
+[topic] 0 results from AR: []
+Query: rails
+total hits: 0, results delivered: 0
+[topic] register class Topic with index topic
+[topic] refusing re-registration of class Topic
+index_for [Topic(id: integer, title: string, body: text, created_at: datetime, updated_at: datetime)]
+options: {:offset=>nil, :limit=>nil}
+ar_options: {}
+[topic] stored_fields: nil
+[topic] query: rails
+-->+(body:rails author:rails title:rails) +(class_name:Topic)
+[topic] now retrieving records from AR with options: {}
+[topic] 0 results from AR: []
+Query: rails
+total hits: 0, results delivered: 0
+[post] register class Post with index post
+[post] refusing re-registration of class Post
+index_for [Post(id: integer, title: string, body: text, topic_id: integer, created_at: datetime, updated_at: datetime)]
+options: {:offset=>nil, :limit=>nil}
+ar_options: {}
+[post] stored_fields: nil
+[post] query: rails
+-->+(body:rails author:rails title:rails) +(class_name:Post)
+[post] now retrieving records from AR with options: {}
+[post] 0 results from AR: []
+Query: rails
+total hits: 0, results delivered: 0
+[topic] register class Topic with index topic
+[topic] refusing re-registration of class Topic
+index_for [Topic(id: integer, title: string, body: text, created_at: datetime, updated_at: datetime)]
+options: {:offset=>nil, :limit=>nil}
+ar_options: {}
+[topic] stored_fields: nil
+[topic] query: rails
+-->+(body:rails author:rails title:rails) +(class_name:Topic)
+[topic] now retrieving records from AR with options: {}
+[topic] 0 results from AR: []
+Query: rails
+total hits: 0, results delivered: 0
+Will use local index.
+Will use local index.
+Will use local index.
+Will use local index.
+Will use local index.
+Will use local index.
+Will use local index.
+Will use local index.
+Will use local index.
+Will use local index.
+Will use local index.
+Will use local index.
+Will use local index.
+Will use local index.
+Will use local index.
+Will use local index.
+Will use local index.
+Will use local index.
+Will use local index.
+using index in d:/rbor/album/index/development/topic
+[topic] register class Topic with index topic
+[topic] default field list for index topic: [:body, :author, :title]
+[topic] register class Topic with index topic
+[topic] refusing re-registration of class Topic
+using index in d:/rbor/album/index/development/reply
+[reply] rebuild index with models: []
+[reply] reopening index at d:/rbor/album/index/development/reply
+[reply] register class Reply with index reply
+[reply] default field list for index reply: [:body, :author, :title]
+[topic] register class Topic with index topic
+[topic] refusing re-registration of class Topic
+[reply] register class Reply with index reply
+[reply] refusing re-registration of class Reply
+[topic] register class Topic with index topic
+[topic] refusing re-registration of class Topic
+[topic] register class Topic with index topic
+[topic] refusing re-registration of class Topic
+[topic] register class Topic with index topic
+[topic] refusing re-registration of class Topic
+[reply] register class Reply with index reply
+[reply] refusing re-registration of class Reply
+[topic] register class Topic with index topic
+[topic] refusing re-registration of class Topic
+[reply] register class Reply with index reply
+[reply] refusing re-registration of class Reply
+[topic] register class Topic with index topic
+[topic] refusing re-registration of class Topic
+[topic] register class Topic with index topic
+[topic] refusing re-registration of class Topic
+[topic] register class Topic with index topic
+[topic] refusing re-registration of class Topic
+[reply] register class Reply with index reply
+[reply] refusing re-registration of class Reply
+[topic] register class Topic with index topic
+[topic] refusing re-registration of class Topic
+[reply] register class Reply with index reply
+[reply] refusing re-registration of class Reply
+[topic] register class Topic with index topic
+[topic] refusing re-registration of class Topic
+[reply] register class Reply with index reply
+[reply] refusing re-registration of class Reply
+[topic] register class Topic with index topic
+[topic] refusing re-registration of class Topic
+index_for [Topic(id: integer, title: string, body: text, forum_id: integer, created_at: datetime, updated_at: datetime, replies_count: integer, sticky: integer, hits: integer)]
+options: {:offset=>nil, :limit=>nil}
+ar_options: {}
+[topic] stored_fields: nil
+[topic] query: rails
+-->+(body:rails author:rails title:rails) +(class_name:Topic)
+[topic] now retrieving records from AR with options: {}
+[topic] 1 results from AR: [#<Topic id: 1, title: "rails之上", body: "从Rails 2.3.5 升级到 Rails 3.0 beta\r\n因为有�...", forum_id: 1, created_at: "2011-04-08 14:43:46", updated_at: "2011-04-08 14:43:46", replies_count: 1, sticky: 0, hits: 2>]
+Query: rails
+total hits: 1, results delivered: 1
+[topic] highlight: Topic-1 query: rails
+[topic] highlight: Topic-1 query: rails
+[topic] register class Topic with index topic
+[topic] refusing re-registration of class Topic
+index_for [Topic(id: integer, title: string, body: text, forum_id: integer, created_at: datetime, updated_at: datetime, replies_count: integer, sticky: integer, hits: integer)]
+options: {:offset=>nil, :limit=>nil}
+ar_options: {}
+[topic] stored_fields: nil
+[topic] query: rails
+-->+(body:rails author:rails title:rails) +(class_name:Topic)
+[topic] now retrieving records from AR with options: {}
+[topic] 1 results from AR: [#<Topic id: 1, title: "rails之上", body: "从Rails 2.3.5 升级到 Rails 3.0 beta\r\n因为有�...", forum_id: 1, created_at: "2011-04-08 14:43:46", updated_at: "2011-04-08 14:43:46", replies_count: 1, sticky: 0, hits: 2>]
+Query: rails
+total hits: 1, results delivered: 1
+[topic] highlight: Topic-1 query: rails
+[topic] highlight: Topic-1 query: rails
+[topic] register class Topic with index topic
+[topic] refusing re-registration of class Topic
+[reply] register class Reply with index reply
+[reply] refusing re-registration of class Reply
+[topic] register class Topic with index topic
+[topic] refusing re-registration of class Topic
+[topic] register class Topic with index topic
+[topic] refusing re-registration of class Topic
+[topic] register class Topic with index topic
+[topic] refusing re-registration of class Topic
+[reply] register class Reply with index reply
+[reply] refusing re-registration of class Reply
+[topic] register class Topic with index topic
+[topic] refusing re-registration of class Topic
+index_for [Topic(id: integer, title: string, body: text, forum_id: integer, created_at: datetime, updated_at: datetime, replies_count: integer, sticky: integer, hits: integer)]
+options: {:offset=>nil, :limit=>nil}
+ar_options: {}
+[topic] stored_fields: nil
+[topic] query: rails
+-->+(body:rails author:rails title:rails) +(class_name:Topic)
+[topic] now retrieving records from AR with options: {}
+[topic] 2 results from AR: [#<Topic id: 1, title: "rails之上", body: "从Rails 2.3.5 升级到 Rails 3.0 beta\r\n因为有�...", forum_id: 1, created_at: "2011-04-08 14:43:46", updated_at: "2011-04-08 14:43:46", replies_count: 1, sticky: 0, hits: 2>, #<Topic id: 2, title: "rails你不懂", body: "\r\nRails 3.0 release note\r\n官方的文档已经出�...", forum_id: 1, created_at: "2011-04-08 14:47:36", updated_at: "2011-04-08 14:47:36", replies_count: 0, sticky: 0, hits: 1>]
+Query: rails
+total hits: 2, results delivered: 2
+[topic] highlight: Topic-1 query: rails
+[topic] highlight: Topic-1 query: rails
+[topic] highlight: Topic-2 query: rails
+[topic] highlight: Topic-2 query: rails
+[reply] register class Reply with index reply
+[reply] refusing re-registration of class Reply
+index_for [Reply(id: integer, title: string, body: text, topic_id: integer, created_at: datetime, updated_at: datetime, forum_id: integer)]
+options: {:offset=>nil, :limit=>nil}
+ar_options: {}
+[reply] stored_fields: nil
+[reply] query: rails
+-->+(body:rails author:rails title:rails) +(class_name:Reply)
+[reply] now retrieving records from AR with options: {}
+[reply] 0 results from AR: []
+Query: rails
+total hits: 0, results delivered: 0
+[topic] register class Topic with index topic
+[topic] refusing re-registration of class Topic
+[reply] register class Reply with index reply
+[reply] refusing re-registration of class Reply
+[topic] register class Topic with index topic
+[topic] refusing re-registration of class Topic
+[reply] register class Reply with index reply
+[reply] refusing re-registration of class Reply
+[topic] register class Topic with index topic
+[topic] refusing re-registration of class Topic
+[reply] register class Reply with index reply
+[reply] refusing re-registration of class Reply
+[topic] register class Topic with index topic
+[topic] refusing re-registration of class Topic
+[reply] register class Reply with index reply
+[reply] refusing re-registration of class Reply
+[reply] register class Reply with index reply
+[reply] refusing re-registration of class Reply
+index_for [Reply(id: integer, title: string, body: text, topic_id: integer, created_at: datetime, updated_at: datetime, forum_id: integer)]
+options: {:offset=>nil, :limit=>nil}
+ar_options: {}
+[reply] stored_fields: nil
+[reply] query: rails
+-->+(body:rails author:rails title:rails) +(class_name:Reply)
+[reply] now retrieving records from AR with options: {}
+[reply] 0 results from AR: []
+Query: rails
+total hits: 0, results delivered: 0
+[reply] register class Reply with index reply
+[reply] refusing re-registration of class Reply
+index_for [Reply(id: integer, title: string, body: text, topic_id: integer, created_at: datetime, updated_at: datetime, forum_id: integer)]
+options: {:offset=>nil, :limit=>nil}
+ar_options: {}
+[reply] stored_fields: nil
+[reply] query: rails
+-->+(body:rails author:rails title:rails) +(class_name:Reply)
+[reply] now retrieving records from AR with options: {}
+[reply] 0 results from AR: []
+Query: rails
+total hits: 0, results delivered: 0
+[reply] register class Reply with index reply
+[reply] refusing re-registration of class Reply
+index_for [Reply(id: integer, title: string, body: text, topic_id: integer, created_at: datetime, updated_at: datetime, forum_id: integer)]
+options: {:offset=>nil, :limit=>nil}
+ar_options: {}
+[reply] stored_fields: nil
+[reply] query: rails
+-->+(body:rails author:rails title:rails) +(class_name:Reply)
+[reply] now retrieving records from AR with options: {}
+[reply] 0 results from AR: []
+Query: rails
+total hits: 0, results delivered: 0
+[reply] register class Reply with index reply
+[reply] refusing re-registration of class Reply
+index_for [Reply(id: integer, title: string, body: text, topic_id: integer, created_at: datetime, updated_at: datetime, forum_id: integer)]
+options: {:offset=>nil, :limit=>nil}
+ar_options: {}
+[reply] stored_fields: nil
+[reply] query: rails
+-->+(body:rails author:rails title:rails) +(class_name:Reply)
+[reply] now retrieving records from AR with options: {}
+[reply] 0 results from AR: []
+Query: rails
+total hits: 0, results delivered: 0
+[topic] register class Topic with index topic
+[topic] refusing re-registration of class Topic
+index_for [Topic(id: integer, title: string, body: text, forum_id: integer, created_at: datetime, updated_at: datetime, replies_count: integer, sticky: integer, hits: integer)]
+options: {:offset=>nil, :limit=>nil}
+ar_options: {}
+[topic] stored_fields: nil
+[topic] query: rails
+-->+(body:rails author:rails title:rails) +(class_name:Topic)
+[topic] now retrieving records from AR with options: {}
+[topic] 2 results from AR: [#<Topic id: 1, title: "rails之上", body: "从Rails 2.3.5 升级到 Rails 3.0 beta\r\n因为有�...", forum_id: 1, created_at: "2011-04-08 14:43:46", updated_at: "2011-04-08 14:43:46", replies_count: 2, sticky: 0, hits: 4>, #<Topic id: 2, title: "rails你不懂", body: "\r\nRails 3.0 release note\r\n官方的文档已经出�...", forum_id: 1, created_at: "2011-04-08 14:47:36", updated_at: "2011-04-08 14:47:36", replies_count: 0, sticky: 0, hits: 1>]
+Query: rails
+total hits: 2, results delivered: 2
+[topic] highlight: Topic-1 query: rails
+[topic] highlight: Topic-1 query: rails
+[topic] highlight: Topic-2 query: rails
+[topic] highlight: Topic-2 query: rails
+[topic] register class Topic with index topic
+[topic] refusing re-registration of class Topic
+index_for [Topic(id: integer, title: string, body: text, forum_id: integer, created_at: datetime, updated_at: datetime, replies_count: integer, sticky: integer, hits: integer)]
+options: {:offset=>nil, :limit=>nil}
+ar_options: {}
+[topic] stored_fields: nil
+[topic] query: rails
+-->+(body:rails author:rails title:rails) +(class_name:Topic)
+[topic] now retrieving records from AR with options: {}
+[topic] 2 results from AR: [#<Topic id: 1, title: "rails之上", body: "从Rails 2.3.5 升级到 Rails 3.0 beta\r\n因为有�...", forum_id: 1, created_at: "2011-04-08 14:43:46", updated_at: "2011-04-08 14:43:46", replies_count: 2, sticky: 0, hits: 4>, #<Topic id: 2, title: "rails你不懂", body: "\r\nRails 3.0 release note\r\n官方的文档已经出�...", forum_id: 1, created_at: "2011-04-08 14:47:36", updated_at: "2011-04-08 14:47:36", replies_count: 0, sticky: 0, hits: 1>]
+Query: rails
+total hits: 2, results delivered: 2
+[topic] highlight: Topic-1 query: rails
+[topic] highlight: Topic-1 query: rails
+[topic] highlight: Topic-2 query: rails
+[topic] highlight: Topic-2 query: rails
+[topic] register class Topic with index topic
+[topic] refusing re-registration of class Topic
+index_for [Topic(id: integer, title: string, body: text, forum_id: integer, created_at: datetime, updated_at: datetime, replies_count: integer, sticky: integer, hits: integer)]
+options: {:offset=>nil, :limit=>nil}
+ar_options: {}
+[topic] stored_fields: nil
+[topic] query: 你不懂
+-->+(body:"� � �"~2 author:"� � �"~2 title:"� � �"~2) +(class_name:Topic)
+[topic] now retrieving records from AR with options: {}
+[topic] 2 results from AR: [#<Topic id: 2, title: "rails你不懂", body: "\r\nRails 3.0 release note\r\n官方的文档已经出�...", forum_id: 1, created_at: "2011-04-08 14:47:36", updated_at: "2011-04-08 14:47:36", replies_count: 0, sticky: 0, hits: 1>, #<Topic id: 1, title: "rails之上", body: "从Rails 2.3.5 升级到 Rails 3.0 beta\r\n因为有�...", forum_id: 1, created_at: "2011-04-08 14:43:46", updated_at: "2011-04-08 14:43:46", replies_count: 2, sticky: 0, hits: 4>]
+Query: 你不懂
+total hits: 2, results delivered: 2
+[topic] highlight: Topic-2 query: 你不懂
+[topic] highlight: Topic-2 query: 你不懂
+[topic] highlight: Topic-1 query: 你不懂
+[topic] highlight: Topic-1 query: 你不懂
+[topic] register class Topic with index topic
+[topic] refusing re-registration of class Topic
+index_for [Topic(id: integer, title: string, body: text, forum_id: integer, created_at: datetime, updated_at: datetime, replies_count: integer, sticky: integer, hits: integer)]
+options: {:offset=>nil, :limit=>nil}
+ar_options: {}
+[topic] stored_fields: nil
+[topic] query: 上
+-->+(body:� author:� title:�) +(class_name:Topic)
+[topic] now retrieving records from AR with options: {}
+[topic] 2 results from AR: [#<Topic id: 1, title: "rails之上", body: "从Rails 2.3.5 升级到 Rails 3.0 beta\r\n因为有�...", forum_id: 1, created_at: "2011-04-08 14:43:46", updated_at: "2011-04-08 14:43:46", replies_count: 2, sticky: 0, hits: 4>, #<Topic id: 2, title: "rails你不懂", body: "\r\nRails 3.0 release note\r\n官方的文档已经出�...", forum_id: 1, created_at: "2011-04-08 14:47:36", updated_at: "2011-04-08 14:47:36", replies_count: 0, sticky: 0, hits: 1>]
+Query: 上
+total hits: 2, results delivered: 2
+[topic] highlight: Topic-1 query: 上
+[topic] highlight: Topic-1 query: 上
+[topic] highlight: Topic-2 query: 上
+[topic] highlight: Topic-2 query: 上
+[topic] register class Topic with index topic
+[topic] refusing re-registration of class Topic
+index_for [Topic(id: integer, title: string, body: text, forum_id: integer, created_at: datetime, updated_at: datetime, replies_count: integer, sticky: integer, hits: integer)]
+options: {:offset=>nil, :limit=>nil}
+ar_options: {}
+[topic] stored_fields: nil
+[topic] query: 2011
+-->+(body:2011 author:2011 title:2011) +(class_name:Topic)
+[topic] now retrieving records from AR with options: {}
+[topic] 0 results from AR: []
+Query: 2011
+total hits: 0, results delivered: 0
+[reply] register class Reply with index reply
+[reply] refusing re-registration of class Reply
+index_for [Reply(id: integer, title: string, body: text, topic_id: integer, created_at: datetime, updated_at: datetime, forum_id: integer)]
+options: {:offset=>nil, :limit=>nil}
+ar_options: {}
+[reply] stored_fields: nil
+[reply] query: 2011
+-->+(body:2011 author:2011 title:2011) +(class_name:Reply)
+[reply] now retrieving records from AR with options: {}
+[reply] 0 results from AR: []
+Query: 2011
+total hits: 0, results delivered: 0
+[topic] register class Topic with index topic
+[topic] refusing re-registration of class Topic
+index_for [Topic(id: integer, title: string, body: text, forum_id: integer, created_at: datetime, updated_at: datetime, replies_count: integer, sticky: integer, hits: integer)]
+options: {:offset=>nil, :limit=>nil}
+ar_options: {}
+[topic] stored_fields: nil
+[topic] query: 2
+-->+(body:2 author:2 title:2) +(class_name:Topic)
+[topic] now retrieving records from AR with options: {}
+[topic] 0 results from AR: []
+Query: 2
+total hits: 0, results delivered: 0
+[topic] register class Topic with index topic
+[topic] refusing re-registration of class Topic
+index_for [Topic(id: integer, title: string, body: text, forum_id: integer, created_at: datetime, updated_at: datetime, replies_count: integer, sticky: integer, hits: integer)]
+options: {:offset=>nil, :limit=>nil}
+ar_options: {}
+[topic] stored_fields: nil
+[topic] query: r
+-->+(body:r author:r title:r) +(class_name:Topic)
+[topic] now retrieving records from AR with options: {}
+[topic] 0 results from AR: []
+Query: r
+total hits: 0, results delivered: 0
+[topic] register class Topic with index topic
+[topic] refusing re-registration of class Topic
+index_for [Topic(id: integer, title: string, body: text, forum_id: integer, created_at: datetime, updated_at: datetime, replies_count: integer, sticky: integer, hits: integer)]
+options: {:offset=>nil, :limit=>nil}
+ar_options: {}
+[topic] stored_fields: nil
+[topic] query: ra
+-->+(body:ra author:ra title:ra) +(class_name:Topic)
+[topic] now retrieving records from AR with options: {}
+[topic] 0 results from AR: []
+Query: ra
+total hits: 0, results delivered: 0
+[topic] register class Topic with index topic
+[topic] refusing re-registration of class Topic
+index_for [Topic(id: integer, title: string, body: text, forum_id: integer, created_at: datetime, updated_at: datetime, replies_count: integer, sticky: integer, hits: integer)]
+options: {:offset=>nil, :limit=>nil}
+ar_options: {}
+[topic] stored_fields: nil
+[topic] query: rail
+-->+(body:rail author:rail title:rail) +(class_name:Topic)
+[topic] now retrieving records from AR with options: {}
+[topic] 0 results from AR: []
+Query: rail
+total hits: 0, results delivered: 0
+[topic] register class Topic with index topic
+[topic] refusing re-registration of class Topic
+index_for [Topic(id: integer, title: string, body: text, forum_id: integer, created_at: datetime, updated_at: datetime, replies_count: integer, sticky: integer, hits: integer)]
+options: {:offset=>nil, :limit=>nil}
+ar_options: {}
+[topic] stored_fields: nil
+[topic] query: rails
+-->+(body:rails author:rails title:rails) +(class_name:Topic)
+[topic] now retrieving records from AR with options: {}
+[topic] 2 results from AR: [#<Topic id: 1, title: "rails之上", body: "从Rails 2.3.5 升级到 Rails 3.0 beta\r\n因为有�...", forum_id: 1, created_at: "2011-04-08 14:43:46", updated_at: "2011-04-08 14:43:46", replies_count: 2, sticky: 0, hits: 4>, #<Topic id: 2, title: "rails你不懂", body: "\r\nRails 3.0 release note\r\n官方的文档已经出�...", forum_id: 1, created_at: "2011-04-08 14:47:36", updated_at: "2011-04-08 14:47:36", replies_count: 0, sticky: 0, hits: 1>]
+Query: rails
+total hits: 2, results delivered: 2
+[topic] highlight: Topic-1 query: rails
+[topic] highlight: Topic-1 query: rails
+[topic] highlight: Topic-2 query: rails
+[topic] highlight: Topic-2 query: rails
+[topic] register class Topic with index topic
+[topic] refusing re-registration of class Topic
+index_for [Topic(id: integer, title: string, body: text, forum_id: integer, created_at: datetime, updated_at: datetime, replies_count: integer, sticky: integer, hits: integer)]
+options: {:offset=>nil, :limit=>nil}
+ar_options: {}
+[topic] stored_fields: nil
+[topic] query: 升级
+-->+(body:"� �"~1 author:"� �"~1 title:"� �"~1) +(class_name:Topic)
+[topic] now retrieving records from AR with options: {}
+[topic] 2 results from AR: [#<Topic id: 1, title: "rails之上", body: "从Rails 2.3.5 升级到 Rails 3.0 beta\r\n因为有�...", forum_id: 1, created_at: "2011-04-08 14:43:46", updated_at: "2011-04-08 14:43:46", replies_count: 2, sticky: 0, hits: 4>, #<Topic id: 2, title: "rails你不懂", body: "\r\nRails 3.0 release note\r\n官方的文档已经出�...", forum_id: 1, created_at: "2011-04-08 14:47:36", updated_at: "2011-04-08 14:47:36", replies_count: 0, sticky: 0, hits: 1>]
+Query: 升级
+total hits: 2, results delivered: 2
+[topic] highlight: Topic-1 query: 升级
+[topic] highlight: Topic-1 query: 升级
+[topic] highlight: Topic-2 query: 升级
+[topic] highlight: Topic-2 query: 升级
+[reply] register class Reply with index reply
+[reply] refusing re-registration of class Reply
+index_for [Reply(id: integer, title: string, body: text, topic_id: integer, created_at: datetime, updated_at: datetime, forum_id: integer)]
+options: {:offset=>nil, :limit=>nil}
+ar_options: {}
+[reply] stored_fields: nil
+[reply] query: 升级
+-->+(body:"� �"~1 author:"� �"~1 title:"� �"~1) +(class_name:Reply)
+[reply] now retrieving records from AR with options: {}
+[reply] 0 results from AR: []
+Query: 升级
+total hits: 0, results delivered: 0
+[topic] register class Topic with index topic
+[topic] refusing re-registration of class Topic
+index_for [Topic(id: integer, title: string, body: text, forum_id: integer, created_at: datetime, updated_at: datetime, replies_count: integer, sticky: integer, hits: integer)]
+options: {:offset=>nil, :limit=>nil}
+ar_options: {}
+[topic] stored_fields: nil
+[topic] query: rails
+-->+(body:rails author:rails title:rails) +(class_name:Topic)
+[topic] now retrieving records from AR with options: {}
+[topic] 2 results from AR: [#<Topic id: 1, title: "rails之上", body: "从Rails 2.3.5 升级到 Rails 3.0 beta\r\n因为有�...", forum_id: 1, created_at: "2011-04-08 14:43:46", updated_at: "2011-04-08 14:43:46", replies_count: 2, sticky: 0, hits: 4>, #<Topic id: 2, title: "rails你不懂", body: "\r\nRails 3.0 release note\r\n官方的文档已经出�...", forum_id: 1, created_at: "2011-04-08 14:47:36", updated_at: "2011-04-08 14:47:36", replies_count: 0, sticky: 0, hits: 1>]
+Query: rails
+total hits: 2, results delivered: 2
+[topic] highlight: Topic-1 query: rails
+[topic] highlight: Topic-1 query: rails
+[topic] highlight: Topic-2 query: rails
+[topic] highlight: Topic-2 query: rails
+[reply] register class Reply with index reply
+[reply] refusing re-registration of class Reply
+index_for [Reply(id: integer, title: string, body: text, topic_id: integer, created_at: datetime, updated_at: datetime, forum_id: integer)]
+options: {:offset=>nil, :limit=>nil}
+ar_options: {}
+[reply] stored_fields: nil
+[reply] query: rails
+-->+(body:rails author:rails title:rails) +(class_name:Reply)
+[reply] now retrieving records from AR with options: {}
+[reply] 0 results from AR: []
+Query: rails
+total hits: 0, results delivered: 0
+[topic] register class Topic with index topic
+[topic] refusing re-registration of class Topic
+index_for [Topic(id: integer, title: string, body: text, forum_id: integer, created_at: datetime, updated_at: datetime, replies_count: integer, sticky: integer, hits: integer)]
+options: {:offset=>nil, :limit=>nil}
+ar_options: {}
+[topic] stored_fields: nil
+[topic] query: rails
+-->+(body:rails author:rails title:rails) +(class_name:Topic)
+[topic] now retrieving records from AR with options: {}
+[topic] 2 results from AR: [#<Topic id: 1, title: "rails之上", body: "从Rails 2.3.5 升级到 Rails 3.0 beta\r\n因为有�...", forum_id: 1, created_at: "2011-04-08 14:43:46", updated_at: "2011-04-08 14:43:46", replies_count: 2, sticky: 0, hits: 4>, #<Topic id: 2, title: "rails你不懂", body: "\r\nRails 3.0 release note\r\n官方的文档已经出�...", forum_id: 1, created_at: "2011-04-08 14:47:36", updated_at: "2011-04-08 14:47:36", replies_count: 0, sticky: 0, hits: 1>]
+Query: rails
+total hits: 2, results delivered: 2
+[topic] highlight: Topic-1 query: rails
+[topic] highlight: Topic-1 query: rails
+[topic] highlight: Topic-2 query: rails
+[topic] highlight: Topic-2 query: rails
+[topic] register class Topic with index topic
+[topic] refusing re-registration of class Topic
+index_for [Topic(id: integer, title: string, body: text, forum_id: integer, created_at: datetime, updated_at: datetime, replies_count: integer, sticky: integer, hits: integer)]
+options: {:offset=>nil, :limit=>nil}
+ar_options: {}
+[topic] stored_fields: nil
+[topic] query: rails
+-->+(body:rails author:rails title:rails) +(class_name:Topic)
+[topic] now retrieving records from AR with options: {}
+[topic] 2 results from AR: [#<Topic id: 1, title: "rails之上", body: "从Rails 2.3.5 升级到 Rails 3.0 beta\r\n因为有�...", forum_id: 1, created_at: "2011-04-08 14:43:46", updated_at: "2011-04-08 14:43:46", replies_count: 2, sticky: 0, hits: 4>, #<Topic id: 2, title: "rails你不懂", body: "\r\nRails 3.0 release note\r\n官方的文档已经出�...", forum_id: 1, created_at: "2011-04-08 14:47:36", updated_at: "2011-04-08 14:47:36", replies_count: 0, sticky: 0, hits: 1>]
+Query: rails
+total hits: 2, results delivered: 2
+[topic] highlight: Topic-1 query: rails
+[topic] highlight: Topic-1 query: rails
+[topic] highlight: Topic-2 query: rails
+[topic] highlight: Topic-2 query: rails
+[topic] register class Topic with index topic
+[topic] refusing re-registration of class Topic
+index_for [Topic(id: integer, title: string, body: text, forum_id: integer, created_at: datetime, updated_at: datetime, replies_count: integer, sticky: integer, hits: integer)]
+options: {:offset=>nil, :limit=>nil}
+ar_options: {}
+[topic] stored_fields: nil
+[topic] query: rails
+-->+(body:rails author:rails title:rails) +(class_name:Topic)
+[topic] now retrieving records from AR with options: {}
+[topic] 2 results from AR: [#<Topic id: 1, title: "rails之上", body: "从Rails 2.3.5 升级到 Rails 3.0 beta\r\n因为有�...", forum_id: 1, created_at: "2011-04-08 14:43:46", updated_at: "2011-04-08 14:43:46", replies_count: 2, sticky: 0, hits: 4>, #<Topic id: 2, title: "rails你不懂", body: "\r\nRails 3.0 release note\r\n官方的文档已经出�...", forum_id: 1, created_at: "2011-04-08 14:47:36", updated_at: "2011-04-08 14:47:36", replies_count: 0, sticky: 0, hits: 1>]
+Query: rails
+total hits: 2, results delivered: 2
+[topic] highlight: Topic-1 query: rails
+[topic] highlight: Topic-1 query: rails
+[topic] highlight: Topic-2 query: rails
+[topic] highlight: Topic-2 query: rails
+[topic] register class Topic with index topic
+[topic] refusing re-registration of class Topic
+index_for [Topic(id: integer, title: string, body: text, forum_id: integer, created_at: datetime, updated_at: datetime, replies_count: integer, sticky: integer, hits: integer)]
+options: {:offset=>nil, :limit=>nil}
+ar_options: {}
+[topic] stored_fields: nil
+[topic] query: rails
+-->+(body:rails author:rails title:rails) +(class_name:Topic)
+[topic] now retrieving records from AR with options: {}
+[topic] 2 results from AR: [#<Topic id: 1, title: "rails之上", body: "从Rails 2.3.5 升级到 Rails 3.0 beta\r\n因为有�...", forum_id: 1, created_at: "2011-04-08 14:43:46", updated_at: "2011-04-08 14:43:46", replies_count: 2, sticky: 0, hits: 4>, #<Topic id: 2, title: "rails你不懂", body: "\r\nRails 3.0 release note\r\n官方的文档已经出�...", forum_id: 1, created_at: "2011-04-08 14:47:36", updated_at: "2011-04-08 14:47:36", replies_count: 0, sticky: 0, hits: 1>]
+Query: rails
+total hits: 2, results delivered: 2
+[topic] highlight: Topic-1 query: rails
+[topic] register class Topic with index topic
+[topic] refusing re-registration of class Topic
+index_for [Topic(id: integer, title: string, body: text, forum_id: integer, created_at: datetime, updated_at: datetime, replies_count: integer, sticky: integer, hits: integer)]
+options: {:offset=>nil, :limit=>nil}
+ar_options: {}
+[topic] stored_fields: nil
+[topic] query: rails
+-->+(body:rails author:rails title:rails) +(class_name:Topic)
+[topic] now retrieving records from AR with options: {}
+[topic] 2 results from AR: [#<Topic id: 1, title: "rails之上", body: "从Rails 2.3.5 升级到 Rails 3.0 beta\r\n因为有�...", forum_id: 1, created_at: "2011-04-08 14:43:46", updated_at: "2011-04-08 14:43:46", replies_count: 2, sticky: 0, hits: 4>, #<Topic id: 2, title: "rails你不懂", body: "\r\nRails 3.0 release note\r\n官方的文档已经出�...", forum_id: 1, created_at: "2011-04-08 14:47:36", updated_at: "2011-04-08 14:47:36", replies_count: 0, sticky: 0, hits: 1>]
+Query: rails
+total hits: 2, results delivered: 2
+[topic] register class Topic with index topic
+[topic] refusing re-registration of class Topic
+index_for [Topic(id: integer, title: string, body: text, forum_id: integer, created_at: datetime, updated_at: datetime, replies_count: integer, sticky: integer, hits: integer)]
+options: {:offset=>nil, :limit=>nil}
+ar_options: {}
+[topic] stored_fields: nil
+[topic] query: rails
+-->+(body:rails author:rails title:rails) +(class_name:Topic)
+[topic] now retrieving records from AR with options: {}
+[topic] 2 results from AR: [#<Topic id: 1, title: "rails之上", body: "从Rails 2.3.5 升级到 Rails 3.0 beta\r\n因为有�...", forum_id: 1, created_at: "2011-04-08 14:43:46", updated_at: "2011-04-08 14:43:46", replies_count: 2, sticky: 0, hits: 4>, #<Topic id: 2, title: "rails你不懂", body: "\r\nRails 3.0 release note\r\n官方的文档已经出�...", forum_id: 1, created_at: "2011-04-08 14:47:36", updated_at: "2011-04-08 14:47:36", replies_count: 0, sticky: 0, hits: 1>]
+Query: rails
+total hits: 2, results delivered: 2
+[topic] register class Topic with index topic
+[topic] refusing re-registration of class Topic
+index_for [Topic(id: integer, title: string, body: text, forum_id: integer, created_at: datetime, updated_at: datetime, replies_count: integer, sticky: integer, hits: integer)]
+options: {:offset=>nil, :limit=>nil}
+ar_options: {}
+[topic] stored_fields: nil
+[topic] query: rails
+-->+(body:rails author:rails title:rails) +(class_name:Topic)
+[topic] now retrieving records from AR with options: {}
+[topic] 2 results from AR: [#<Topic id: 1, title: "rails之上", body: "从Rails 2.3.5 升级到 Rails 3.0 beta\r\n因为有�...", forum_id: 1, created_at: "2011-04-08 14:43:46", updated_at: "2011-04-08 14:43:46", replies_count: 2, sticky: 0, hits: 4>, #<Topic id: 2, title: "rails你不懂", body: "\r\nRails 3.0 release note\r\n官方的文档已经出�...", forum_id: 1, created_at: "2011-04-08 14:47:36", updated_at: "2011-04-08 14:47:36", replies_count: 0, sticky: 0, hits: 1>]
+Query: rails
+total hits: 2, results delivered: 2
+[topic] highlight: Topic-1 query: rails
+[topic] highlight: Topic-1 query: rails
+[topic] highlight: Topic-2 query: rails
+[topic] highlight: Topic-2 query: rails
+[topic] register class Topic with index topic
+[topic] refusing re-registration of class Topic
+index_for [Topic(id: integer, title: string, body: text, forum_id: integer, created_at: datetime, updated_at: datetime, replies_count: integer, sticky: integer, hits: integer)]
+options: {:offset=>nil, :limit=>nil}
+ar_options: {}
+[topic] stored_fields: nil
+[topic] query: rails
+-->+(body:rails author:rails title:rails) +(class_name:Topic)
+[topic] now retrieving records from AR with options: {}
+[topic] 2 results from AR: [#<Topic id: 1, title: "rails之上", body: "从Rails 2.3.5 升级到 Rails 3.0 beta\r\n因为有�...", forum_id: 1, created_at: "2011-04-08 14:43:46", updated_at: "2011-04-08 14:43:46", replies_count: 2, sticky: 0, hits: 4>, #<Topic id: 2, title: "rails你不懂", body: "\r\nRails 3.0 release note\r\n官方的文档已经出�...", forum_id: 1, created_at: "2011-04-08 14:47:36", updated_at: "2011-04-08 14:47:36", replies_count: 0, sticky: 0, hits: 1>]
+Query: rails
+total hits: 2, results delivered: 2
+[topic] highlight: Topic-1 query: rails
+[topic] highlight: Topic-1 query: rails
+[topic] highlight: Topic-2 query: rails
+[topic] highlight: Topic-2 query: rails
+[topic] register class Topic with index topic
+[topic] refusing re-registration of class Topic
+index_for [Topic(id: integer, title: string, body: text, forum_id: integer, created_at: datetime, updated_at: datetime, replies_count: integer, sticky: integer, hits: integer)]
+options: {:offset=>nil, :limit=>nil}
+ar_options: {}
+[topic] stored_fields: nil
+[topic] query: rails
+-->+(body:rails author:rails title:rails) +(class_name:Topic)
+[topic] now retrieving records from AR with options: {}
+[topic] 2 results from AR: [#<Topic id: 1, title: "rails之上", body: "从Rails 2.3.5 升级到 Rails 3.0 beta\r\n因为有�...", forum_id: 1, created_at: "2011-04-08 14:43:46", updated_at: "2011-04-08 14:43:46", replies_count: 2, sticky: 0, hits: 4>, #<Topic id: 2, title: "rails你不懂", body: "\r\nRails 3.0 release note\r\n官方的文档已经出�...", forum_id: 1, created_at: "2011-04-08 14:47:36", updated_at: "2011-04-08 14:47:36", replies_count: 0, sticky: 0, hits: 1>]
+Query: rails
+total hits: 2, results delivered: 2
+[topic] highlight: Topic-1 query: rails
+[topic] highlight: Topic-1 query: rails
+[topic] register class Topic with index topic
+[topic] refusing re-registration of class Topic
+index_for [Topic(id: integer, title: string, body: text, forum_id: integer, created_at: datetime, updated_at: datetime, replies_count: integer, sticky: integer, hits: integer)]
+options: {:offset=>nil, :limit=>nil}
+ar_options: {}
+[topic] stored_fields: nil
+[topic] query: rails
+-->+(body:rails author:rails title:rails) +(class_name:Topic)
+[topic] now retrieving records from AR with options: {}
+[topic] 2 results from AR: [#<Topic id: 1, title: "rails之上", body: "从Rails 2.3.5 升级到 Rails 3.0 beta\r\n因为有�...", forum_id: 1, created_at: "2011-04-08 14:43:46", updated_at: "2011-04-08 14:43:46", replies_count: 2, sticky: 0, hits: 4>, #<Topic id: 2, title: "rails你不懂", body: "\r\nRails 3.0 release note\r\n官方的文档已经出�...", forum_id: 1, created_at: "2011-04-08 14:47:36", updated_at: "2011-04-08 14:47:36", replies_count: 0, sticky: 0, hits: 1>]
+Query: rails
+total hits: 2, results delivered: 2
+[topic] highlight: Topic-2 query: rails
+[topic] highlight: Topic-2 query: rails
+[topic] register class Topic with index topic
+[topic] refusing re-registration of class Topic
+index_for [Topic(id: integer, title: string, body: text, forum_id: integer, created_at: datetime, updated_at: datetime, replies_count: integer, sticky: integer, hits: integer)]
+options: {:offset=>nil, :limit=>nil}
+ar_options: {}
+[topic] stored_fields: nil
+[topic] query: rails
+-->+(body:rails author:rails title:rails) +(class_name:Topic)
+[topic] now retrieving records from AR with options: {}
+[topic] 2 results from AR: [#<Topic id: 1, title: "rails之上", body: "从Rails 2.3.5 升级到 Rails 3.0 beta\r\n因为有�...", forum_id: 1, created_at: "2011-04-08 14:43:46", updated_at: "2011-04-08 14:43:46", replies_count: 2, sticky: 0, hits: 4>, #<Topic id: 2, title: "rails你不懂", body: "\r\nRails 3.0 release note\r\n官方的文档已经出�...", forum_id: 1, created_at: "2011-04-08 14:47:36", updated_at: "2011-04-08 14:47:36", replies_count: 0, sticky: 0, hits: 1>]
+Query: rails
+total hits: 2, results delivered: 2
+[topic] highlight: Topic-1 query: rails
+[topic] highlight: Topic-1 query: rails
+[topic] register class Topic with index topic
+[topic] refusing re-registration of class Topic
+index_for [Topic(id: integer, title: string, body: text, forum_id: integer, created_at: datetime, updated_at: datetime, replies_count: integer, sticky: integer, hits: integer)]
+options: {:offset=>nil, :limit=>nil}
+ar_options: {}
+[topic] stored_fields: nil
+[topic] query: rails
+-->+(body:rails author:rails title:rails) +(class_name:Topic)
+[topic] now retrieving records from AR with options: {}
+[topic] 2 results from AR: [#<Topic id: 1, title: "rails之上", body: "从Rails 2.3.5 升级到 Rails 3.0 beta\r\n因为有�...", forum_id: 1, created_at: "2011-04-08 14:43:46", updated_at: "2011-04-08 14:43:46", replies_count: 2, sticky: 0, hits: 4>, #<Topic id: 2, title: "rails你不懂", body: "\r\nRails 3.0 release note\r\n官方的文档已经出�...", forum_id: 1, created_at: "2011-04-08 14:47:36", updated_at: "2011-04-08 14:47:36", replies_count: 0, sticky: 0, hits: 1>]
+Query: rails
+total hits: 2, results delivered: 2
+[topic] highlight: Topic-2 query: rails
+[topic] highlight: Topic-2 query: rails
+Will use local index.
+Will use local index.
+Will use local index.
+Will use local index.
+Will use local index.
+Will use local index.
+Will use local index.
