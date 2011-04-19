@@ -1,51 +1,64 @@
-<div class="figure">
-  <%= image_tag @photo.image.url ,:alt =>"被GFW和谐了！" %>
-  <div class="legend">所有人：<%=h @photo.user.login %>；是否为头像：<%= @photo.is_avatar %></div>
-  <p>
-    <b>Title:</b>
-    <%=h @photo.title %>
-  </p>
+<span>
+  <h1><%=h @photo.title %></h1>
+</span>
+<div class="mainpic">
+  <%= image_tag @photo.image.url(:avatar) ,:alt =>"被GFW和谐了！" %>
+<%#*<div class="legend">所有人：<%=h @photo.user.login %><%#=；是否为头像：%><%#= @photo.is_avatar %>
 
-  <p>
-    <b>Description:</b>
-    <%=h @photo.description %>
-  </p>
 
-  <p>
-    <b>Director:</b>
-    <%=h @photo.director_id %>
-  </p>
+  <div class="subject clearfix">
 
-  <p>
-    <b>Country:</b>
-    <%=h @photo.country_id %>
-  </p>
+    <br />
+    <span>
+      <span class="p1">Director:</span>
+      <%=h @photo.director_id %>
+    </span>
+    <br />
 
-  <p>
-    <b>Language:</b>
-    <%=h @photo.language %>
-  </p>
+    <span>
+      <span class="p1">Country:</span>
+      <%=h @photo.country_id %>
+    </span>
+    <br />
 
-  <p>
-    <b>Published at:</b>
-    <%=h @photo.published_at %>
-  </p>
+    <span>
+      <span class="p1">Language:</span>
+      <%=h @photo.language %>
+    </span>
+    <br />
 
-  <p>
-    <b>Length:</b>
-    <%=h @photo.length %>
-  </p>
+    <span>
+      <span class="p1">Published at:</span>
+      <%=h @photo.published_at.strftime("%Y-%m-%d") %>
+    </span>
+    <br />
 
-  <p>
-    <b>Starring:</b>
-    <%=h @photo.starring %>
-  </p>
+    <span>
+      <span class="p1">Length:</span>
+      <%=h @photo.length %><%= "分钟" %>
+    </span>
+    <br />
 
-  <p>
-    <b>Screenwrite:</b>
-    <%=h @photo.screenwrite %>
-  </p>
+    <span>
+      <span class="p1">Starring</span>
+      <%=h @photo.starring %>
+    </span>
+    <br />
 
+    <span>
+      <span class="p1">Screenwrite:</span>
+      <%=h @photo.screenwrite %>
+    </span>
+    <br />
+
+  </div>
 </div>
-<%= link_to '编辑', [:edit,@photo],:class => "button" %>
-<%= link_to '返回', photos_path,:class => "button"   %>
+<br />
+<span>
+  <span class="p1">剧情简述:</span>
+  <%=h @photo.description %>
+</span>
+<br />
+<%= link_to "<img src='/images/icon_edit.gif' border='0' alt='编辑'/>", [:edit,@photo],:class => "button" %>
+<%= link_to "<img src='/images/icon_back.png' border='0' alt='返回'/>", photos_path,:class => "button"   %>
+<%= render :partial => 'jz' %>

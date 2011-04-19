@@ -528,3 +528,56 @@ td.forum{
     margin-right: 1em; }
 .flickr_pagination .next_page {
     margin-left: 1em; }
+#info{
+    float: right;
+    max-width: 248px;
+    word-wrap: break-word;
+}
+
+#discover p.p1{
+    margin: 0 0 7px;
+    padding-top: 2px;
+}
+
+/* clear both */
+.clearfix:after { content: "."; display: block; height: 0; clear: both; visibility: hidden }
+.clearfix { zoom: 1; display: inline-block; _height: 1px }
+*html .clearfix { height: 1% }
+*+html .clearfix { height: 1% }
+.clearfix { display: block }
+
+
+#mainpic{
+    float: left;
+    margin: 3px 12px 0 0;
+    max-width: 155px;
+    overflow: hidden;
+    text-align: center;
+}
+
+#mainpic a img{
+    margin-bottom: 10px;
+}
+
+* html #mainpic{
+    left: -7px;
+}
+
+.clearfix:after {
+clear:both;
+content:".";
+display:block;
+height:0;
+visibility:hidden;
+}
+.clearfix {
+display:inline-block;
+}
+.clearfix {
+/*display:block;*/
+}
+
+.subject {
+/*float:left;*/
+width:415px;
+}

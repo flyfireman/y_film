@@ -1,6 +1,6 @@
 <tr>
-  <th width='150px'>作者</td>
-  <th>正文</td>
+  <td width='150px'>作者</td>
+  <td>正文</td>
 </tr>
 <tr>
   <td align='left' valign="top" class='user'>
@@ -8,8 +8,8 @@
     <img src='/images/user.jpg'/>
   </td>
   <td align='left' valign="top" class='post'>
-    <%=show_time(@topic.created_at) %>&nbsp;&nbsp;标题:<%=h @topic.title %> 
-    <hr width='98%'>
+    <%=show_time(@topic.created_at) %>&nbsp;&nbsp;标题:<%=h @topic.title %>
+    <%#*<hr width='98%'>%>
     <p><%= @topic.body %></p>
   </td>
 </tr>

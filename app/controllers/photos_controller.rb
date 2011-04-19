@@ -18,7 +18,11 @@ class PhotosController < ApplicationController
   # GET /photos/1.xml
   def show
     @photo = Photo.find(params[:id])
-
+     @photos = Photo.paginate(:page => params[:page],
+        :per_page => params[:pre_page] || 15,
+        :include => :user,
+       # :conditions => "published = true",
+        :order=>"created_at DESC")
     respond_to do |format|
       format.html # show.html.erb
       format.xml  { render :xml => @photo }

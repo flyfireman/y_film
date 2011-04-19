@@ -12234,3 +12234,1594 @@ Migrating to AddTitleToPhoto (20110414175432)
   [4;36;1mSQL (63.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
   [4;35;1mSQL (0.0ms)[0m   [0mdescribe `users`[0m
   [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW KEYS FROM `users`[0m
+  [4;36;1mSQL (609.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (31.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2011-04-15 11:56:55) [GET]
+  Parameters: {"action"=>"index", "controller"=>"products"}
+
+NameError (uninitialized constant ProductsController::Product):
+  app/controllers/products_controller.rb:5:in `index'
+
+Rendered rescues/_trace (359.0ms)
+Rendered rescues/_request_and_response (16.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PhotosController#index (for 127.0.0.1 at 2011-04-15 11:56:57) [GET]
+  Parameters: {"action"=>"index", "controller"=>"photos"}
+  [4;36;1mPhoto Load (1329.0ms)[0m   [0;1mSELECT * FROM `photos` ORDER BY created_at DESC LIMIT 0, 5[0m
+  [4;35;1mPhoto Columns (781.0ms)[0m   [0mSHOW FIELDS FROM `photos`[0m
+  [4;36;1mUser Columns (266.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (187.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;36;1mSQL (141.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `photos` [0m
+Rendering template within layouts/application
+Rendering photos/index
+Rendered users/_user_bar (16.0ms)
+Completed in 9156ms (View: 5500, DB: 2704) | 200 OK [http://localhost/photos]
+  [4;35;1mSQL (1171.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (297.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PhotosController#show (for 127.0.0.1 at 2011-04-15 11:58:31) [GET]
+  Parameters: {"action"=>"show", "id"=>"8", "controller"=>"photos"}
+  [4;35;1mPhoto Columns (1719.0ms)[0m   [0mSHOW FIELDS FROM `photos`[0m
+  [4;36;1mPhoto Load (532.0ms)[0m   [0;1mSELECT * FROM `photos` WHERE (`photos`.`id` = 8) [0m
+Rendering template within layouts/application
+Rendering photos/show
+  [4;35;1mUser Columns (16.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+Rendered users/_user_bar (46.0ms)
+Completed in 5421ms (View: 687, DB: 3735) | 200 OK [http://localhost/photos/8]
+  [4;35;1mSQL (1688.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (172.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PhotosController#edit (for 127.0.0.1 at 2011-04-15 11:59:54) [GET]
+  Parameters: {"action"=>"edit", "id"=>"8", "controller"=>"photos"}
+  [4;35;1mPhoto Columns (1781.0ms)[0m   [0mSHOW FIELDS FROM `photos`[0m
+  [4;36;1mPhoto Load (703.0ms)[0m   [0;1mSELECT * FROM `photos` WHERE (`photos`.`id` = 8) [0m
+Rendering template within layouts/application
+Rendering photos/edit
+Rendered photos/_form (1188.0ms)
+Rendered users/_user_bar (0.0ms)
+Completed in 8515ms (View: 1812, DB: 4344) | 200 OK [http://localhost/photos/8/edit]
+  [4;35;1mSQL (1969.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (219.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PhotosController#update (for 127.0.0.1 at 2011-04-15 12:11:39) [PUT]
+  Parameters: {"photo"=>{"image_url"=>"", "screenwrite"=>"鹦鹉莱欧", "language"=>"英语", "title"=>"里约大冒险 Rio  (2011)", "director_id"=>"", "country_id"=>"", "starring"=>"动画 / 冒险 / 喜剧 / 家庭", "length"=>"120", "published_at(1i)"=>"2011", "description"=>"二十世纪福斯《里约大冒险》豆瓣小站：http://site.douban.com/foxmovies/\r\n　　影片讲述一只明尼苏达州小镇上的金刚鹦鹉，一直认为自己是世界上仅存的一只金刚鹦鹉。一天他得知里约热内卢还有另外一只金刚鹦鹉，并且还是一只雌性金刚鹦鹉，他便决定离开家乡，前往巴西的里约热内卢。冒险就这么开始了……", "published_at(2i)"=>"4", "delete_image"=>"0", "published_at(3i)"=>"15", "published_at(4i)"=>"08", "published_at(5i)"=>"11"}, "action"=>"update", "_method"=>"put", "authenticity_token"=>"xvURT1kIls+MhQ5rrzRCVoM1OaP4JU6w1tqmcn4jFGI=", "id"=>"8", "controller"=>"photos"}
+  [4;35;1mPhoto Columns (1016.0ms)[0m   [0mSHOW FIELDS FROM `photos`[0m
+  [4;36;1mPhoto Load (797.0ms)[0m   [0;1mSELECT * FROM `photos` WHERE (`photos`.`id` = 8) [0m
+  [4;35;1mSQL (15.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mPhoto Update (516.0ms)[0m   [0;1mUPDATE `photos` SET `starring` = '动画 / 冒险 / 喜剧 / 家庭', `title` = '里约大冒险 Rio (2011)', `length` = 120, `published_at` = '2011-04-15 08:11:00', `screenwrite` = '鹦鹉莱欧', `description` = '二十世纪福斯《里约大冒险》豆瓣小站：http://site.douban.com/foxmovies/\r\n　　影片讲述一只明尼苏达州小镇上的金刚鹦鹉，一直认为自己是世界上仅存的一只金刚鹦鹉。一天他得知里约热内卢还有另外一只金刚鹦鹉，并且还是一只雌性金刚鹦鹉，他便决定离开家乡，前往巴西的里约热内卢。冒险就这么开始了……', `language` = '英语', `updated_at` = '2011-04-15 04:11:53' WHERE `id` = 8[0m
+[paperclip] Saving attachments.
+  [4;35;1mSQL (141.0ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3303/photos/8
+Completed in 15891ms (DB: 4673) | 302 Found [http://localhost/photos/8]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PhotosController#show (for 127.0.0.1 at 2011-04-15 12:11:59) [GET]
+  Parameters: {"action"=>"show", "id"=>"8", "controller"=>"photos"}
+  [4;36;1mPhoto Columns (31.0ms)[0m   [0;1mSHOW FIELDS FROM `photos`[0m
+  [4;35;1mPhoto Load (63.0ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.`id` = 8) [0m
+Rendering template within layouts/application
+Rendering photos/show
+  [4;36;1mUser Columns (78.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+Rendered users/_user_bar (125.0ms)
+Completed in 5016ms (View: 3719, DB: 172) | 200 OK [http://localhost/photos/8]
+  [4;36;1mSQL (4750.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (141.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PhotosController#show (for 127.0.0.1 at 2011-04-15 12:28:30) [GET]
+  Parameters: {"action"=>"show", "id"=>"8", "controller"=>"photos"}
+  [4;36;1mPhoto Columns (2641.0ms)[0m   [0;1mSHOW FIELDS FROM `photos`[0m
+  [4;35;1mPhoto Load (687.0ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.`id` = 8) [0m
+Rendering template within layouts/application
+Rendering photos/show
+  [4;36;1mUser Columns (188.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (78.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+Rendered users/_user_bar (422.0ms)
+Completed in 5875ms (View: 1156, DB: 8485) | 200 OK [http://localhost/photos/8]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (16.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PhotosController#show (for 127.0.0.1 at 2011-04-15 12:28:37) [GET]
+  Parameters: {"action"=>"show", "id"=>"8", "controller"=>"photos"}
+  [4;36;1mPhoto Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `photos`[0m
+  [4;35;1mPhoto Load (16.0ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.`id` = 8) [0m
+Rendering template within layouts/application
+Rendering photos/show
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+Rendered users/_user_bar (0.0ms)
+Completed in 172ms (View: 93, DB: 32) | 200 OK [http://localhost/photos/8]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PhotosController#show (for 127.0.0.1 at 2011-04-15 12:28:38) [GET]
+  Parameters: {"action"=>"show", "id"=>"8", "controller"=>"photos"}
+  [4;36;1mPhoto Columns (31.0ms)[0m   [0;1mSHOW FIELDS FROM `photos`[0m
+  [4;35;1mPhoto Load (0.0ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.`id` = 8) [0m
+Rendering template within layouts/application
+Rendering photos/show
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+Rendered users/_user_bar (0.0ms)
+Completed in 188ms (View: 94, DB: 31) | 200 OK [http://localhost/photos/8]
+  [4;36;1mSQL (1047.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (391.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PhotosController#show (for 127.0.0.1 at 2011-04-15 12:48:36) [GET]
+  Parameters: {"action"=>"show", "id"=>"8", "controller"=>"photos"}
+  [4;36;1mPhoto Columns (9438.0ms)[0m   [0;1mSHOW FIELDS FROM `photos`[0m
+  [4;35;1mPhoto Load (563.0ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.`id` = 8) [0m
+Rendering template within layouts/application
+Rendering photos/show
+  [4;36;1mUser Columns (46.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (79.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+Rendered users/_user_bar (390.0ms)
+Completed in 17750ms (View: 3093, DB: 11564) | 200 OK [http://localhost/photos/8]
+  [4;36;1mSQL (328.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (156.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PhotosController#show (for 127.0.0.1 at 2011-04-15 12:48:57) [GET]
+  Parameters: {"action"=>"show", "id"=>"8", "controller"=>"photos"}
+  [4;36;1mPhoto Columns (125.0ms)[0m   [0;1mSHOW FIELDS FROM `photos`[0m
+  [4;35;1mPhoto Load (0.0ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.`id` = 8) [0m
+Rendering template within layouts/application
+Rendering photos/show
+  [4;36;1mUser Columns (78.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+Rendered users/_user_bar (0.0ms)
+Completed in 422ms (View: 157, DB: 687) | 200 OK [http://localhost/photos/8]
+  [4;36;1mSQL (1984.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (94.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PhotosController#show (for 127.0.0.1 at 2011-04-15 12:54:42) [GET]
+  Parameters: {"action"=>"show", "id"=>"8", "controller"=>"photos"}
+  [4;36;1mPhoto Columns (4703.0ms)[0m   [0;1mSHOW FIELDS FROM `photos`[0m
+  [4;35;1mPhoto Load (735.0ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.`id` = 8) [0m
+Rendering template within layouts/application
+Rendering photos/show
+  [4;36;1mUser Columns (297.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (125.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+Rendered users/_user_bar (1672.0ms)
+Completed in 86625ms (View: 23062, DB: 7938) | 200 OK [http://localhost/photos/8]
+  [4;36;1mSQL (625.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (281.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PhotosController#show (for 127.0.0.1 at 2011-04-15 12:57:51) [GET]
+  Parameters: {"action"=>"show", "id"=>"8", "controller"=>"photos"}
+  [4;36;1mPhoto Columns (6610.0ms)[0m   [0;1mSHOW FIELDS FROM `photos`[0m
+  [4;35;1mPhoto Load (687.0ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.`id` = 8) [0m
+Rendering template within layouts/application
+Rendering photos/show
+  [4;36;1mUser Columns (79.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+Rendered users/_user_bar (16.0ms)
+Completed in 9250ms (View: 265, DB: 8282) | 200 OK [http://localhost/photos/8]
+  [4;36;1mSQL (688.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (156.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PhotosController#show (for 127.0.0.1 at 2011-04-15 13:08:40) [GET]
+  Parameters: {"action"=>"show", "id"=>"8", "controller"=>"photos"}
+  [4;36;1mPhoto Columns (1750.0ms)[0m   [0;1mSHOW FIELDS FROM `photos`[0m
+  [4;35;1mPhoto Load (531.0ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.`id` = 8) [0m
+Rendering template within layouts/application
+Rendering photos/show
+  [4;36;1mUser Columns (78.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (328.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+Rendered users/_user_bar (1813.0ms)
+Completed in 24734ms (View: 14750, DB: 3531) | 200 OK [http://localhost/photos/8]
+  [4;36;1mSQL (5484.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (219.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PhotosController#show (for 127.0.0.1 at 2011-04-15 13:18:33) [GET]
+  Parameters: {"action"=>"show", "id"=>"8", "controller"=>"photos"}
+  [4;36;1mPhoto Columns (1844.0ms)[0m   [0;1mSHOW FIELDS FROM `photos`[0m
+  [4;35;1mPhoto Load (968.0ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.`id` = 8) [0m
+Rendering template within layouts/application
+Rendering photos/show
+  [4;36;1mUser Columns (907.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (156.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+Rendered users/_user_bar (1312.0ms)
+Completed in 109750ms (View: 83749, DB: 9578) | 200 OK [http://localhost/photos/8]
+  [4;36;1mSQL (1094.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (516.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PhotosController#show (for 127.0.0.1 at 2011-04-15 13:20:33) [GET]
+  Parameters: {"action"=>"show", "id"=>"8", "controller"=>"photos"}
+  [4;36;1mPhoto Columns (5843.0ms)[0m   [0;1mSHOW FIELDS FROM `photos`[0m
+  [4;35;1mPhoto Load (16.0ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.`id` = 8) [0m
+Rendering template within layouts/application
+Rendering photos/show
+  [4;36;1mUser Columns (79.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+Rendered users/_user_bar (0.0ms)
+Completed in 8422ms (View: 312, DB: 7548) | 200 OK [http://localhost/photos/8]
+  [4;36;1mSQL (110.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PhotosController#index (for 127.0.0.1 at 2011-04-19 12:05:23) [GET]
+  Parameters: {"action"=>"index", "controller"=>"photos"}
+  [4;36;1mPhoto Load (609.0ms)[0m   [0;1mSELECT * FROM `photos` ORDER BY created_at DESC LIMIT 0, 5[0m
+  [4;35;1mPhoto Columns (203.0ms)[0m   [0mSHOW FIELDS FROM `photos`[0m
+  [4;36;1mUser Columns (93.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (78.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;36;1mSQL (31.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `photos` [0m
+Rendering template within layouts/application
+Rendering photos/index
+Rendered users/_user_bar (15.0ms)
+Completed in 7016ms (View: 2672, DB: 1124) | 200 OK [http://localhost/photos]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PhotosController#show (for 127.0.0.1 at 2011-04-19 12:05:39) [GET]
+  Parameters: {"action"=>"show", "id"=>"9", "controller"=>"photos"}
+  [4;35;1mPhoto Columns (109.0ms)[0m   [0mSHOW FIELDS FROM `photos`[0m
+  [4;36;1mPhoto Load (0.0ms)[0m   [0;1mSELECT * FROM `photos` WHERE (`photos`.`id` = 9) [0m
+Rendering template within layouts/application
+Rendering photos/show
+Rendered users/_user_bar (31.0ms)
+Completed in 406ms (View: 78, DB: 109) | 200 OK [http://localhost/photos/9]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PhotosController#show (for 127.0.0.1 at 2011-04-19 12:06:16) [GET]
+  Parameters: {"action"=>"show", "id"=>"9", "controller"=>"photos"}
+  [4;35;1mPhoto Columns (1859.0ms)[0m   [0mSHOW FIELDS FROM `photos`[0m
+  [4;36;1mPhoto Load (391.0ms)[0m   [0;1mSELECT * FROM `photos` WHERE (`photos`.`id` = 9) [0m
+Rendering template within layouts/application
+Rendering photos/show
+Rendered users/_user_bar (0.0ms)
+Completed in 3265ms (View: 109, DB: 2250) | 200 OK [http://localhost/photos/9]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PhotosController#show (for 127.0.0.1 at 2011-04-19 12:06:38) [GET]
+  Parameters: {"action"=>"show", "id"=>"9", "controller"=>"photos"}
+  [4;35;1mPhoto Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `photos`[0m
+  [4;36;1mPhoto Load (0.0ms)[0m   [0;1mSELECT * FROM `photos` WHERE (`photos`.`id` = 9) [0m
+Rendering template within layouts/application
+Rendering photos/show
+Rendered users/_user_bar (0.0ms)
+Completed in 407ms (View: 235, DB: 0) | 200 OK [http://localhost/photos/9]
+  [4;35;1mSQL (328.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (63.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PhotosController#show (for 127.0.0.1 at 2011-04-19 12:10:57) [GET]
+  Parameters: {"action"=>"show", "id"=>"9", "controller"=>"photos"}
+  [4;35;1mPhoto Columns (1469.0ms)[0m   [0mSHOW FIELDS FROM `photos`[0m
+  [4;36;1mPhoto Load (844.0ms)[0m   [0;1mSELECT * FROM `photos` WHERE (`photos`.`id` = 9) [0m
+Rendering template within layouts/application
+Rendering photos/show
+Rendered users/_user_bar (360.0ms)
+Completed in 3610ms (View: 797, DB: 2704) | 200 OK [http://localhost/photos/9]
+  [4;35;1mSQL (219.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (62.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PhotosController#show (for 127.0.0.1 at 2011-04-19 12:19:31) [GET]
+  Parameters: {"action"=>"show", "id"=>"9", "controller"=>"photos"}
+  [4;35;1mPhoto Columns (922.0ms)[0m   [0mSHOW FIELDS FROM `photos`[0m
+  [4;36;1mPhoto Load (266.0ms)[0m   [0;1mSELECT * FROM `photos` WHERE (`photos`.`id` = 9) [0m
+Rendering template within layouts/application
+Rendering photos/show
+Rendered users/_user_bar (391.0ms)
+Completed in 13844ms (View: 3750, DB: 1469) | 200 OK [http://localhost/photos/9]
+  [4;35;1mSQL (235.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (78.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PhotosController#show (for 127.0.0.1 at 2011-04-19 12:20:52) [GET]
+  Parameters: {"action"=>"show", "id"=>"9", "controller"=>"photos"}
+  [4;35;1mPhoto Columns (78.0ms)[0m   [0mSHOW FIELDS FROM `photos`[0m
+  [4;36;1mPhoto Load (16.0ms)[0m   [0;1mSELECT * FROM `photos` WHERE (`photos`.`id` = 9) [0m
+Rendering template within layouts/application
+Rendering photos/show
+Rendered users/_user_bar (0.0ms)
+Completed in 422ms (View: 140, DB: 407) | 200 OK [http://localhost/photos/9]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PhotosController#show (for 127.0.0.1 at 2011-04-19 12:21:42) [GET]
+  Parameters: {"action"=>"show", "id"=>"9", "controller"=>"photos"}
+  [4;35;1mPhoto Columns (1547.0ms)[0m   [0mSHOW FIELDS FROM `photos`[0m
+  [4;36;1mPhoto Load (47.0ms)[0m   [0;1mSELECT * FROM `photos` WHERE (`photos`.`id` = 9) [0m
+Rendering template within layouts/application
+Rendering photos/show
+Rendered users/_user_bar (16.0ms)
+Completed in 1954ms (View: 125, DB: 1594) | 200 OK [http://localhost/photos/9]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PhotosController#show (for 127.0.0.1 at 2011-04-19 12:22:36) [GET]
+  Parameters: {"action"=>"show", "id"=>"9", "controller"=>"photos"}
+  [4;35;1mPhoto Columns (16.0ms)[0m   [0mSHOW FIELDS FROM `photos`[0m
+  [4;36;1mPhoto Load (0.0ms)[0m   [0;1mSELECT * FROM `photos` WHERE (`photos`.`id` = 9) [0m
+Rendering template within layouts/application
+Rendering photos/show
+Rendered users/_user_bar (0.0ms)
+Completed in 140ms (View: 46, DB: 16) | 200 OK [http://localhost/photos/9]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PhotosController#show (for 127.0.0.1 at 2011-04-19 12:25:26) [GET]
+  Parameters: {"action"=>"show", "id"=>"9", "controller"=>"photos"}
+  [4;35;1mPhoto Columns (156.0ms)[0m   [0mSHOW FIELDS FROM `photos`[0m
+  [4;36;1mPhoto Load (0.0ms)[0m   [0;1mSELECT * FROM `photos` WHERE (`photos`.`id` = 9) [0m
+Rendering template within layouts/application
+Rendering photos/show
+Rendered users/_user_bar (0.0ms)
+Completed in 265ms (View: 31, DB: 156) | 200 OK [http://localhost/photos/9]
+  [4;35;1mSQL (32.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (93.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PhotosController#show (for 127.0.0.1 at 2011-04-19 12:32:47) [GET]
+  Parameters: {"action"=>"show", "id"=>"9", "controller"=>"photos"}
+  [4;35;1mPhoto Columns (500.0ms)[0m   [0mSHOW FIELDS FROM `photos`[0m
+  [4;36;1mPhoto Load (63.0ms)[0m   [0;1mSELECT * FROM `photos` WHERE (`photos`.`id` = 9) [0m
+Rendering template within layouts/application
+Rendering photos/show
+Rendered users/_user_bar (16.0ms)
+Completed in 1141ms (View: 156, DB: 688) | 200 OK [http://localhost/photos/9]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PhotosController#show (for 127.0.0.1 at 2011-04-19 12:33:18) [GET]
+  Parameters: {"action"=>"show", "id"=>"9", "controller"=>"photos"}
+  [4;35;1mPhoto Columns (15.0ms)[0m   [0mSHOW FIELDS FROM `photos`[0m
+  [4;36;1mPhoto Load (0.0ms)[0m   [0;1mSELECT * FROM `photos` WHERE (`photos`.`id` = 9) [0m
+Rendering template within layouts/application
+Rendering photos/show
+Rendered users/_user_bar (0.0ms)
+Completed in 1734ms (View: 1500, DB: 15) | 200 OK [http://localhost/photos/9]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PhotosController#show (for 127.0.0.1 at 2011-04-19 12:33:44) [GET]
+  Parameters: {"action"=>"show", "id"=>"9", "controller"=>"photos"}
+  [4;35;1mPhoto Columns (16.0ms)[0m   [0mSHOW FIELDS FROM `photos`[0m
+  [4;36;1mPhoto Load (0.0ms)[0m   [0;1mSELECT * FROM `photos` WHERE (`photos`.`id` = 9) [0m
+Rendering template within layouts/application
+Rendering photos/show
+Rendered users/_user_bar (16.0ms)
+Completed in 94ms (View: 32, DB: 16) | 200 OK [http://localhost/photos/9]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ForumsController#index (for 127.0.0.1 at 2011-04-19 12:33:56) [GET]
+  Parameters: {"action"=>"index", "controller"=>"forums"}
+  [4;35;1mForum Load (453.0ms)[0m   [0mSELECT * FROM `forums` [0m
+Rendering template within layouts/application
+Rendering forums/index
+  [4;36;1mForum Columns (15.0ms)[0m   [0;1mSHOW FIELDS FROM `forums`[0m
+Rendered users/_user_bar (0.0ms)
+Completed in 703ms (View: 126, DB: 468) | 200 OK [http://localhost/forums]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ForumsController#show (for 127.0.0.1 at 2011-04-19 12:34:00) [GET]
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"forums"}
+  [4;35;1mForum Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `forums`[0m
+  [4;36;1mForum Load (0.0ms)[0m   [0;1mSELECT * FROM `forums` WHERE (`forums`.`id` = 1) [0m
+  [4;35;1mTopic Load (157.0ms)[0m   [0mSELECT `topics`.* FROM `topics` WHERE (`topics`.forum_id = 1) [0m
+  [4;36;1mTopic Columns (15.0ms)[0m   [0;1mSHOW FIELDS FROM `topics`[0m
+  [4;35;1mReply Load (47.0ms)[0m   [0mSELECT * FROM `replies` WHERE (`replies`.topic_id = 1) [0m
+  [4;36;1mReply Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `replies`[0m
+Rendering template within layouts/application
+Rendering forums/show
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `forums` WHERE (`forums`.`id` = 1) [0m
+  [4;36;1mSQL (94.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `replies` WHERE (`replies`.topic_id = 1) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `replies` WHERE (`replies`.topic_id = 2) [0m
+Rendered users/_user_bar (0.0ms)
+Completed in 766ms (View: 78, DB: 313) | 200 OK [http://localhost/forums/1]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TopicsController#show (for 127.0.0.1 at 2011-04-19 12:34:03) [GET]
+  Parameters: {"action"=>"show", "id"=>"2", "controller"=>"topics", "forum_id"=>"1"}
+  [4;36;1mTopic Columns (15.0ms)[0m   [0;1mSHOW FIELDS FROM `topics`[0m
+  [4;35;1mTopic Load (0.0ms)[0m   [0mSELECT * FROM `topics` WHERE (`topics`.`id` = 2) [0m
+  [4;36;1mReply Load (16.0ms)[0m   [0;1mSELECT * FROM `replies` WHERE (`replies`.topic_id = 2) LIMIT 0, 20[0m
+  [4;35;1mTopic Update (125.0ms)[0m   [0mUPDATE `topics` SET `hits` = COALESCE(`hits`, 0) + 1 WHERE (`id` = 2) [0m
+Rendering template within layouts/application
+Rendering topics/show
+  [4;36;1mForum Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `forums`[0m
+  [4;35;1mForum Load (0.0ms)[0m   [0mSELECT * FROM `forums` WHERE (`forums`.`id` = 1) [0m
+
+ActionView::TemplateError (stack level too deep) on line #13 of app/views/topics/_topic.rhtml:
+10:   <td align='left' valign="top" class='post'>
+11:     <%=show_time(@topic.created_at) %>&nbsp;&nbsp;标题:<%=h @topic.title %> 
+12:     <hr width='98%'>
+13:     <p><%= @topic.body %></p>
+14:   </td>
+15: </tr>
+16: <tr>
+
+    app/models/topic.rb:74:in `has_replies'
+    app/models/topic.rb:50:in `last_post'
+    app/models/topic.rb:38:in `body'
+    app/models/topic.rb:38:in `body'
+    app/views/topics/_topic.rhtml:13:in `_run_rhtml_app47views47topics47_topic46rhtml_locals_object_topic'
+    app/views/topics/show.html.erb:5
+    app/controllers/topics_controller.rb:13:in `show'
+
+Rendered rescues/_trace (141.0ms)
+Rendered rescues/_request_and_response (47.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TopicsController#show (for 127.0.0.1 at 2011-04-19 12:35:03) [GET]
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"topics", "forum_id"=>"1"}
+  [4;36;1mTopic Columns (31.0ms)[0m   [0;1mSHOW FIELDS FROM `topics`[0m
+  [4;35;1mTopic Load (0.0ms)[0m   [0mSELECT * FROM `topics` WHERE (`topics`.`id` = 1) [0m
+  [4;36;1mReply Load (0.0ms)[0m   [0;1mSELECT * FROM `replies` WHERE (`replies`.topic_id = 1) LIMIT 0, 20[0m
+  [4;35;1mTopic Update (16.0ms)[0m   [0mUPDATE `topics` SET `hits` = COALESCE(`hits`, 0) + 1 WHERE (`id` = 1) [0m
+Rendering template within layouts/application
+Rendering topics/show
+  [4;36;1mForum Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `forums`[0m
+  [4;35;1mForum Load (0.0ms)[0m   [0mSELECT * FROM `forums` WHERE (`forums`.`id` = 1) [0m
+  [4;36;1mReply Load (0.0ms)[0m   [0;1mSELECT * FROM `replies` WHERE (`replies`.topic_id = 1) [0m
+  [4;35;1mReply Columns (15.0ms)[0m   [0mSHOW FIELDS FROM `replies`[0m
+Rendered topics/_topic (15.0ms)
+  [4;36;1mTopic Load (0.0ms)[0m   [0;1mSELECT * FROM `topics` WHERE (`topics`.`id` = 1) [0m
+Rendered topics/_reply (250.0ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `topics` WHERE (`topics`.`id` = 1) [0m
+Rendered topics/_reply (16.0ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `forums` WHERE (`forums`.`id` = 1) [0m
+Rendered topics/_quick_reply (78.0ms)
+Rendered users/_user_bar (0.0ms)
+Completed in 687ms (View: 453, DB: 62) | 200 OK [http://localhost/forums/1/topics/1]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TopicsController#show (for 127.0.0.1 at 2011-04-19 12:35:12) [GET]
+  Parameters: {"action"=>"show", "id"=>"2", "controller"=>"topics", "forum_id"=>"1"}
+  [4;35;1mTopic Columns (16.0ms)[0m   [0mSHOW FIELDS FROM `topics`[0m
+  [4;36;1mTopic Load (0.0ms)[0m   [0;1mSELECT * FROM `topics` WHERE (`topics`.`id` = 2) [0m
+  [4;35;1mReply Load (0.0ms)[0m   [0mSELECT * FROM `replies` WHERE (`replies`.topic_id = 2) LIMIT 0, 20[0m
+  [4;36;1mTopic Update (0.0ms)[0m   [0;1mUPDATE `topics` SET `hits` = COALESCE(`hits`, 0) + 1 WHERE (`id` = 2) [0m
+Rendering template within layouts/application
+Rendering topics/show
+  [4;35;1mForum Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `forums`[0m
+  [4;36;1mForum Load (0.0ms)[0m   [0;1mSELECT * FROM `forums` WHERE (`forums`.`id` = 1) [0m
+
+ActionView::TemplateError (stack level too deep) on line #13 of app/views/topics/_topic.rhtml:
+10:   <td align='left' valign="top" class='post'>
+11:     <%=show_time(@topic.created_at) %>&nbsp;&nbsp;标题:<%=h @topic.title %> 
+12:     <hr width='98%'>
+13:     <p><%= @topic.body %></p>
+14:   </td>
+15: </tr>
+16: <tr>
+
+    app/models/topic.rb:74:in `has_replies'
+    app/models/topic.rb:50:in `last_post'
+    app/models/topic.rb:38:in `body'
+    app/models/topic.rb:38:in `body'
+    app/views/topics/_topic.rhtml:13:in `_run_rhtml_app47views47topics47_topic46rhtml_locals_object_topic'
+    app/views/topics/show.html.erb:5
+    app/controllers/topics_controller.rb:13:in `show'
+
+Rendered rescues/_trace (281.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (578.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (78.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ForumsController#show (for 127.0.0.1 at 2011-04-19 12:37:12) [GET]
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"forums"}
+  [4;35;1mForum Columns (672.0ms)[0m   [0mSHOW FIELDS FROM `forums`[0m
+  [4;36;1mForum Load (62.0ms)[0m   [0;1mSELECT * FROM `forums` WHERE (`forums`.`id` = 1) [0m
+  [4;35;1mTopic Load (94.0ms)[0m   [0mSELECT `topics`.* FROM `topics` WHERE (`topics`.forum_id = 1) [0m
+  [4;36;1mTopic Columns (15.0ms)[0m   [0;1mSHOW FIELDS FROM `topics`[0m
+  [4;35;1mReply Load (15.0ms)[0m   [0mSELECT * FROM `replies` WHERE (`replies`.topic_id = 1) [0m
+  [4;36;1mReply Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `replies`[0m
+Rendering template within layouts/application
+Rendering forums/show
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `forums` WHERE (`forums`.`id` = 1) [0m
+  [4;36;1mSQL (125.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `replies` WHERE (`replies`.topic_id = 1) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `replies` WHERE (`replies`.topic_id = 2) [0m
+Rendered users/_user_bar (0.0ms)
+Completed in 1407ms (View: 141, DB: 1639) | 200 OK [http://localhost/forums/1]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TopicsController#show (for 127.0.0.1 at 2011-04-19 12:37:34) [GET]
+  Parameters: {"action"=>"show", "id"=>"2", "controller"=>"topics", "forum_id"=>"1"}
+  [4;36;1mTopic Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `topics`[0m
+  [4;35;1mTopic Load (0.0ms)[0m   [0mSELECT * FROM `topics` WHERE (`topics`.`id` = 2) [0m
+  [4;36;1mReply Load (16.0ms)[0m   [0;1mSELECT * FROM `replies` WHERE (`replies`.topic_id = 2) LIMIT 0, 20[0m
+  [4;35;1mTopic Update (797.0ms)[0m   [0mUPDATE `topics` SET `hits` = COALESCE(`hits`, 0) + 1 WHERE (`id` = 2) [0m
+Rendering template within layouts/application
+Rendering topics/show
+  [4;36;1mForum Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `forums`[0m
+  [4;35;1mForum Load (0.0ms)[0m   [0mSELECT * FROM `forums` WHERE (`forums`.`id` = 1) [0m
+
+ActionView::TemplateError (stack level too deep) on line #13 of app/views/topics/_topic.rhtml:
+10:   <td align='left' valign="top" class='post'>
+11:     <%=show_time(@topic.created_at) %>&nbsp;&nbsp;标题:<%=h @topic.title %> 
+12:     <%#*<hr width='98%'>%>
+13:     <p><%= @topic.body %></p>
+14:   </td>
+15: </tr>
+16: <tr>
+
+    app/models/topic.rb:74:in `has_replies'
+    app/models/topic.rb:50:in `last_post'
+    app/models/topic.rb:38:in `body'
+    app/models/topic.rb:38:in `body'
+    app/views/topics/_topic.rhtml:13:in `_run_rhtml_app47views47topics47_topic46rhtml_locals_object_topic'
+    app/views/topics/show.html.erb:5
+    app/controllers/topics_controller.rb:13:in `show'
+
+Rendered rescues/_trace (156.0ms)
+Rendered rescues/_request_and_response (62.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TopicsController#show (for 127.0.0.1 at 2011-04-19 12:38:32) [GET]
+  Parameters: {"action"=>"show", "id"=>"2", "controller"=>"topics", "forum_id"=>"1"}
+  [4;36;1mTopic Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `topics`[0m
+  [4;35;1mTopic Load (0.0ms)[0m   [0mSELECT * FROM `topics` WHERE (`topics`.`id` = 2) [0m
+  [4;36;1mReply Load (0.0ms)[0m   [0;1mSELECT * FROM `replies` WHERE (`replies`.topic_id = 2) LIMIT 0, 20[0m
+  [4;35;1mTopic Update (0.0ms)[0m   [0mUPDATE `topics` SET `hits` = COALESCE(`hits`, 0) + 1 WHERE (`id` = 2) [0m
+Rendering template within layouts/application
+Rendering topics/show
+  [4;36;1mForum Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `forums`[0m
+  [4;35;1mForum Load (0.0ms)[0m   [0mSELECT * FROM `forums` WHERE (`forums`.`id` = 1) [0m
+
+ActionView::TemplateError (stack level too deep) on line #13 of app/views/topics/_topic.rhtml:
+10:   <td align='left' valign="top" >
+11:     <%=show_time(@topic.created_at) %>&nbsp;&nbsp;标题:<%=h @topic.title %> 
+12:     <%#*<hr width='98%'>%>
+13:     <p><%= @topic.body %></p>
+14:   </td>
+15: </tr>
+16: <tr>
+
+    app/models/topic.rb:74:in `has_replies'
+    app/models/topic.rb:50:in `last_post'
+    app/models/topic.rb:38:in `body'
+    app/models/topic.rb:38:in `body'
+    app/views/topics/_topic.rhtml:13:in `_run_rhtml_app47views47topics47_topic46rhtml_locals_object_topic'
+    app/views/topics/show.html.erb:5
+    app/controllers/topics_controller.rb:13:in `show'
+
+Rendered rescues/_trace (141.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TopicsController#show (for 127.0.0.1 at 2011-04-19 12:38:58) [GET]
+  Parameters: {"action"=>"show", "id"=>"2", "controller"=>"topics", "forum_id"=>"1"}
+  [4;36;1mTopic Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `topics`[0m
+  [4;35;1mTopic Load (0.0ms)[0m   [0mSELECT * FROM `topics` WHERE (`topics`.`id` = 2) [0m
+  [4;36;1mReply Load (0.0ms)[0m   [0;1mSELECT * FROM `replies` WHERE (`replies`.topic_id = 2) LIMIT 0, 20[0m
+  [4;35;1mTopic Update (0.0ms)[0m   [0mUPDATE `topics` SET `hits` = COALESCE(`hits`, 0) + 1 WHERE (`id` = 2) [0m
+Rendering template within layouts/application
+Rendering topics/show
+  [4;36;1mForum Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `forums`[0m
+  [4;35;1mForum Load (0.0ms)[0m   [0mSELECT * FROM `forums` WHERE (`forums`.`id` = 1) [0m
+Rendered topics/_topic (0.0ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `forums` WHERE (`forums`.`id` = 1) [0m
+  [4;35;1mReply Columns (16.0ms)[0m   [0mSHOW FIELDS FROM `replies`[0m
+Rendered topics/_quick_reply (16.0ms)
+Rendered users/_user_bar (0.0ms)
+Completed in 188ms (View: 94, DB: 16) | 200 OK [http://localhost/forums/1/topics/2]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TopicsController#show (for 127.0.0.1 at 2011-04-19 12:39:37) [GET]
+  Parameters: {"action"=>"show", "id"=>"2", "controller"=>"topics", "forum_id"=>"1"}
+  [4;36;1mTopic Columns (31.0ms)[0m   [0;1mSHOW FIELDS FROM `topics`[0m
+  [4;35;1mTopic Load (0.0ms)[0m   [0mSELECT * FROM `topics` WHERE (`topics`.`id` = 2) [0m
+  [4;36;1mReply Load (0.0ms)[0m   [0;1mSELECT * FROM `replies` WHERE (`replies`.topic_id = 2) LIMIT 0, 20[0m
+  [4;35;1mTopic Update (0.0ms)[0m   [0mUPDATE `topics` SET `hits` = COALESCE(`hits`, 0) + 1 WHERE (`id` = 2) [0m
+Rendering template within layouts/application
+Rendering topics/show
+  [4;36;1mForum Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `forums`[0m
+  [4;35;1mForum Load (0.0ms)[0m   [0mSELECT * FROM `forums` WHERE (`forums`.`id` = 1) [0m
+
+ActionView::TemplateError (stack level too deep) on line #13 of app/views/topics/_topic.rhtml:
+10:   <td align='left' valign="top" class='post'>
+11:     <%=show_time(@topic.created_at) %>&nbsp;&nbsp;标题:<%=h @topic.title %>
+12:     <%#*<hr width='98%'>%>
+13:     <p><%= @topic.body %></p>
+14:   </td>
+15: </tr>
+16: <tr>
+
+    app/models/topic.rb:74:in `has_replies'
+    app/models/topic.rb:50:in `last_post'
+    app/models/topic.rb:38:in `body'
+    app/models/topic.rb:38:in `body'
+    app/views/topics/_topic.rhtml:13:in `_run_rhtml_app47views47topics47_topic46rhtml_locals_object_topic'
+    app/views/topics/show.html.erb:5
+    app/controllers/topics_controller.rb:13:in `show'
+
+Rendered rescues/_trace (141.0ms)
+Rendered rescues/_request_and_response (62.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (46.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2011-04-19 12:43:12) [GET]
+  Parameters: {"action"=>"new", "controller"=>"sessions"}
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered users/_user_bar (0.0ms)
+Completed in 266ms (View: 250, DB: 46) | 200 OK [http://localhost/login]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PhotosController#index (for 127.0.0.1 at 2011-04-19 12:43:22) [GET]
+  Parameters: {"action"=>"index", "controller"=>"photos"}
+  [4;36;1mPhoto Load (266.0ms)[0m   [0;1mSELECT * FROM `photos` ORDER BY created_at DESC LIMIT 0, 5[0m
+  [4;35;1mPhoto Columns (234.0ms)[0m   [0mSHOW FIELDS FROM `photos`[0m
+  [4;36;1mUser Columns (156.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (32.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;36;1mSQL (31.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `photos` [0m
+Rendering template within layouts/application
+Rendering photos/index
+Rendered users/_user_bar (16.0ms)
+Completed in 1282ms (View: 79, DB: 719) | 200 OK [http://localhost/photos]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PhotosController#show (for 127.0.0.1 at 2011-04-19 12:43:27) [GET]
+  Parameters: {"action"=>"show", "id"=>"6", "controller"=>"photos"}
+  [4;35;1mPhoto Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `photos`[0m
+  [4;36;1mPhoto Load (0.0ms)[0m   [0;1mSELECT * FROM `photos` WHERE (`photos`.`id` = 6) [0m
+Rendering template within layouts/application
+Rendering photos/show
+Rendered users/_user_bar (16.0ms)
+Completed in 63ms (View: 32, DB: 0) | 200 OK [http://localhost/photos/6]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PhotosController#show (for 127.0.0.1 at 2011-04-19 12:45:02) [GET]
+  Parameters: {"action"=>"show", "id"=>"6", "controller"=>"photos"}
+  [4;35;1mPhoto Columns (1188.0ms)[0m   [0mSHOW FIELDS FROM `photos`[0m
+  [4;36;1mPhoto Load (0.0ms)[0m   [0;1mSELECT * FROM `photos` WHERE (`photos`.`id` = 6) [0m
+Rendering template within layouts/application
+Rendering photos/show
+Rendered users/_user_bar (0.0ms)
+Completed in 1719ms (View: 62, DB: 1188) | 200 OK [http://localhost/photos/6]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PhotosController#show (for 127.0.0.1 at 2011-04-19 12:45:20) [GET]
+  Parameters: {"action"=>"show", "id"=>"6", "controller"=>"photos"}
+  [4;35;1mPhoto Columns (31.0ms)[0m   [0mSHOW FIELDS FROM `photos`[0m
+  [4;36;1mPhoto Load (0.0ms)[0m   [0;1mSELECT * FROM `photos` WHERE (`photos`.`id` = 6) [0m
+Rendering template within layouts/application
+Rendering photos/show
+Rendered users/_user_bar (0.0ms)
+Completed in 172ms (View: 94, DB: 31) | 200 OK [http://localhost/photos/6]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PhotosController#show (for 127.0.0.1 at 2011-04-19 12:45:45) [GET]
+  Parameters: {"action"=>"show", "id"=>"6", "controller"=>"photos"}
+  [4;35;1mPhoto Columns (47.0ms)[0m   [0mSHOW FIELDS FROM `photos`[0m
+  [4;36;1mPhoto Load (0.0ms)[0m   [0;1mSELECT * FROM `photos` WHERE (`photos`.`id` = 6) [0m
+Rendering template within layouts/application
+Rendering photos/show
+Rendered users/_user_bar (16.0ms)
+Completed in 125ms (View: 47, DB: 47) | 200 OK [http://localhost/photos/6]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PhotosController#show (for 127.0.0.1 at 2011-04-19 12:52:11) [GET]
+  Parameters: {"action"=>"show", "id"=>"6", "controller"=>"photos"}
+  [4;35;1mPhoto Columns (1235.0ms)[0m   [0mSHOW FIELDS FROM `photos`[0m
+  [4;36;1mPhoto Load (297.0ms)[0m   [0;1mSELECT * FROM `photos` WHERE (`photos`.`id` = 6) [0m
+Rendering template within layouts/application
+Rendering photos/show
+Rendered users/_user_bar (468.0ms)
+Completed in 3391ms (View: 1391, DB: 1532) | 200 OK [http://localhost/photos/6]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PhotosController#show (for 127.0.0.1 at 2011-04-19 12:52:35) [GET]
+  Parameters: {"action"=>"show", "id"=>"6", "controller"=>"photos"}
+  [4;35;1mPhoto Columns (47.0ms)[0m   [0mSHOW FIELDS FROM `photos`[0m
+  [4;36;1mPhoto Load (0.0ms)[0m   [0;1mSELECT * FROM `photos` WHERE (`photos`.`id` = 6) [0m
+Rendering template within layouts/application
+Rendering photos/show
+Rendered users/_user_bar (0.0ms)
+Completed in 141ms (View: 31, DB: 47) | 200 OK [http://localhost/photos/6]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PhotosController#show (for 127.0.0.1 at 2011-04-19 12:52:41) [GET]
+  Parameters: {"action"=>"show", "id"=>"6", "controller"=>"photos"}
+  [4;35;1mPhoto Columns (16.0ms)[0m   [0mSHOW FIELDS FROM `photos`[0m
+  [4;36;1mPhoto Load (0.0ms)[0m   [0;1mSELECT * FROM `photos` WHERE (`photos`.`id` = 6) [0m
+Rendering template within layouts/application
+Rendering photos/show
+Rendered users/_user_bar (0.0ms)
+Completed in 78ms (View: 16, DB: 16) | 200 OK [http://localhost/photos/6]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PhotosController#show (for 127.0.0.1 at 2011-04-19 12:52:52) [GET]
+  Parameters: {"action"=>"show", "id"=>"6", "controller"=>"photos"}
+  [4;35;1mPhoto Columns (16.0ms)[0m   [0mSHOW FIELDS FROM `photos`[0m
+  [4;36;1mPhoto Load (0.0ms)[0m   [0;1mSELECT * FROM `photos` WHERE (`photos`.`id` = 6) [0m
+Rendering template within layouts/application
+Rendering photos/show
+Rendered users/_user_bar (0.0ms)
+Completed in 110ms (View: 47, DB: 16) | 200 OK [http://localhost/photos/6]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PhotosController#show (for 127.0.0.1 at 2011-04-19 12:53:07) [GET]
+  Parameters: {"action"=>"show", "id"=>"6", "controller"=>"photos"}
+  [4;35;1mPhoto Columns (16.0ms)[0m   [0mSHOW FIELDS FROM `photos`[0m
+  [4;36;1mPhoto Load (0.0ms)[0m   [0;1mSELECT * FROM `photos` WHERE (`photos`.`id` = 6) [0m
+Rendering template within layouts/application
+Rendering photos/show
+Rendered users/_user_bar (0.0ms)
+Completed in 62ms (View: 15, DB: 16) | 200 OK [http://localhost/photos/6]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PhotosController#show (for 127.0.0.1 at 2011-04-19 12:53:46) [GET]
+  Parameters: {"action"=>"show", "id"=>"6", "controller"=>"photos"}
+  [4;35;1mPhoto Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `photos`[0m
+  [4;36;1mPhoto Load (0.0ms)[0m   [0;1mSELECT * FROM `photos` WHERE (`photos`.`id` = 6) [0m
+Rendering template within layouts/application
+Rendering photos/show
+Rendered users/_user_bar (0.0ms)
+Completed in 78ms (View: 31, DB: 0) | 200 OK [http://localhost/photos/6]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PhotosController#show (for 127.0.0.1 at 2011-04-19 12:54:31) [GET]
+  Parameters: {"action"=>"show", "id"=>"6", "controller"=>"photos"}
+  [4;35;1mPhoto Columns (47.0ms)[0m   [0mSHOW FIELDS FROM `photos`[0m
+  [4;36;1mPhoto Load (0.0ms)[0m   [0;1mSELECT * FROM `photos` WHERE (`photos`.`id` = 6) [0m
+Rendering template within layouts/application
+Rendering photos/show
+Rendered users/_user_bar (0.0ms)
+Completed in 188ms (View: 78, DB: 47) | 200 OK [http://localhost/photos/6]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PhotosController#show (for 127.0.0.1 at 2011-04-19 12:55:39) [GET]
+  Parameters: {"action"=>"show", "id"=>"6", "controller"=>"photos"}
+  [4;35;1mPhoto Columns (15.0ms)[0m   [0mSHOW FIELDS FROM `photos`[0m
+  [4;36;1mPhoto Load (16.0ms)[0m   [0;1mSELECT * FROM `photos` WHERE (`photos`.`id` = 6) [0m
+Rendering template within layouts/application
+Rendering photos/show
+Rendered users/_user_bar (0.0ms)
+Completed in 125ms (View: 62, DB: 31) | 200 OK [http://localhost/photos/6]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PhotosController#show (for 127.0.0.1 at 2011-04-19 12:55:41) [GET]
+  Parameters: {"action"=>"show", "id"=>"6", "controller"=>"photos"}
+  [4;35;1mPhoto Columns (16.0ms)[0m   [0mSHOW FIELDS FROM `photos`[0m
+  [4;36;1mPhoto Load (0.0ms)[0m   [0;1mSELECT * FROM `photos` WHERE (`photos`.`id` = 6) [0m
+Rendering template within layouts/application
+Rendering photos/show
+Rendered users/_user_bar (0.0ms)
+Completed in 78ms (View: 16, DB: 16) | 200 OK [http://localhost/photos/6]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PhotosController#show (for 127.0.0.1 at 2011-04-19 12:58:11) [GET]
+  Parameters: {"action"=>"show", "id"=>"6", "controller"=>"photos"}
+  [4;35;1mPhoto Columns (78.0ms)[0m   [0mSHOW FIELDS FROM `photos`[0m
+  [4;36;1mPhoto Load (0.0ms)[0m   [0;1mSELECT * FROM `photos` WHERE (`photos`.`id` = 6) [0m
+Rendering template within layouts/application
+Rendering photos/show
+Rendered users/_user_bar (0.0ms)
+Completed in 718ms (View: 500, DB: 78) | 200 OK [http://localhost/photos/6]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PhotosController#show (for 127.0.0.1 at 2011-04-19 13:00:49) [GET]
+  Parameters: {"action"=>"show", "id"=>"6", "controller"=>"photos"}
+  [4;35;1mPhoto Columns (32.0ms)[0m   [0mSHOW FIELDS FROM `photos`[0m
+  [4;36;1mPhoto Load (0.0ms)[0m   [0;1mSELECT * FROM `photos` WHERE (`photos`.`id` = 6) [0m
+Rendering template within layouts/application
+Rendering photos/show
+Rendered users/_user_bar (0.0ms)
+Completed in 282ms (View: 47, DB: 32) | 200 OK [http://localhost/photos/6]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PhotosController#edit (for 127.0.0.1 at 2011-04-19 13:00:54) [GET]
+  Parameters: {"action"=>"edit", "id"=>"6", "controller"=>"photos"}
+  [4;35;1mPhoto Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `photos`[0m
+  [4;36;1mPhoto Load (0.0ms)[0m   [0;1mSELECT * FROM `photos` WHERE (`photos`.`id` = 6) [0m
+Rendering template within layouts/application
+Rendering photos/edit
+Rendered photos/_form (797.0ms)
+Rendered users/_user_bar (0.0ms)
+Completed in 1047ms (View: 1016, DB: 0) | 200 OK [http://localhost/photos/6/edit]
+  [4;35;1mSQL (172.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (62.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PhotosController#update (for 127.0.0.1 at 2011-04-19 13:08:33) [PUT]
+  Parameters: {"photo"=>{"image_url"=>"", "screenwrite"=>"韦家辉 / 游乃海 / 欧文杰 / 陈伟斌", "language"=>"汉语普通话 / 粤语", "title"=>"单身男女 單身男女  (2011)", "director_id"=>"", "country_id"=>"", "starring"=>"喜剧 / 爱情", "length"=>"115", "published_at(1i)"=>"2011", "description"=>"  为追寻爱情，苏州女孩程子欣（高圆圆饰）随男友来至香港，在一家金融公司供职。谁知男友移情别恋，令子欣备受打击。偶然机缘，她结识了正处于瓶颈期的建筑师方启宏（吴彦祖饰），二人互相勉励，子欣丢掉了关于前男友的一切，启宏也决定重新出发，并相约一周后给子欣看最新的设计图。谁知约会当晚，子欣却失约了。原来在子欣的办公室对面，另一家公司的老板张申然（古天乐饰）长久以来一直注视着她。在她失落期间，两人通过彩色贴纸交流，子欣也渐渐喜欢上了这个大男孩。子欣忘记了和启宏的约定，与申然约在某咖啡厅见面，而申然却睡在了另一个女人的床上。\r\n　　阴差阳错，让三个人的缘分暂时中断。直到三年后的一天，未了的情缘继续上演……    © 豆瓣", "published_at(2i)"=>"4", "delete_image"=>"0", "published_at(3i)"=>"11", "published_at(4i)"=>"05", "published_at(5i)"=>"00"}, "action"=>"update", "_method"=>"put", "authenticity_token"=>"RaOuFBAwHFvnZfVHJ0sIcVRCaD2cBokDraMDGUqcAdI=", "id"=>"6", "controller"=>"photos"}
+  [4;35;1mPhoto Columns (1000.0ms)[0m   [0mSHOW FIELDS FROM `photos`[0m
+  [4;36;1mPhoto Load (578.0ms)[0m   [0;1mSELECT * FROM `photos` WHERE (`photos`.`id` = 6) [0m
+  [4;35;1mSQL (16.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mPhoto Update (187.0ms)[0m   [0;1mUPDATE `photos` SET `starring` = '喜剧 / 爱情', `title` = '单身男女 單身男女 (2011)', `length` = 115, `published_at` = '2011-04-11 05:00:00', `screenwrite` = '韦家辉 / 游乃海 / 欧文杰 / 陈伟斌', `description` = ' 为追寻爱情，苏州女孩程子欣（高圆圆饰）随男友来至香港，在一家金融公司供职。谁知男友移情别恋，令子欣备受打击。偶然机缘，她结识了正处于瓶颈期的建筑师方启宏（吴彦祖饰），二人互相勉励，子欣丢掉了关于前男友的一切，启宏也决定重新出发，并相约一周后给子欣看最新的设计图。谁知约会当晚，子欣却失约了。原来在子欣的办公室对面，另一家公司的老板张申然（古天乐饰）长久以来一直注视着她。在她失落期间，两人通过彩色贴纸交流，子欣也渐渐喜欢上了这个大男孩。子欣忘记了和启宏的约定，与申然约在某咖啡厅见面，而申然却睡在了另一个女人的床上。\r\n　　阴差阳错，让三个人的缘分暂时中断。直到三年后的一天，未了的情缘继续上演…… © 豆瓣', `language` = '汉语普通话 / 粤语', `updated_at` = '2011-04-19 05:08:45' WHERE `id` = 6[0m
+[paperclip] Saving attachments.
+  [4;35;1mSQL (62.0ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/photos/6
+Completed in 12562ms (DB: 2077) | 302 Found [http://localhost/photos/6]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PhotosController#show (for 127.0.0.1 at 2011-04-19 13:08:50) [GET]
+  Parameters: {"action"=>"show", "id"=>"6", "controller"=>"photos"}
+  [4;36;1mPhoto Columns (94.0ms)[0m   [0;1mSHOW FIELDS FROM `photos`[0m
+  [4;35;1mPhoto Load (15.0ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.`id` = 6) [0m
+Rendering template within layouts/application
+Rendering photos/show
+Rendered users/_user_bar (218.0ms)
+Completed in 8890ms (View: 6109, DB: 109) | 200 OK [http://localhost/photos/6]
+  [4;36;1mSQL (157.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (31.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PhotosController#show (for 127.0.0.1 at 2011-04-19 13:12:21) [GET]
+  Parameters: {"action"=>"show", "id"=>"6", "controller"=>"photos"}
+  [4;36;1mPhoto Columns (828.0ms)[0m   [0;1mSHOW FIELDS FROM `photos`[0m
+  [4;35;1mPhoto Load (79.0ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.`id` = 6) [0m
+Rendering template within layouts/application
+Rendering photos/show
+Rendered users/_user_bar (297.0ms)
+Completed in 2594ms (View: 782, DB: 1095) | 200 OK [http://localhost/photos/6]
+  [4;36;1mSQL (406.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (47.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PhotosController#show (for 127.0.0.1 at 2011-04-19 13:13:12) [GET]
+  Parameters: {"action"=>"show", "id"=>"6", "controller"=>"photos"}
+  [4;36;1mPhoto Columns (110.0ms)[0m   [0;1mSHOW FIELDS FROM `photos`[0m
+  [4;35;1mPhoto Load (31.0ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.`id` = 6) [0m
+Rendering template within layouts/application
+Rendering photos/show
+Rendered users/_user_bar (281.0ms)
+Completed in 1203ms (View: 953, DB: 594) | 200 OK [http://localhost/photos/6]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PhotosController#show (for 127.0.0.1 at 2011-04-19 13:13:33) [GET]
+  Parameters: {"action"=>"show", "id"=>"6", "controller"=>"photos"}
+  [4;36;1mPhoto Columns (47.0ms)[0m   [0;1mSHOW FIELDS FROM `photos`[0m
+  [4;35;1mPhoto Load (0.0ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.`id` = 6) [0m
+Rendering template within layouts/application
+Rendering photos/show
+Rendered users/_user_bar (1891.0ms)
+Completed in 2156ms (View: 2000, DB: 47) | 200 OK [http://localhost/photos/6]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PhotosController#show (for 127.0.0.1 at 2011-04-19 13:13:46) [GET]
+  Parameters: {"action"=>"show", "id"=>"6", "controller"=>"photos"}
+  [4;36;1mPhoto Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `photos`[0m
+  [4;35;1mPhoto Load (0.0ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.`id` = 6) [0m
+Rendering template within layouts/application
+Rendering photos/show
+Rendered users/_user_bar (0.0ms)
+Completed in 93ms (View: 31, DB: 0) | 200 OK [http://localhost/photos/6]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PhotosController#show (for 127.0.0.1 at 2011-04-19 13:14:48) [GET]
+  Parameters: {"action"=>"show", "id"=>"6", "controller"=>"photos"}
+  [4;36;1mPhoto Columns (32.0ms)[0m   [0;1mSHOW FIELDS FROM `photos`[0m
+  [4;35;1mPhoto Load (0.0ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.`id` = 6) [0m
+Rendering template within layouts/application
+Rendering photos/show
+Rendered users/_user_bar (0.0ms)
+Completed in 687ms (View: 218, DB: 32) | 200 OK [http://localhost/photos/6]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PhotosController#show (for 127.0.0.1 at 2011-04-19 13:15:29) [GET]
+  Parameters: {"action"=>"show", "id"=>"6", "controller"=>"photos"}
+  [4;36;1mPhoto Columns (94.0ms)[0m   [0;1mSHOW FIELDS FROM `photos`[0m
+  [4;35;1mPhoto Load (0.0ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.`id` = 6) [0m
+Rendering template within layouts/application
+Rendering photos/show
+Rendered users/_user_bar (0.0ms)
+Completed in 1016ms (View: 375, DB: 94) | 200 OK [http://localhost/photos/6]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PhotosController#show (for 127.0.0.1 at 2011-04-19 13:16:21) [GET]
+  Parameters: {"action"=>"show", "id"=>"6", "controller"=>"photos"}
+  [4;36;1mPhoto Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `photos`[0m
+  [4;35;1mPhoto Load (0.0ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.`id` = 6) [0m
+Rendering template within layouts/application
+Rendering photos/show
+Rendered users/_user_bar (0.0ms)
+Completed in 125ms (View: 32, DB: 16) | 200 OK [http://localhost/photos/6]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PhotosController#show (for 127.0.0.1 at 2011-04-19 13:16:35) [GET]
+  Parameters: {"action"=>"show", "id"=>"6", "controller"=>"photos"}
+  [4;36;1mPhoto Columns (31.0ms)[0m   [0;1mSHOW FIELDS FROM `photos`[0m
+  [4;35;1mPhoto Load (0.0ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.`id` = 6) [0m
+Rendering template within layouts/application
+Rendering photos/show
+Rendered users/_user_bar (15.0ms)
+Completed in 468ms (View: 312, DB: 31) | 200 OK [http://localhost/photos/6]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PhotosController#show (for 127.0.0.1 at 2011-04-19 13:16:56) [GET]
+  Parameters: {"action"=>"show", "id"=>"6", "controller"=>"photos"}
+  [4;36;1mPhoto Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `photos`[0m
+  [4;35;1mPhoto Load (0.0ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.`id` = 6) [0m
+Rendering template within layouts/application
+Rendering photos/show
+Rendered users/_user_bar (0.0ms)
+Completed in 187ms (View: 62, DB: 0) | 200 OK [http://localhost/photos/6]
+  [4;36;1mSQL (172.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PhotosController#show (for 127.0.0.1 at 2011-04-19 13:21:30) [GET]
+  Parameters: {"action"=>"show", "id"=>"6", "controller"=>"photos"}
+  [4;36;1mPhoto Columns (1015.0ms)[0m   [0;1mSHOW FIELDS FROM `photos`[0m
+  [4;35;1mPhoto Load (250.0ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.`id` = 6) [0m
+Rendering template within layouts/application
+Rendering photos/show
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.each) on line #66 of app/views/photos/show.html.erb:
+63: <%= link_to "<img src='/images/icon_back.png' border='0' alt='返回'/>", photos_path,:class => "button"   %>
+64: <%#= render :partial => 'jz' %>
+65: <h2>剧照</h2>
+66: <% @photos.each do |photo| %>
+67:   <tr class="<%= cycle('list-line-odd', 'list-line-even') %>">
+68:     <td><%= link_to ([image_tag photo.image.url(:thumb) ,:alt =>"被GFW和谐了！"],photo)%></td>
+69:   </tr>
+
+    app/views/photos/show.html.erb:66
+    app/controllers/photos_controller.rb:22:in `show'
+
+Rendered rescues/_trace (188.0ms)
+Rendered rescues/_request_and_response (141.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (15.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PhotosController#show (for 127.0.0.1 at 2011-04-19 13:24:10) [GET]
+  Parameters: {"action"=>"show", "id"=>"6", "controller"=>"photos"}
+  [4;36;1mPhoto Columns (15.0ms)[0m   [0;1mSHOW FIELDS FROM `photos`[0m
+  [4;35;1mPhoto Load (0.0ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.`id` = 6) [0m
+Rendering template within layouts/application
+Rendering photos/show
+Rendered users/_user_bar (78.0ms)
+Completed in 266ms (View: 157, DB: 30) | 200 OK [http://localhost/photos/6]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PhotosController#show (for 127.0.0.1 at 2011-04-19 13:24:32) [GET]
+  Parameters: {"action"=>"show", "id"=>"6", "controller"=>"photos"}
+  [4;36;1mPhoto Columns (62.0ms)[0m   [0;1mSHOW FIELDS FROM `photos`[0m
+  [4;35;1mPhoto Load (0.0ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.`id` = 6) [0m
+Rendering template within layouts/application
+Rendering photos/show
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.each) on line #2 of app/views/photos/_jz.rhtml:
+1: <h2>剧照</h2>
+2: <% @photos.each do |photo| %>
+3:   <tr class="<%= cycle('list-line-odd', 'list-line-even') %>">
+4:     <td><%= link_to ([image_tag photo.image.url(:thumb) ,:alt =>"被GFW和谐了！"],photo)%></td>
+5:   </tr>
+
+    app/views/photos/_jz.rhtml:2:in `_run_rhtml_app47views47photos47_jz46rhtml_locals_jz_object'
+    app/views/photos/show.html.erb:64
+    app/controllers/photos_controller.rb:22:in `show'
+
+Rendered rescues/_trace (234.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PhotosController#show (for 127.0.0.1 at 2011-04-19 13:26:56) [GET]
+  Parameters: {"action"=>"show", "id"=>"6", "controller"=>"photos"}
+  [4;36;1mPhoto Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `photos`[0m
+  [4;35;1mPhoto Load (0.0ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.`id` = 6) [0m
+  [4;36;1mPhoto Load (62.0ms)[0m   [0;1mSELECT * FROM `photos` ORDER BY created_at DESC LIMIT 0, 5[0m
+  [4;35;1mUser Columns (156.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (78.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;35;1mSQL (438.0ms)[0m   [0mSELECT count(*) AS count_all FROM `photos` [0m
+Rendering template within layouts/application
+Rendering photos/show
+Rendered photos/_jz (15.0ms)
+Rendered users/_user_bar (0.0ms)
+Completed in 937ms (View: 31, DB: 734) | 200 OK [http://localhost/photos/6]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PhotosController#show (for 127.0.0.1 at 2011-04-19 13:28:45) [GET]
+  Parameters: {"action"=>"show", "id"=>"6", "controller"=>"photos"}
+  [4;36;1mPhoto Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `photos`[0m
+  [4;35;1mPhoto Load (0.0ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.`id` = 6) [0m
+  [4;36;1mPhoto Load (0.0ms)[0m   [0;1mSELECT * FROM `photos` ORDER BY created_at DESC LIMIT 0, 5[0m
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `photos` [0m
+Rendering template within layouts/application
+Rendering photos/show
+
+ActionView::TemplateError (undefined local variable or method `photo' for #<ActionView::Base:0x49b7d24>) on line #17 of app/views/photos/_jz.rhtml:
+14: <div class="digg_pagination">
+15:   <%= will_paginate @photos %>
+16: </div>
+17: <td><%= link_to "<img src='/images/icon_edit.gif' border='0' alt='编辑'/>", edit_photo_path(photo) %></td>
+18:     <td><%= link_to "<img src='/images/icon_delete.png' border='0' alt='删除'>", photo, :confirm => 'Are you sure?', :method => :delete %></td>
+
+    app/views/photos/_jz.rhtml:17:in `_run_rhtml_app47views47photos47_jz46rhtml_locals_jz_object'
+    app/views/photos/show.html.erb:64
+    app/controllers/photos_controller.rb:26:in `show'
+
+Rendered rescues/_trace (156.0ms)
+Rendered rescues/_request_and_response (31.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (16.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PhotosController#show (for 127.0.0.1 at 2011-04-19 13:29:08) [GET]
+  Parameters: {"action"=>"show", "id"=>"6", "controller"=>"photos"}
+  [4;36;1mPhoto Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `photos`[0m
+  [4;35;1mPhoto Load (0.0ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.`id` = 6) [0m
+  [4;36;1mPhoto Load (16.0ms)[0m   [0;1mSELECT * FROM `photos` ORDER BY created_at DESC LIMIT 0, 5[0m
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `photos` [0m
+Rendering template within layouts/application
+Rendering photos/show
+Rendered photos/_jz (15.0ms)
+Rendered users/_user_bar (0.0ms)
+Completed in 281ms (View: 47, DB: 32) | 200 OK [http://localhost/photos/6]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PhotosController#show (for 127.0.0.1 at 2011-04-19 13:29:23) [GET]
+  Parameters: {"action"=>"show", "id"=>"6", "controller"=>"photos"}
+  [4;36;1mPhoto Columns (15.0ms)[0m   [0;1mSHOW FIELDS FROM `photos`[0m
+  [4;35;1mPhoto Load (0.0ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.`id` = 6) [0m
+  [4;36;1mPhoto Load (0.0ms)[0m   [0;1mSELECT * FROM `photos` ORDER BY created_at DESC LIMIT 0, 5[0m
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `photos` [0m
+Rendering template within layouts/application
+Rendering photos/show
+Rendered photos/_jz (31.0ms)
+Rendered users/_user_bar (0.0ms)
+Completed in 141ms (View: 47, DB: 15) | 200 OK [http://localhost/photos/6]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PhotosController#show (for 127.0.0.1 at 2011-04-19 13:29:45) [GET]
+  Parameters: {"action"=>"show", "id"=>"6", "controller"=>"photos", "page"=>"2"}
+  [4;36;1mPhoto Columns (31.0ms)[0m   [0;1mSHOW FIELDS FROM `photos`[0m
+  [4;35;1mPhoto Load (0.0ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.`id` = 6) [0m
+  [4;36;1mPhoto Load (0.0ms)[0m   [0;1mSELECT * FROM `photos` ORDER BY created_at DESC LIMIT 5, 5[0m
+  [4;35;1mUser Columns (16.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering photos/show
+Rendered photos/_jz (16.0ms)
+Rendered users/_user_bar (0.0ms)
+Completed in 282ms (View: 16, DB: 47) | 200 OK [http://localhost/photos/6?page=2]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-04-19 13:29:46) [GET]
+  Parameters: {"1301678055"=>nil}
+
+ActionController::RoutingError (No route matches "/system/images/2/thumb/55.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PhotosController#show (for 127.0.0.1 at 2011-04-19 13:29:50) [GET]
+  Parameters: {"action"=>"show", "id"=>"6", "controller"=>"photos", "page"=>"1"}
+  [4;35;1mPhoto Columns (15.0ms)[0m   [0mSHOW FIELDS FROM `photos`[0m
+  [4;36;1mPhoto Load (16.0ms)[0m   [0;1mSELECT * FROM `photos` WHERE (`photos`.`id` = 6) [0m
+  [4;35;1mPhoto Load (0.0ms)[0m   [0mSELECT * FROM `photos` ORDER BY created_at DESC LIMIT 0, 5[0m
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;36;1mSQL (16.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `photos` [0m
+Rendering template within layouts/application
+Rendering photos/show
+Rendered photos/_jz (16.0ms)
+Rendered users/_user_bar (0.0ms)
+Completed in 140ms (View: 31, DB: 47) | 200 OK [http://localhost/photos/6?page=1]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (16.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PhotosController#show (for 127.0.0.1 at 2011-04-19 13:31:11) [GET]
+  Parameters: {"action"=>"show", "id"=>"6", "controller"=>"photos", "page"=>"1"}
+  [4;35;1mPhoto Columns (1343.0ms)[0m   [0mSHOW FIELDS FROM `photos`[0m
+  [4;36;1mPhoto Load (610.0ms)[0m   [0;1mSELECT * FROM `photos` WHERE (`photos`.`id` = 6) [0m
+  [4;35;1mPhoto Load (78.0ms)[0m   [0mSELECT * FROM `photos` ORDER BY created_at DESC LIMIT 0, 5[0m
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (47.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;36;1mSQL (187.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `photos` [0m
+Rendering template within layouts/application
+Rendering photos/show
+Rendered photos/_jz (62.0ms)
+Rendered users/_user_bar (172.0ms)
+Completed in 3079ms (View: 563, DB: 2281) | 200 OK [http://localhost/photos/6?page=1]
+  [4;35;1mSQL (218.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (94.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PhotosController#show (for 127.0.0.1 at 2011-04-19 13:32:34) [GET]
+  Parameters: {"action"=>"show", "id"=>"6", "controller"=>"photos", "page"=>"1"}
+  [4;35;1mPhoto Columns (547.0ms)[0m   [0mSHOW FIELDS FROM `photos`[0m
+  [4;36;1mPhoto Load (672.0ms)[0m   [0;1mSELECT * FROM `photos` WHERE (`photos`.`id` = 6) [0m
+  [4;35;1mPhoto Load (0.0ms)[0m   [0mSELECT * FROM `photos` ORDER BY created_at DESC LIMIT 0, 5[0m
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `photos` [0m
+Rendering template within layouts/application
+Rendering photos/show
+Rendered photos/_jz (203.0ms)
+Rendered users/_user_bar (16.0ms)
+Completed in 2500ms (View: 500, DB: 1531) | 200 OK [http://localhost/photos/6?page=1]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PhotosController#new (for 127.0.0.1 at 2011-04-19 13:32:42) [GET]
+  Parameters: {"action"=>"new", "controller"=>"photos"}
+  [4;35;1mPhoto Columns (78.0ms)[0m   [0mSHOW FIELDS FROM `photos`[0m
+Rendering template within layouts/application
+Rendering photos/new
+Rendered photos/_form (391.0ms)
+Rendered users/_user_bar (0.0ms)
+Completed in 672ms (View: 547, DB: 78) | 200 OK [http://localhost/photos/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PhotosController#show (for 127.0.0.1 at 2011-04-19 13:33:30) [GET]
+  Parameters: {"action"=>"show", "id"=>"6", "controller"=>"photos", "page"=>"1"}
+  [4;36;1mPhoto Columns (15.0ms)[0m   [0;1mSHOW FIELDS FROM `photos`[0m
+  [4;35;1mPhoto Load (0.0ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.`id` = 6) [0m
+  [4;36;1mPhoto Load (0.0ms)[0m   [0;1mSELECT * FROM `photos` ORDER BY created_at DESC LIMIT 0, 5[0m
+  [4;35;1mUser Columns (31.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `photos` [0m
+Rendering template within layouts/application
+Rendering photos/show
+Rendered photos/_jz (16.0ms)
+Rendered users/_user_bar (0.0ms)
+Completed in 219ms (View: 47, DB: 46) | 200 OK [http://localhost/photos/6?page=1]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PhotosController#show (for 127.0.0.1 at 2011-04-19 13:34:01) [GET]
+  Parameters: {"action"=>"show", "id"=>"6", "controller"=>"photos", "page"=>"1"}
+  [4;36;1mPhoto Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `photos`[0m
+  [4;35;1mPhoto Load (0.0ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.`id` = 6) [0m
+  [4;36;1mPhoto Load (0.0ms)[0m   [0;1mSELECT * FROM `photos` ORDER BY created_at DESC LIMIT 0, 15[0m
+  [4;35;1mUser Columns (16.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering photos/show
+Rendered photos/_jz (157.0ms)
+Rendered users/_user_bar (0.0ms)
+Completed in 250ms (View: 172, DB: 16) | 200 OK [http://localhost/photos/6?page=1]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-04-19 13:34:02) [GET]
+  Parameters: {"1301678055"=>nil}
+
+ActionController::RoutingError (No route matches "/system/images/2/thumb/55.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PhotosController#new (for 127.0.0.1 at 2011-04-19 13:34:31) [GET]
+  Parameters: {"action"=>"new", "controller"=>"photos"}
+  [4;35;1mPhoto Columns (47.0ms)[0m   [0mSHOW FIELDS FROM `photos`[0m
+Rendering template within layouts/application
+Rendering photos/new
+Rendered photos/_form (141.0ms)
+Rendered users/_user_bar (0.0ms)
+Completed in 234ms (View: 141, DB: 47) | 200 OK [http://localhost/photos/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PhotosController#create (for 127.0.0.1 at 2011-04-19 13:34:48) [POST]
+  Parameters: {"photo"=>{"image_url"=>"", "screenwrite"=>"", "language"=>"", "title"=>"", "director_id"=>"", "country_id"=>"", "starring"=>"", "length"=>"", "published_at(1i)"=>"2011", "description"=>"", "published_at(2i)"=>"4", "is_avatar"=>"0", "published_at(3i)"=>"19", "published_at(4i)"=>"05", "image"=>#<File:G:/DOCUME~1/R/LOCALS~1/Temp/RackMultipart.1820.1>, "published_at(5i)"=>"34"}, "action"=>"create", "authenticity_token"=>"RaOuFBAwHFvnZfVHJ0sIcVRCaD2cBokDraMDGUqcAdI=", "controller"=>"photos"}
+  [4;36;1mPhoto Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `photos`[0m
+[paperclip] G:/PROGRA~1/ImageMagick-6.5.6-Q8/identify -format %wx%h "G:/DOCUME~1/R/LOCALS~1/Temp/stream110419-1820-iny3ad-0.jpg[0]" 2>NUL
+[paperclip] G:/PROGRA~1/ImageMagick-6.5.6-Q8/convert "G:/DOCUME~1/R/LOCALS~1/Temp/stream110419-1820-iny3ad-0.jpg[0]" -resize "200" "G:/DOCUME~1/R/LOCALS~1/Temp/stream110419-1820-iny3ad-0110419-1820-v6hljl-0" 2>NUL
+[paperclip] G:/PROGRA~1/ImageMagick-6.5.6-Q8/identify -format %wx%h "G:/DOCUME~1/R/LOCALS~1/Temp/stream110419-1820-iny3ad-0.jpg[0]" 2>NUL
+[paperclip] G:/PROGRA~1/ImageMagick-6.5.6-Q8/convert "G:/DOCUME~1/R/LOCALS~1/Temp/stream110419-1820-iny3ad-0.jpg[0]" -resize "100" "G:/DOCUME~1/R/LOCALS~1/Temp/stream110419-1820-iny3ad-0110419-1820-6dp94n-0" 2>NUL
+[paperclip] G:/PROGRA~1/ImageMagick-6.5.6-Q8/identify -format %wx%h "G:/DOCUME~1/R/LOCALS~1/Temp/stream110419-1820-iny3ad-0.jpg[0]" 2>NUL
+[paperclip] G:/PROGRA~1/ImageMagick-6.5.6-Q8/convert "G:/DOCUME~1/R/LOCALS~1/Temp/stream110419-1820-iny3ad-0.jpg[0]" -resize "150" "G:/DOCUME~1/R/LOCALS~1/Temp/stream110419-1820-iny3ad-0110419-1820-10ffehm-0" 2>NUL
+  [4;35;1mSQL (16.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mPhoto Create (312.0ms)[0m   [0;1mINSERT INTO `photos` (`image_file_size`, `updated_at`, `screenwrite`, `title`, `language`, `director_id`, `image_content_type`, `image_remote_url`, `country_id`, `description`, `length`, `starring`, `is_avatar`, `user_id`, `published_at`, `image_updated_at`, `created_at`, `image_file_name`) VALUES(40056, '2011-04-19 05:34:59', '', '', '', NULL, 'image/jpeg', NULL, NULL, '', NULL, '', 0, NULL, '2011-04-19 05:34:00', '2011-04-19 05:34:48', '2011-04-19 05:34:59', 'user.bar.jpg')[0m
+[paperclip] Saving attachments.
+[paperclip] saving d:/rbor/y_film/public/system/images/10/avatar/user.bar.jpg
+[paperclip] saving d:/rbor/y_film/public/system/images/10/original/user.bar.jpg
+[paperclip] saving d:/rbor/y_film/public/system/images/10/thumb/user.bar.jpg
+[paperclip] saving d:/rbor/y_film/public/system/images/10/gallery/user.bar.jpg
+  [4;35;1mSQL (78.0ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/photos/10
+Completed in 12250ms (DB: 406) | 302 Found [http://localhost/photos]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PhotosController#show (for 127.0.0.1 at 2011-04-19 13:35:00) [GET]
+  Parameters: {"action"=>"show", "id"=>"10", "controller"=>"photos"}
+  [4;36;1mPhoto Columns (32.0ms)[0m   [0;1mSHOW FIELDS FROM `photos`[0m
+  [4;35;1mPhoto Load (31.0ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.`id` = 10) [0m
+  [4;36;1mPhoto Load (16.0ms)[0m   [0;1mSELECT * FROM `photos` ORDER BY created_at DESC LIMIT 0, 15[0m
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (16.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering photos/show
+Rendered photos/_jz (78.0ms)
+Rendered users/_user_bar (0.0ms)
+Completed in 375ms (View: 141, DB: 95) | 200 OK [http://localhost/photos/10]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-04-19 13:35:02) [GET]
+  Parameters: {"1301678055"=>nil}
+
+ActionController::RoutingError (No route matches "/system/images/2/thumb/55.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PhotosController#show (for 127.0.0.1 at 2011-04-19 13:35:16) [GET]
+  Parameters: {"action"=>"show", "id"=>"2", "controller"=>"photos"}
+  [4;35;1mPhoto Columns (765.0ms)[0m   [0mSHOW FIELDS FROM `photos`[0m
+  [4;36;1mPhoto Load (0.0ms)[0m   [0;1mSELECT * FROM `photos` WHERE (`photos`.`id` = 2) [0m
+  [4;35;1mPhoto Load (0.0ms)[0m   [0mSELECT * FROM `photos` ORDER BY created_at DESC LIMIT 0, 15[0m
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering photos/show
+
+ActionView::TemplateError (undefined method `strftime' for nil:NilClass) on line #32 of app/views/photos/show.html.erb:
+29: 
+30:     <span>
+31:       <span class="p1">Published at:</span>
+32:       <%=h @photo.published_at.strftime("%Y-%m-%d") %>
+33:     </span>
+34:     <br />
+35: 
+
+    app/views/photos/show.html.erb:32
+    app/controllers/photos_controller.rb:26:in `show'
+
+Rendered rescues/_trace (109.0ms)
+Rendered rescues/_request_and_response (16.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PhotosController#show (for 127.0.0.1 at 2011-04-19 13:35:25) [GET]
+  Parameters: {"action"=>"show", "id"=>"2", "controller"=>"photos"}
+  [4;36;1mPhoto Columns (15.0ms)[0m   [0;1mSHOW FIELDS FROM `photos`[0m
+  [4;35;1mPhoto Load (0.0ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.`id` = 2) [0m
+  [4;36;1mPhoto Load (0.0ms)[0m   [0;1mSELECT * FROM `photos` ORDER BY created_at DESC LIMIT 0, 15[0m
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (16.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering photos/show
+
+ActionView::TemplateError (undefined method `strftime' for nil:NilClass) on line #32 of app/views/photos/show.html.erb:
+29: 
+30:     <span>
+31:       <span class="p1">Published at:</span>
+32:       <%=h @photo.published_at.strftime("%Y-%m-%d") %>
+33:     </span>
+34:     <br />
+35: 
+
+    app/views/photos/show.html.erb:32
+    app/controllers/photos_controller.rb:26:in `show'
+
+Rendered rescues/_trace (109.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PhotosController#new (for 127.0.0.1 at 2011-04-19 13:35:30) [GET]
+  Parameters: {"action"=>"new", "controller"=>"photos"}
+  [4;35;1mPhoto Columns (15.0ms)[0m   [0mSHOW FIELDS FROM `photos`[0m
+Rendering template within layouts/application
+Rendering photos/new
+Rendered photos/_form (110.0ms)
+Rendered users/_user_bar (0.0ms)
+Completed in 172ms (View: 125, DB: 15) | 200 OK [http://localhost/photos/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PhotosController#create (for 127.0.0.1 at 2011-04-19 13:35:59) [POST]
+  Parameters: {"photo"=>{"image_url"=>"", "screenwrite"=>"", "language"=>"", "title"=>"", "director_id"=>"", "country_id"=>"", "starring"=>"", "length"=>"", "published_at(1i)"=>"2011", "description"=>"", "published_at(2i)"=>"4", "is_avatar"=>"0", "published_at(3i)"=>"19", "published_at(4i)"=>"05", "image"=>#<File:G:/DOCUME~1/R/LOCALS~1/Temp/RackMultipart.1820.0>, "published_at(5i)"=>"35"}, "action"=>"create", "authenticity_token"=>"RaOuFBAwHFvnZfVHJ0sIcVRCaD2cBokDraMDGUqcAdI=", "controller"=>"photos"}
+  [4;36;1mPhoto Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `photos`[0m
+[paperclip] G:/PROGRA~1/ImageMagick-6.5.6-Q8/identify -format %wx%h "G:/DOCUME~1/R/LOCALS~1/Temp/stream110419-1820-1e01ot7-0.jpg[0]" 2>NUL
+[paperclip] G:/PROGRA~1/ImageMagick-6.5.6-Q8/convert "G:/DOCUME~1/R/LOCALS~1/Temp/stream110419-1820-1e01ot7-0.jpg[0]" -resize "200" "G:/DOCUME~1/R/LOCALS~1/Temp/stream110419-1820-1e01ot7-0110419-1820-17g747n-0" 2>NUL
+[paperclip] G:/PROGRA~1/ImageMagick-6.5.6-Q8/identify -format %wx%h "G:/DOCUME~1/R/LOCALS~1/Temp/stream110419-1820-1e01ot7-0.jpg[0]" 2>NUL
+[paperclip] G:/PROGRA~1/ImageMagick-6.5.6-Q8/convert "G:/DOCUME~1/R/LOCALS~1/Temp/stream110419-1820-1e01ot7-0.jpg[0]" -resize "100" "G:/DOCUME~1/R/LOCALS~1/Temp/stream110419-1820-1e01ot7-0110419-1820-1l9tsel-0" 2>NUL
+[paperclip] G:/PROGRA~1/ImageMagick-6.5.6-Q8/identify -format %wx%h "G:/DOCUME~1/R/LOCALS~1/Temp/stream110419-1820-1e01ot7-0.jpg[0]" 2>NUL
+[paperclip] G:/PROGRA~1/ImageMagick-6.5.6-Q8/convert "G:/DOCUME~1/R/LOCALS~1/Temp/stream110419-1820-1e01ot7-0.jpg[0]" -resize "150" "G:/DOCUME~1/R/LOCALS~1/Temp/stream110419-1820-1e01ot7-0110419-1820-1tzcvat-0" 2>NUL
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mPhoto Create (0.0ms)[0m   [0;1mINSERT INTO `photos` (`image_file_size`, `updated_at`, `screenwrite`, `title`, `language`, `director_id`, `image_content_type`, `image_remote_url`, `country_id`, `description`, `length`, `starring`, `is_avatar`, `user_id`, `published_at`, `image_updated_at`, `created_at`, `image_file_name`) VALUES(84906, '2011-04-19 05:36:01', '', '', '', NULL, 'image/jpeg', NULL, NULL, '', NULL, '', 0, NULL, '2011-04-19 05:35:00', '2011-04-19 05:35:59', '2011-04-19 05:36:01', '777z.jpg')[0m
+[paperclip] Saving attachments.
+[paperclip] saving d:/rbor/y_film/public/system/images/11/avatar/777z.jpg
+[paperclip] saving d:/rbor/y_film/public/system/images/11/original/777z.jpg
+[paperclip] saving d:/rbor/y_film/public/system/images/11/thumb/777z.jpg
+[paperclip] saving d:/rbor/y_film/public/system/images/11/gallery/777z.jpg
+  [4;35;1mSQL (0.0ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/photos/11
+Completed in 2359ms (DB: 16) | 302 Found [http://localhost/photos]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PhotosController#show (for 127.0.0.1 at 2011-04-19 13:36:01) [GET]
+  Parameters: {"action"=>"show", "id"=>"11", "controller"=>"photos"}
+  [4;36;1mPhoto Columns (15.0ms)[0m   [0;1mSHOW FIELDS FROM `photos`[0m
+  [4;35;1mPhoto Load (0.0ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.`id` = 11) [0m
+  [4;36;1mPhoto Load (0.0ms)[0m   [0;1mSELECT * FROM `photos` ORDER BY created_at DESC LIMIT 0, 15[0m
+  [4;35;1mUser Columns (15.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering photos/show
+Rendered photos/_jz (31.0ms)
+Rendered users/_user_bar (0.0ms)
+Completed in 125ms (View: 31, DB: 30) | 200 OK [http://localhost/photos/11]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (16.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-04-19 13:36:02) [GET]
+  Parameters: {"1301678055"=>nil}
+
+ActionController::RoutingError (No route matches "/system/images/2/thumb/55.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PhotosController#show (for 127.0.0.1 at 2011-04-19 13:36:49) [GET]
+  Parameters: {"action"=>"show", "id"=>"11", "controller"=>"photos"}
+  [4;35;1mPhoto Columns (16.0ms)[0m   [0mSHOW FIELDS FROM `photos`[0m
+  [4;36;1mPhoto Load (0.0ms)[0m   [0;1mSELECT * FROM `photos` WHERE (`photos`.`id` = 11) [0m
+  [4;35;1mPhoto Load (0.0ms)[0m   [0mSELECT * FROM `photos` ORDER BY created_at DESC LIMIT 0, 15[0m
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering photos/show
+Rendered photos/_jz (125.0ms)
+Rendered users/_user_bar (0.0ms)
+Completed in 484ms (View: 188, DB: 16) | 200 OK [http://localhost/photos/11]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-04-19 13:36:51) [GET]
+  Parameters: {"1301678055"=>nil}
+
+ActionController::RoutingError (No route matches "/system/images/2/thumb/55.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PhotosController#show (for 127.0.0.1 at 2011-04-19 13:36:56) [GET]
+  Parameters: {"action"=>"show", "id"=>"11", "controller"=>"photos"}
+  [4;36;1mPhoto Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `photos`[0m
+  [4;35;1mPhoto Load (0.0ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.`id` = 11) [0m
+  [4;36;1mPhoto Load (0.0ms)[0m   [0;1mSELECT * FROM `photos` ORDER BY created_at DESC LIMIT 0, 15[0m
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering photos/show
+Rendered photos/_jz (15.0ms)
+Rendered users/_user_bar (0.0ms)
+Completed in 125ms (View: 47, DB: 0) | 200 OK [http://localhost/photos/11]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-04-19 13:36:58) [GET]
+  Parameters: {"1301678055"=>nil}
+
+ActionController::RoutingError (No route matches "/system/images/2/thumb/55.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PhotosController#show (for 127.0.0.1 at 2011-04-19 13:37:09) [GET]
+  Parameters: {"action"=>"show", "id"=>"11", "controller"=>"photos"}
+  [4;35;1mPhoto Columns (31.0ms)[0m   [0mSHOW FIELDS FROM `photos`[0m
+  [4;36;1mPhoto Load (0.0ms)[0m   [0;1mSELECT * FROM `photos` WHERE (`photos`.`id` = 11) [0m
+  [4;35;1mPhoto Load (0.0ms)[0m   [0mSELECT * FROM `photos` ORDER BY created_at DESC LIMIT 0, 15[0m
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering photos/show
+Rendered photos/_jz (32.0ms)
+Rendered users/_user_bar (0.0ms)
+Completed in 187ms (View: 62, DB: 31) | 200 OK [http://localhost/photos/11]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-04-19 13:37:10) [GET]
+  Parameters: {"1301678055"=>nil}
+
+ActionController::RoutingError (No route matches "/system/images/2/thumb/55.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (343.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PhotosController#show (for 127.0.0.1 at 2011-04-19 13:41:29) [GET]
+  Parameters: {"action"=>"show", "id"=>"11", "controller"=>"photos"}
+  [4;36;1mPhoto Columns (1062.0ms)[0m   [0;1mSHOW FIELDS FROM `photos`[0m
+  [4;35;1mPhoto Load (359.0ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.`id` = 11) [0m
+  [4;36;1mPhoto Load (110.0ms)[0m   [0;1mSELECT * FROM `photos` ORDER BY created_at DESC LIMIT 0, 15[0m
+  [4;35;1mUser Columns (47.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (31.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering photos/show
+Rendered photos/_jz (328.0ms)
+Rendered users/_user_bar (437.0ms)
+Completed in 4219ms (View: 1422, DB: 1952) | 200 OK [http://localhost/photos/11]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PhotosController#show (for 127.0.0.1 at 2011-04-19 13:41:34) [GET]
+  Parameters: {"action"=>"show", "id"=>"11", "controller"=>"photos"}
+  [4;35;1mPhoto Columns (63.0ms)[0m   [0mSHOW FIELDS FROM `photos`[0m
+  [4;36;1mPhoto Load (0.0ms)[0m   [0;1mSELECT * FROM `photos` WHERE (`photos`.`id` = 11) [0m
+  [4;35;1mPhoto Load (0.0ms)[0m   [0mSELECT * FROM `photos` ORDER BY created_at DESC LIMIT 0, 15[0m
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering photos/show
+Rendered photos/_jz (16.0ms)
+Rendered users/_user_bar (0.0ms)
+Completed in 187ms (View: 46, DB: 63) | 200 OK [http://localhost/photos/11]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-04-19 13:41:44) [GET]
+  Parameters: {"1301678055"=>nil}
+
+ActionController::RoutingError (No route matches "/system/images/2/thumb/55.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)

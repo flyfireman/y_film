@@ -1,0 +1,12 @@
+<h2>剧照</h2>(<%= link_to  "添加", new_photo_path %>|)
+<br />
+<div style="padding: 1px;">
+  <% @photos.each do |photo| %>
+    <tr class="<%= cycle('list-line-odd', 'list-line-even') %>">
+      <td><%= link_to ([image_tag photo.image.url(:thumb) ,:alt =>"被GFW和谐了！"],photo)%></td>
+    </tr>
+  <% end %>
+</div>
+<div class="digg_pagination">
+  <%= will_paginate @photos %>
+</div>

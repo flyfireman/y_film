@@ -11,14 +11,13 @@
     <th></th>
   </tr>
 <% @photos.each do |photo| %>
-  <tr>
+  <tr class="<%= cycle('list-line-odd', 'list-line-even') %>">
     <td><%=h photo.user.login %></td>
     <td><%= photo.is_avatar ? "是":"否" %></td>
     <td><%= link_to ([image_tag photo.image.url(:thumb) ,:alt =>"被GFW和谐了！"],photo)%></td>
     <td><%= link_to "<img src='/images/icon_edit.gif' border='0' alt='编辑'/>", edit_photo_path(photo) %></td>
     <td><%= link_to "<img src='/images/icon_delete.png' border='0' alt='删除'>", photo, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
-  <p>
 <% end %>
 </table>
 <div class="digg_pagination">
