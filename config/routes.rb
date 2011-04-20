@@ -18,7 +18,7 @@ ActionController::Routing::Routes.draw do |map|
 
   map.resources :products
 
-  map.resources :photos
+ 
   
   map.root :controller => :users
   map.logout '/logout', :controller => 'sessions', :action => 'destroy'
@@ -26,6 +26,8 @@ ActionController::Routing::Routes.draw do |map|
   map.register '/register', :controller => 'users', :action => 'create'
   map.signup '/signup', :controller => 'users', :action => 'new'
   map.resources :users
+  
+  map.resources :photos
 
   map.resource :session
 

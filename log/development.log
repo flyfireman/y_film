@@ -13825,3 +13825,1613 @@ ActionController::RoutingError (No route matches "/system/images/2/thumb/55.jpg"
   
 
 Rendering rescues/layout (not_found)
+  [4;36;1mSQL (578.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (203.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2011-04-20 14:02:14) [GET]
+  Parameters: {"action"=>"index", "controller"=>"users"}
+Rendering template within layouts/application
+Rendering users/index
+Rendered users/_user_bar (1141.0ms)
+Completed in 1718ms (View: 1718, DB: 781) | 200 OK [http://localhost/]
+  [4;36;1mSQL (78.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PhotosController#index (for 127.0.0.1 at 2011-04-20 14:04:50) [GET]
+  Parameters: {"action"=>"index", "controller"=>"photos"}
+  [4;36;1mPhoto Load (532.0ms)[0m   [0;1mSELECT * FROM `photos` ORDER BY created_at DESC LIMIT 0, 5[0m
+  [4;35;1mPhoto Columns (328.0ms)[0m   [0mSHOW FIELDS FROM `photos`[0m
+  [4;36;1mUser Columns (94.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (46.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;36;1mSQL (32.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `photos` [0m
+Rendering template within layouts/application
+Rendering photos/index
+
+ActionView::TemplateError (undefined method `login' for nil:NilClass) on line #15 of app/views/photos/index.html.erb:
+12:   </tr>
+13: <% @photos.each do |photo| %>
+14:   <tr class="<%= cycle('list-line-odd', 'list-line-even') %>">
+15:     <td><%=h photo.user.login %></td>
+16:     <td><%= photo.is_avatar ? "是":"否" %></td>
+17:     <td><%= link_to ([image_tag photo.image.url(:thumb) ,:alt =>"被GFW和谐了！"],photo)%></td>
+18:     <td><%= link_to "<img src='/images/icon_edit.gif' border='0' alt='编辑'/>", edit_photo_path(photo) %></td>
+
+    app/views/photos/index.html.erb:15
+    app/views/photos/index.html.erb:13:in `each'
+    app/views/photos/index.html.erb:13
+    app/controllers/photos_controller.rb:11:in `index'
+
+Rendered rescues/_trace (172.0ms)
+Rendered rescues/_request_and_response (15.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PhotosController#index (for 127.0.0.1 at 2011-04-20 14:06:00) [GET]
+  Parameters: {"action"=>"index", "controller"=>"photos"}
+  [4;35;1mPhoto Load (0.0ms)[0m   [0mSELECT * FROM `photos` ORDER BY created_at DESC LIMIT 0, 5[0m
+  [4;36;1mPhoto Columns (47.0ms)[0m   [0;1mSHOW FIELDS FROM `photos`[0m
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `photos` [0m
+Rendering template within layouts/application
+Rendering photos/index
+
+ActionView::TemplateError (undefined method `login' for nil:NilClass) on line #15 of app/views/photos/index.html.erb:
+12:   </tr>
+13: <% @photos.each do |photo| %>
+14:   <tr class="<%= cycle('list-line-odd', 'list-line-even') %>">
+15:     <td><%=h photo.user.login %></td>
+16:     <td><%= photo.is_avatar ? "是":"否" %></td>
+17:     <td><%= link_to ([image_tag photo.image.url(:thumb) ,:alt =>"被GFW和谐了！"],photo)%></td>
+18:     <td><%= link_to "<img src='/images/icon_edit.gif' border='0' alt='编辑'/>", edit_photo_path(photo) %></td>
+
+    app/views/photos/index.html.erb:15
+    app/views/photos/index.html.erb:13:in `each'
+    app/views/photos/index.html.erb:13
+    app/controllers/photos_controller.rb:11:in `index'
+
+Rendered rescues/_trace (109.0ms)
+Rendered rescues/_request_and_response (16.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PhotosController#index (for 127.0.0.1 at 2011-04-20 14:07:36) [GET]
+  Parameters: {"action"=>"index", "controller"=>"photos"}
+  [4;36;1mPhoto Load (0.0ms)[0m   [0;1mSELECT * FROM `photos` ORDER BY created_at DESC LIMIT 0, 5[0m
+  [4;35;1mPhoto Columns (78.0ms)[0m   [0mSHOW FIELDS FROM `photos`[0m
+  [4;36;1mUser Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `photos` [0m
+Rendering template within layouts/application
+Rendering photos/index
+Rendered users/_user_bar (0.0ms)
+Completed in 4437ms (View: 2843, DB: 94) | 200 OK [http://localhost/photos]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PhotosController#index (for 127.0.0.1 at 2011-04-20 14:09:49) [GET]
+  Parameters: {"action"=>"index", "controller"=>"photos"}
+  [4;35;1mPhoto Load (31.0ms)[0m   [0mSELECT * FROM `photos` ORDER BY created_at DESC LIMIT 0, 5[0m
+  [4;36;1mPhoto Columns (1297.0ms)[0m   [0;1mSHOW FIELDS FROM `photos`[0m
+  [4;35;1mUser Columns (16.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `photos` [0m
+Rendering template within layouts/application
+Rendering photos/index
+Rendered users/_user_bar (0.0ms)
+Completed in 1593ms (View: 140, DB: 1344) | 200 OK [http://localhost/photos]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PhotosController#index (for 127.0.0.1 at 2011-04-20 14:10:57) [GET]
+  Parameters: {"action"=>"index", "controller"=>"photos"}
+  [4;36;1mPhoto Load (0.0ms)[0m   [0;1mSELECT * FROM `photos` ORDER BY created_at DESC LIMIT 0, 5[0m
+  [4;35;1mPhoto Columns (16.0ms)[0m   [0mSHOW FIELDS FROM `photos`[0m
+  [4;36;1mUser Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `photos` [0m
+Rendering template within layouts/application
+Rendering photos/index
+Rendered users/_user_bar (0.0ms)
+Completed in 312ms (View: 203, DB: 32) | 200 OK [http://localhost/photos]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PhotosController#show (for 127.0.0.1 at 2011-04-20 14:10:59) [GET]
+  Parameters: {"action"=>"show", "id"=>"11", "controller"=>"photos"}
+  [4;35;1mPhoto Columns (16.0ms)[0m   [0mSHOW FIELDS FROM `photos`[0m
+  [4;36;1mPhoto Load (0.0ms)[0m   [0;1mSELECT * FROM `photos` WHERE (`photos`.`id` = 11) [0m
+  [4;35;1mPhoto Load (0.0ms)[0m   [0mSELECT * FROM `photos` ORDER BY created_at DESC LIMIT 0, 15[0m
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering photos/show
+Rendered photos/_jz (62.0ms)
+Rendered users/_user_bar (0.0ms)
+Completed in 250ms (View: 157, DB: 16) | 200 OK [http://localhost/photos/11]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-04-20 14:11:00) [GET]
+  Parameters: {"1301678055"=>nil}
+
+ActionController::RoutingError (No route matches "/system/images/2/thumb/55.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PhotosController#show (for 127.0.0.1 at 2011-04-20 14:11:03) [GET]
+  Parameters: {"action"=>"show", "id"=>"8", "controller"=>"photos"}
+  [4;36;1mPhoto Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `photos`[0m
+  [4;35;1mPhoto Load (0.0ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.`id` = 8) [0m
+  [4;36;1mPhoto Load (0.0ms)[0m   [0;1mSELECT * FROM `photos` ORDER BY created_at DESC LIMIT 0, 15[0m
+  [4;35;1mUser Columns (15.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering photos/show
+Rendered photos/_jz (31.0ms)
+Rendered users/_user_bar (16.0ms)
+Completed in 156ms (View: 47, DB: 31) | 200 OK [http://localhost/photos/8]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-04-20 14:11:03) [GET]
+  Parameters: {"1301678055"=>nil}
+
+ActionController::RoutingError (No route matches "/system/images/2/thumb/55.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PhotosController#index (for 127.0.0.1 at 2011-04-20 14:11:06) [GET]
+  Parameters: {"action"=>"index", "controller"=>"photos"}
+  [4;35;1mPhoto Load (0.0ms)[0m   [0mSELECT * FROM `photos` ORDER BY created_at DESC LIMIT 0, 5[0m
+  [4;36;1mPhoto Columns (31.0ms)[0m   [0;1mSHOW FIELDS FROM `photos`[0m
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `photos` [0m
+Rendering template within layouts/application
+Rendering photos/index
+Rendered users/_user_bar (0.0ms)
+Completed in 156ms (View: 47, DB: 31) | 200 OK [http://localhost/photos]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PhotosController#index (for 127.0.0.1 at 2011-04-20 14:11:21) [GET]
+  Parameters: {"action"=>"index", "controller"=>"photos"}
+  [4;36;1mPhoto Load (0.0ms)[0m   [0;1mSELECT * FROM `photos` ORDER BY created_at DESC LIMIT 0, 5[0m
+  [4;35;1mPhoto Columns (16.0ms)[0m   [0mSHOW FIELDS FROM `photos`[0m
+  [4;36;1mUser Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `photos` [0m
+Rendering template within layouts/application
+Rendering photos/index
+Rendered users/_user_bar (0.0ms)
+Completed in 140ms (View: 46, DB: 32) | 200 OK [http://localhost/photos]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PhotosController#index (for 127.0.0.1 at 2011-04-20 14:12:40) [GET]
+  Parameters: {"action"=>"index", "controller"=>"photos"}
+  [4;35;1mPhoto Load (0.0ms)[0m   [0mSELECT * FROM `photos` ORDER BY created_at DESC LIMIT 0, 5[0m
+  [4;36;1mPhoto Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `photos`[0m
+  [4;35;1mUser Columns (16.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `photos` [0m
+Rendering template within layouts/application
+Rendering photos/index
+
+ActionView::TemplateError (undefined method `login' for nil:NilClass) on line #15 of app/views/photos/index.html.erb:
+12:   </tr>
+13: <% @photos.each do |photo| %>
+14:   <tr class="<%= cycle('list-line-odd', 'list-line-even') %>">
+15:     <td><%=h photo.user.login %></td>
+16:     <td><%= photo.is_avatar ? "是":"否" %></td>
+17:     <td><%= link_to [image_tag photo.image.url(:thumb) ,:alt =>"被GFW和谐了！"],photo%></td>
+18:     <td><%= link_to "<img src='/images/icon_edit.gif' border='0' alt='编辑'/>", edit_photo_path(photo) %></td>
+
+    app/views/photos/index.html.erb:15
+    app/views/photos/index.html.erb:13:in `each'
+    app/views/photos/index.html.erb:13
+    app/controllers/photos_controller.rb:11:in `index'
+
+Rendered rescues/_trace (109.0ms)
+Rendered rescues/_request_and_response (31.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PhotosController#index (for 127.0.0.1 at 2011-04-20 14:14:06) [GET]
+  Parameters: {"action"=>"index", "controller"=>"photos"}
+  [4;36;1mPhoto Load (0.0ms)[0m   [0;1mSELECT * FROM `photos` ORDER BY created_at DESC LIMIT 0, 5[0m
+  [4;35;1mPhoto Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `photos`[0m
+  [4;36;1mUser Columns (15.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `photos` [0m
+Rendering template within layouts/application
+Rendering photos/index
+
+ActionView::TemplateError (undefined method `login' for nil:NilClass) on line #16 of app/views/photos/index.html.erb:
+13: <% @photos.each do |photo| %>
+14:   <%#*<tr class="<%= cycle('list-line-odd', 'list-line-even') %>">%>
+15:   <tr>
+16:     <td><%=h photo.user.login %></td>
+17:     <td><%= photo.is_avatar ? "是":"否" %></td>
+18:     <td><%= link_to [image_tag photo.image.url(:thumb) ,:alt =>"被GFW和谐了！"],photo%></td>
+19:     <td><%= link_to "<img src='/images/icon_edit.gif' border='0' alt='编辑'/>", edit_photo_path(photo) %></td>
+
+    app/views/photos/index.html.erb:16
+    app/views/photos/index.html.erb:13:in `each'
+    app/views/photos/index.html.erb:13
+    app/controllers/photos_controller.rb:11:in `index'
+
+Rendered rescues/_trace (109.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2011-04-20 14:14:33) [GET]
+  Parameters: {"action"=>"new", "controller"=>"sessions"}
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered users/_user_bar (0.0ms)
+Completed in 109ms (View: 109, DB: 0) | 200 OK [http://localhost/login]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2011-04-20 14:14:39) [POST]
+  Parameters: {"commit"=>"Log in", "action"=>"create", "authenticity_token"=>"6utU9bhGlkjAssqm5hHH04DFLTVM68lCN4hj/nJJ96I=", "controller"=>"sessions", "login"=>"fireflyman", "password"=>"[FILTERED]"}
+  [4;35;1mUser Columns (15.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (62.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`login` = 'fireflyman') LIMIT 1[0m
+  [4;35;1mSQL (15.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed in 172ms (DB: 92) | 302 Found [http://localhost/session]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2011-04-20 14:14:40) [GET]
+  Parameters: {"action"=>"index", "controller"=>"users"}
+Rendering template within layouts/application
+Rendering users/index
+  [4;35;1mUser Columns (15.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendered users/_user_bar (78.0ms)
+Completed in 93ms (View: 63, DB: 15) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PhotosController#index (for 127.0.0.1 at 2011-04-20 14:14:42) [GET]
+  Parameters: {"action"=>"index", "controller"=>"photos"}
+  [4;35;1mPhoto Load (0.0ms)[0m   [0mSELECT * FROM `photos` ORDER BY created_at DESC LIMIT 0, 5[0m
+  [4;36;1mPhoto Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `photos`[0m
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `photos` [0m
+Rendering template within layouts/application
+Rendering photos/index
+
+ActionView::TemplateError (undefined method `login' for nil:NilClass) on line #16 of app/views/photos/index.html.erb:
+13: <% @photos.each do |photo| %>
+14:   <%#*<tr class="<%= cycle('list-line-odd', 'list-line-even') %>">%>
+15:   <tr>
+16:     <td><%=h photo.user.login %></td>
+17:     <td><%= photo.is_avatar ? "是":"否" %></td>
+18:     <td><%= link_to [image_tag photo.image.url(:thumb) ,:alt =>"被GFW和谐了！"],photo%></td>
+19:     <td><%= link_to "<img src='/images/icon_edit.gif' border='0' alt='编辑'/>", edit_photo_path(photo) %></td>
+
+    app/views/photos/index.html.erb:16
+    app/views/photos/index.html.erb:13:in `each'
+    app/views/photos/index.html.erb:13
+    app/controllers/photos_controller.rb:11:in `index'
+
+Rendered rescues/_trace (235.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PhotosController#index (for 127.0.0.1 at 2011-04-20 14:15:13) [GET]
+  Parameters: {"action"=>"index", "controller"=>"photos"}
+  [4;36;1mPhoto Load (0.0ms)[0m   [0;1mSELECT * FROM `photos` ORDER BY created_at DESC LIMIT 0, 5[0m
+  [4;35;1mPhoto Columns (15.0ms)[0m   [0mSHOW FIELDS FROM `photos`[0m
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `photos` [0m
+Rendering template within layouts/application
+Rendering photos/index
+
+ActionView::TemplateError (undefined method `login' for nil:NilClass) on line #16 of app/views/photos/index.html.erb:
+13: <% @photos.each do |photo| %>
+14:   <%#*<tr class="<%= cycle('list-line-odd', 'list-line-even') %>">%>
+15:   <tr>
+16:     <td><%=h photo.user.login %></td>
+17:     <td><%= photo.is_avatar ? "是":"否" %></td>
+18:     <td><%= link_to [image_tag photo.image.url(:thumb) ,:alt =>"被GFW和谐了！"],photo%></td>
+19:     <td><%= link_to "<img src='/images/icon_edit.gif' border='0' alt='编辑'/>", edit_photo_path(photo) %></td>
+
+    app/views/photos/index.html.erb:16
+    app/views/photos/index.html.erb:13:in `each'
+    app/views/photos/index.html.erb:13
+    app/controllers/photos_controller.rb:11:in `index'
+
+Rendered rescues/_trace (234.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PhotosController#index (for 127.0.0.1 at 2011-04-20 14:15:56) [GET]
+  Parameters: {"action"=>"index", "controller"=>"photos"}
+  [4;35;1mPhoto Load (0.0ms)[0m   [0mSELECT * FROM `photos` ORDER BY created_at DESC LIMIT 0, 5[0m
+  [4;36;1mPhoto Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `photos`[0m
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (16.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `photos` [0m
+Rendering template within layouts/application
+Rendering photos/index
+
+ActionView::TemplateError (undefined method `login' for nil:NilClass) on line #16 of app/views/photos/index.html.erb:
+13: <% @photos.each do |photo| %>
+14:   <%#*<tr class="<%= cycle('list-line-odd', 'list-line-even') %>">%>
+15:   <tr>
+16:     <td><%=h photo.user.login %></td>
+17:     <td><%= photo.is_avatar ? "是":"否" %></td>
+18:     <td><%= link_to [image_tag photo.image.url(:thumb) ,:alt =>"被GFW和谐了！"],photo%></td>
+19:     <td><%= link_to "<img src='/images/icon_edit.gif' border='0' alt='编辑'/>", edit_photo_path(photo) %></td>
+
+    app/views/photos/index.html.erb:16
+    app/views/photos/index.html.erb:13:in `each'
+    app/views/photos/index.html.erb:13
+    app/controllers/photos_controller.rb:11:in `index'
+
+Rendered rescues/_trace (250.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PhotosController#index (for 127.0.0.1 at 2011-04-20 14:15:57) [GET]
+  Parameters: {"action"=>"index", "controller"=>"photos"}
+  [4;36;1mPhoto Load (0.0ms)[0m   [0;1mSELECT * FROM `photos` ORDER BY created_at DESC LIMIT 0, 5[0m
+  [4;35;1mPhoto Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `photos`[0m
+  [4;36;1mUser Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `photos` [0m
+Rendering template within layouts/application
+Rendering photos/index
+
+ActionView::TemplateError (undefined method `login' for nil:NilClass) on line #16 of app/views/photos/index.html.erb:
+13: <% @photos.each do |photo| %>
+14:   <%#*<tr class="<%= cycle('list-line-odd', 'list-line-even') %>">%>
+15:   <tr>
+16:     <td><%=h photo.user.login %></td>
+17:     <td><%= photo.is_avatar ? "是":"否" %></td>
+18:     <td><%= link_to [image_tag photo.image.url(:thumb) ,:alt =>"被GFW和谐了！"],photo%></td>
+19:     <td><%= link_to "<img src='/images/icon_edit.gif' border='0' alt='编辑'/>", edit_photo_path(photo) %></td>
+
+    app/views/photos/index.html.erb:16
+    app/views/photos/index.html.erb:13:in `each'
+    app/views/photos/index.html.erb:13
+    app/controllers/photos_controller.rb:11:in `index'
+
+Rendered rescues/_trace (250.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PhotosController#index (for 127.0.0.1 at 2011-04-20 14:15:58) [GET]
+  Parameters: {"action"=>"index", "controller"=>"photos"}
+  [4;35;1mPhoto Load (0.0ms)[0m   [0mSELECT * FROM `photos` ORDER BY created_at DESC LIMIT 0, 5[0m
+  [4;36;1mPhoto Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `photos`[0m
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `photos` [0m
+Rendering template within layouts/application
+Rendering photos/index
+
+ActionView::TemplateError (undefined method `login' for nil:NilClass) on line #16 of app/views/photos/index.html.erb:
+13: <% @photos.each do |photo| %>
+14:   <%#*<tr class="<%= cycle('list-line-odd', 'list-line-even') %>">%>
+15:   <tr>
+16:     <td><%=h photo.user.login %></td>
+17:     <td><%= photo.is_avatar ? "是":"否" %></td>
+18:     <td><%= link_to [image_tag photo.image.url(:thumb) ,:alt =>"被GFW和谐了！"],photo%></td>
+19:     <td><%= link_to "<img src='/images/icon_edit.gif' border='0' alt='编辑'/>", edit_photo_path(photo) %></td>
+
+    app/views/photos/index.html.erb:16
+    app/views/photos/index.html.erb:13:in `each'
+    app/views/photos/index.html.erb:13
+    app/controllers/photos_controller.rb:11:in `index'
+
+Rendered rescues/_trace (157.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PhotosController#index (for 127.0.0.1 at 2011-04-20 14:15:59) [GET]
+  Parameters: {"action"=>"index", "controller"=>"photos"}
+  [4;36;1mPhoto Load (0.0ms)[0m   [0;1mSELECT * FROM `photos` ORDER BY created_at DESC LIMIT 0, 5[0m
+  [4;35;1mPhoto Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `photos`[0m
+  [4;36;1mUser Columns (15.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `photos` [0m
+Rendering template within layouts/application
+Rendering photos/index
+
+ActionView::TemplateError (undefined method `login' for nil:NilClass) on line #16 of app/views/photos/index.html.erb:
+13: <% @photos.each do |photo| %>
+14:   <%#*<tr class="<%= cycle('list-line-odd', 'list-line-even') %>">%>
+15:   <tr>
+16:     <td><%=h photo.user.login %></td>
+17:     <td><%= photo.is_avatar ? "是":"否" %></td>
+18:     <td><%= link_to [image_tag photo.image.url(:thumb) ,:alt =>"被GFW和谐了！"],photo%></td>
+19:     <td><%= link_to "<img src='/images/icon_edit.gif' border='0' alt='编辑'/>", edit_photo_path(photo) %></td>
+
+    app/views/photos/index.html.erb:16
+    app/views/photos/index.html.erb:13:in `each'
+    app/views/photos/index.html.erb:13
+    app/controllers/photos_controller.rb:11:in `index'
+
+Rendered rescues/_trace (109.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (313.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (46.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PhotosController#index (for 127.0.0.1 at 2011-04-20 14:17:40) [GET]
+  Parameters: {"action"=>"index", "controller"=>"photos"}
+  [4;35;1mPhoto Load (203.0ms)[0m   [0mSELECT * FROM `photos` ORDER BY created_at DESC LIMIT 0, 5[0m
+  [4;36;1mPhoto Columns (62.0ms)[0m   [0;1mSHOW FIELDS FROM `photos`[0m
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `photos` [0m
+Rendering template within layouts/application
+Rendering photos/index
+
+ActionView::TemplateError (undefined local variable or method `user' for #<ActionView::Base:0x4cbe1bc>) on line #16 of app/views/photos/index.html.erb:
+13: <% @photos.each do |photo| %>
+14:   <%#*<tr class="<%= cycle('list-line-odd', 'list-line-even') %>">%>
+15:   <tr>
+16:     <td><%=h user.photo.login %></td>
+17:     <td><%= photo.is_avatar ? "是":"否" %></td>
+18:     <td><%= link_to [image_tag photo.image.url(:thumb) ,:alt =>"被GFW和谐了！"],photo%></td>
+19:     <td><%= link_to "<img src='/images/icon_edit.gif' border='0' alt='编辑'/>", edit_photo_path(photo) %></td>
+
+    app/views/photos/index.html.erb:16
+    app/views/photos/index.html.erb:13:in `each'
+    app/views/photos/index.html.erb:13
+    app/controllers/photos_controller.rb:11:in `index'
+
+Rendered rescues/_trace (235.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PhotosController#index (for 127.0.0.1 at 2011-04-20 14:17:49) [GET]
+  Parameters: {"action"=>"index", "controller"=>"photos"}
+  [4;36;1mPhoto Load (0.0ms)[0m   [0;1mSELECT * FROM `photos` ORDER BY created_at DESC LIMIT 0, 5[0m
+  [4;35;1mPhoto Columns (15.0ms)[0m   [0mSHOW FIELDS FROM `photos`[0m
+  [4;36;1mUser Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `photos` [0m
+Rendering template within layouts/application
+Rendering photos/index
+
+ActionView::TemplateError (undefined method `photo' for nil:NilClass) on line #16 of app/views/photos/index.html.erb:
+13: <% @photos.each do |photo| %>
+14:   <%#*<tr class="<%= cycle('list-line-odd', 'list-line-even') %>">%>
+15:   <tr>
+16:     <td><%=h @user.photo.login %></td>
+17:     <td><%= photo.is_avatar ? "是":"否" %></td>
+18:     <td><%= link_to [image_tag photo.image.url(:thumb) ,:alt =>"被GFW和谐了！"],photo%></td>
+19:     <td><%= link_to "<img src='/images/icon_edit.gif' border='0' alt='编辑'/>", edit_photo_path(photo) %></td>
+
+    app/views/photos/index.html.erb:16
+    app/views/photos/index.html.erb:13:in `each'
+    app/views/photos/index.html.erb:13
+    app/controllers/photos_controller.rb:11:in `index'
+
+Rendered rescues/_trace (235.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PhotosController#index (for 127.0.0.1 at 2011-04-20 14:18:10) [GET]
+  Parameters: {"action"=>"index", "controller"=>"photos"}
+  [4;35;1mPhoto Load (0.0ms)[0m   [0mSELECT * FROM `photos` ORDER BY created_at DESC LIMIT 0, 5[0m
+  [4;36;1mPhoto Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `photos`[0m
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `photos` [0m
+Rendering template within layouts/application
+Rendering photos/index
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendered users/_user_bar (0.0ms)
+Completed in 281ms (View: 187, DB: 0) | 200 OK [http://localhost/photos]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PhotosController#index (for 127.0.0.1 at 2011-04-20 14:18:39) [GET]
+  Parameters: {"action"=>"index", "controller"=>"photos"}
+  [4;35;1mPhoto Load (0.0ms)[0m   [0mSELECT * FROM `photos` ORDER BY created_at DESC LIMIT 0, 5[0m
+  [4;36;1mPhoto Columns (15.0ms)[0m   [0;1mSHOW FIELDS FROM `photos`[0m
+  [4;35;1mUser Columns (31.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `photos` [0m
+Rendering template within layouts/application
+Rendering photos/index
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendered users/_user_bar (15.0ms)
+Completed in 406ms (View: 203, DB: 46) | 200 OK [http://localhost/photos]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PhotosController#index (for 127.0.0.1 at 2011-04-20 14:19:32) [GET]
+  Parameters: {"action"=>"index", "controller"=>"photos"}
+  [4;35;1mPhoto Load (0.0ms)[0m   [0mSELECT * FROM `photos` ORDER BY created_at DESC LIMIT 0, 5[0m
+  [4;36;1mPhoto Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `photos`[0m
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `photos` [0m
+Rendering template within layouts/application
+Rendering photos/index
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendered users/_user_bar (16.0ms)
+Completed in 157ms (View: 63, DB: 0) | 200 OK [http://localhost/photos]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PhotosController#show (for 127.0.0.1 at 2011-04-20 14:19:36) [GET]
+  Parameters: {"action"=>"show", "id"=>"10", "controller"=>"photos"}
+  [4;35;1mPhoto Columns (1750.0ms)[0m   [0mSHOW FIELDS FROM `photos`[0m
+  [4;36;1mPhoto Load (16.0ms)[0m   [0;1mSELECT * FROM `photos` WHERE (`photos`.`id` = 10) [0m
+  [4;35;1mPhoto Load (47.0ms)[0m   [0mSELECT * FROM `photos` ORDER BY created_at DESC LIMIT 0, 15[0m
+  [4;36;1mUser Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering photos/show
+Rendered photos/_jz (16.0ms)
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendered users/_user_bar (0.0ms)
+Completed in 1938ms (View: 47, DB: 1829) | 200 OK [http://localhost/photos/10]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-04-20 14:19:38) [GET]
+  Parameters: {"1301678055"=>nil}
+
+ActionController::RoutingError (No route matches "/system/images/2/thumb/55.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (109.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PhotosController#index (for 127.0.0.1 at 2011-04-20 14:24:10) [GET]
+  Parameters: {"action"=>"index", "controller"=>"photos"}
+  [4;35;1mPhoto Load (234.0ms)[0m   [0mSELECT * FROM `photos` ORDER BY created_at DESC LIMIT 0, 5[0m
+  [4;36;1mPhoto Columns (156.0ms)[0m   [0;1mSHOW FIELDS FROM `photos`[0m
+  [4;35;1mUser Columns (31.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (47.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;35;1mSQL (47.0ms)[0m   [0mSELECT count(*) AS count_all FROM `photos` [0m
+Rendering template within layouts/application
+Rendering photos/index
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendered users/_user_bar (15.0ms)
+Completed in 906ms (View: 140, DB: 624) | 200 OK [http://localhost/photos]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PhotosController#index (for 127.0.0.1 at 2011-04-20 14:24:29) [GET]
+  Parameters: {"action"=>"index", "controller"=>"photos"}
+  [4;35;1mPhoto Load (15.0ms)[0m   [0mSELECT * FROM `photos` ORDER BY created_at DESC LIMIT 0, 5[0m
+  [4;36;1mPhoto Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `photos`[0m
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `photos` [0m
+Rendering template within layouts/application
+Rendering photos/index
+
+ActionView::TemplateError (undefined method `login' for nil:NilClass) on line #15 of app/views/photos/index.html.erb:
+12:   </tr>
+13: <% @photos.each do |photo| %>
+14:   <tr class="<%= cycle('list-line-odd', 'list-line-even') %>">
+15:     <td><%=h photo.user.login %></td>
+16:     <td><%= photo.is_avatar ? "是":"否" %></td>
+17:     <td><%= link_to [image_tag photo.image.url(:thumb) ,:alt =>"被GFW和谐了！"],photo%></td>
+18:     <td><%= link_to "<img src='/images/icon_edit.gif' border='0' alt='编辑'/>", edit_photo_path(photo) %></td>
+
+    app/views/photos/index.html.erb:15
+    app/views/photos/index.html.erb:13:in `each'
+    app/views/photos/index.html.erb:13
+    app/controllers/photos_controller.rb:11:in `index'
+
+Rendered rescues/_trace (234.0ms)
+Rendered rescues/_request_and_response (109.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (718.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (141.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PhotosController#index (for 127.0.0.1 at 2011-04-20 14:29:46) [GET]
+  Parameters: {"action"=>"index", "controller"=>"photos"}
+  [4;36;1mPhoto Load (766.0ms)[0m   [0;1mSELECT * FROM `photos` ORDER BY created_at DESC LIMIT 0, 5[0m
+  [4;35;1mPhoto Columns (672.0ms)[0m   [0mSHOW FIELDS FROM `photos`[0m
+  [4;36;1mUser Columns (15.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (203.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;36;1mSQL (47.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `photos` [0m
+Rendering template within layouts/application
+Rendering photos/index
+---------------a------------------
+
+ActionView::TemplateError (undefined method `login' for nil:NilClass) on line #16 of app/views/photos/index.html.erb:
+13: <% @photos.each do |photo| %>
+14:   <tr class="<%= cycle('list-line-odd', 'list-line-even') %>">
+15:     <%= logger.info("---------------a------------------") %>
+16:     <td><%=h photo.user.login %></td>
+17:     <%= logger.info("---------------a------------------") %>
+18:     <td><%= photo.is_avatar ? "是":"否" %></td>
+19:     <td><%= link_to [image_tag photo.image.url(:thumb) ,:alt =>"被GFW和谐了！"],photo%></td>
+
+    app/views/photos/index.html.erb:16
+    app/views/photos/index.html.erb:13:in `each'
+    app/views/photos/index.html.erb:13
+    app/controllers/photos_controller.rb:11:in `index'
+
+Rendered rescues/_trace (19640.0ms)
+Rendered rescues/_request_and_response (47.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PhotosController#index (for 127.0.0.1 at 2011-04-20 14:30:21) [GET]
+  Parameters: {"action"=>"index", "controller"=>"photos"}
+  [4;35;1mPhoto Load (0.0ms)[0m   [0mSELECT * FROM `photos` ORDER BY created_at DESC LIMIT 0, 5[0m
+  [4;36;1mPhoto Columns (32.0ms)[0m   [0;1mSHOW FIELDS FROM `photos`[0m
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `photos` [0m
+Rendering template within layouts/application
+Rendering photos/index
+---------------a------------------
+
+ActionView::TemplateError (undefined method `login' for nil:NilClass) on line #16 of app/views/photos/index.html.erb:
+13: <% @photos.each do |photo| %>
+14:   <tr class="<%= cycle('list-line-odd', 'list-line-even') %>">
+15:     <%= logger.info("---------------a------------------") %>
+16:     <td><%=h photo.user.login %></td>
+17:     <%= logger.info("---------------a------------------") %>
+18:     <td><%= photo.is_avatar ? "是":"否" %></td>
+19:     <td><%= link_to [image_tag photo.image.url(:thumb) ,:alt =>"被GFW和谐了！"],photo%></td>
+
+    app/views/photos/index.html.erb:16
+    app/views/photos/index.html.erb:13:in `each'
+    app/views/photos/index.html.erb:13
+    app/controllers/photos_controller.rb:11:in `index'
+
+Rendered rescues/_trace (234.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PhotosController#index (for 127.0.0.1 at 2011-04-20 14:30:21) [GET]
+  Parameters: {"action"=>"index", "controller"=>"photos"}
+  [4;36;1mPhoto Load (0.0ms)[0m   [0;1mSELECT * FROM `photos` ORDER BY created_at DESC LIMIT 0, 5[0m
+  [4;35;1mPhoto Columns (32.0ms)[0m   [0mSHOW FIELDS FROM `photos`[0m
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `photos` [0m
+Rendering template within layouts/application
+Rendering photos/index
+---------------a------------------
+
+ActionView::TemplateError (undefined method `login' for nil:NilClass) on line #16 of app/views/photos/index.html.erb:
+13: <% @photos.each do |photo| %>
+14:   <tr class="<%= cycle('list-line-odd', 'list-line-even') %>">
+15:     <%= logger.info("---------------a------------------") %>
+16:     <td><%=h photo.user.login %></td>
+17:     <%= logger.info("---------------a------------------") %>
+18:     <td><%= photo.is_avatar ? "是":"否" %></td>
+19:     <td><%= link_to [image_tag photo.image.url(:thumb) ,:alt =>"被GFW和谐了！"],photo%></td>
+
+    app/views/photos/index.html.erb:16
+    app/views/photos/index.html.erb:13:in `each'
+    app/views/photos/index.html.erb:13
+    app/controllers/photos_controller.rb:11:in `index'
+
+Rendered rescues/_trace (234.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PhotosController#index (for 127.0.0.1 at 2011-04-20 14:30:22) [GET]
+  Parameters: {"action"=>"index", "controller"=>"photos"}
+  [4;35;1mPhoto Load (0.0ms)[0m   [0mSELECT * FROM `photos` ORDER BY created_at DESC LIMIT 0, 5[0m
+  [4;36;1mPhoto Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `photos`[0m
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `photos` [0m
+Rendering template within layouts/application
+Rendering photos/index
+---------------a------------------
+
+ActionView::TemplateError (undefined method `login' for nil:NilClass) on line #16 of app/views/photos/index.html.erb:
+13: <% @photos.each do |photo| %>
+14:   <tr class="<%= cycle('list-line-odd', 'list-line-even') %>">
+15:     <%= logger.info("---------------a------------------") %>
+16:     <td><%=h photo.user.login %></td>
+17:     <%= logger.info("---------------a------------------") %>
+18:     <td><%= photo.is_avatar ? "是":"否" %></td>
+19:     <td><%= link_to [image_tag photo.image.url(:thumb) ,:alt =>"被GFW和谐了！"],photo%></td>
+
+    app/views/photos/index.html.erb:16
+    app/views/photos/index.html.erb:13:in `each'
+    app/views/photos/index.html.erb:13
+    app/controllers/photos_controller.rb:11:in `index'
+
+Rendered rescues/_trace (234.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PhotosController#index (for 127.0.0.1 at 2011-04-20 14:31:14) [GET]
+  Parameters: {"action"=>"index", "controller"=>"photos"}
+  [4;36;1mPhoto Load (0.0ms)[0m   [0;1mSELECT * FROM `photos` ORDER BY created_at DESC LIMIT 0, 5[0m
+  [4;35;1mPhoto Columns (16.0ms)[0m   [0mSHOW FIELDS FROM `photos`[0m
+  [4;36;1mUser Columns (31.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `photos` [0m
+Rendering template within layouts/application
+Rendering photos/index
+---------------a------------------
+
+ActionView::TemplateError (undefined method `login' for nil:NilClass) on line #16 of app/views/photos/index.html.erb:
+13: <% @photos.each do |photo| %>
+14:   <tr class="<%= cycle('list-line-odd', 'list-line-even') %>">
+15:     <% logger.info("---------------a------------------") %>
+16:     <td><%=h photo.user.login %></td>
+17:     <% logger.info("---------------a------------------") %>
+18:     <td><%= photo.is_avatar ? "是":"否" %></td>
+19:     <td><%= link_to [image_tag photo.image.url(:thumb) ,:alt =>"被GFW和谐了！"],photo%></td>
+
+    app/views/photos/index.html.erb:16
+    app/views/photos/index.html.erb:13:in `each'
+    app/views/photos/index.html.erb:13
+    app/controllers/photos_controller.rb:11:in `index'
+
+Rendered rescues/_trace (375.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PhotosController#index (for 127.0.0.1 at 2011-04-20 14:31:18) [GET]
+  Parameters: {"action"=>"index", "controller"=>"photos"}
+  [4;35;1mPhoto Load (0.0ms)[0m   [0mSELECT * FROM `photos` ORDER BY created_at DESC LIMIT 0, 5[0m
+  [4;36;1mPhoto Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `photos`[0m
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `photos` [0m
+Rendering template within layouts/application
+Rendering photos/index
+---------------a------------------
+
+ActionView::TemplateError (undefined method `login' for nil:NilClass) on line #16 of app/views/photos/index.html.erb:
+13: <% @photos.each do |photo| %>
+14:   <tr class="<%= cycle('list-line-odd', 'list-line-even') %>">
+15:     <% logger.info("---------------a------------------") %>
+16:     <td><%=h photo.user.login %></td>
+17:     <% logger.info("---------------a------------------") %>
+18:     <td><%= photo.is_avatar ? "是":"否" %></td>
+19:     <td><%= link_to [image_tag photo.image.url(:thumb) ,:alt =>"被GFW和谐了！"],photo%></td>
+
+    app/views/photos/index.html.erb:16
+    app/views/photos/index.html.erb:13:in `each'
+    app/views/photos/index.html.erb:13
+    app/controllers/photos_controller.rb:11:in `index'
+
+Rendered rescues/_trace (234.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PhotosController#index (for 127.0.0.1 at 2011-04-20 14:31:26) [GET]
+  Parameters: {"action"=>"index", "controller"=>"photos"}
+  [4;36;1mPhoto Load (0.0ms)[0m   [0;1mSELECT * FROM `photos` ORDER BY created_at DESC LIMIT 0, 5[0m
+  [4;35;1mPhoto Columns (31.0ms)[0m   [0mSHOW FIELDS FROM `photos`[0m
+  [4;36;1mUser Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `photos` [0m
+Rendering template within layouts/application
+Rendering photos/index
+---------------a------------------
+
+ActionView::TemplateError (undefined method `login' for nil:NilClass) on line #16 of app/views/photos/index.html.erb:
+13: <% @photos.each do |photo| %>
+14:   <tr class="<%= cycle('list-line-odd', 'list-line-even') %>">
+15:     <% logger.info("---------------a------------------") %>
+16:     <td><%=h photo.user.login %></td>
+17:     <% logger.info("---------------a------------------") %>
+18:     <td><%= photo.is_avatar ? "是":"否" %></td>
+19:     <td><%= link_to [image_tag photo.image.url(:thumb) ,:alt =>"被GFW和谐了！"],photo%></td>
+
+    app/views/photos/index.html.erb:16
+    app/views/photos/index.html.erb:13:in `each'
+    app/views/photos/index.html.erb:13
+    app/controllers/photos_controller.rb:11:in `index'
+
+Rendered rescues/_trace (234.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PhotosController#index (for 127.0.0.1 at 2011-04-20 14:33:26) [GET]
+  Parameters: {"action"=>"index", "controller"=>"photos"}
+  [4;35;1mPhoto Load (0.0ms)[0m   [0mSELECT * FROM `photos` ORDER BY created_at DESC LIMIT 0, 5[0m
+  [4;36;1mPhoto Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `photos`[0m
+  [4;35;1mUser Columns (15.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `photos` [0m
+Rendering template within layouts/application
+Rendering photos/index
+---------------a------------------
+---------------a------------------
+---------------a------------------
+---------------a------------------
+---------------a------------------
+---------------a------------------
+---------------a------------------
+---------------a------------------
+---------------a------------------
+---------------a------------------
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendered users/_user_bar (250.0ms)
+Completed in 1125ms (View: 938, DB: 31) | 200 OK [http://localhost/photos]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PhotosController#destroy (for 127.0.0.1 at 2011-04-20 14:33:46) [DELETE]
+  Parameters: {"action"=>"destroy", "_method"=>"delete", "authenticity_token"=>"6utU9bhGlkjAssqm5hHH04DFLTVM68lCN4hj/nJJ96I=", "id"=>"11", "controller"=>"photos"}
+  [4;35;1mPhoto Columns (16.0ms)[0m   [0mSHOW FIELDS FROM `photos`[0m
+  [4;36;1mPhoto Load (0.0ms)[0m   [0;1mSELECT * FROM `photos` WHERE (`photos`.`id` = 11) [0m
+  [4;35;1mSQL (46.0ms)[0m   [0mBEGIN[0m
+[paperclip] Deleting attachments.
+[paperclip] deleting d:/rbor/y_film/public/system/images/11/original/777z.jpg
+[paperclip] deleting d:/rbor/y_film/public/system/images/11/thumb/777z.jpg
+[paperclip] deleting d:/rbor/y_film/public/system/images/11/gallery/777z.jpg
+[paperclip] deleting d:/rbor/y_film/public/system/images/11/avatar/777z.jpg
+  [4;36;1mPhoto Destroy (235.0ms)[0m   [0;1mDELETE FROM `photos` WHERE `id` = 11[0m
+  [4;35;1mSQL (31.0ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/photos
+Completed in 2406ms (DB: 328) | 302 Found [http://localhost/photos/11]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PhotosController#index (for 127.0.0.1 at 2011-04-20 14:33:49) [GET]
+  Parameters: {"action"=>"index", "controller"=>"photos"}
+  [4;36;1mPhoto Load (31.0ms)[0m   [0;1mSELECT * FROM `photos` ORDER BY created_at DESC LIMIT 0, 5[0m
+  [4;35;1mPhoto Columns (188.0ms)[0m   [0mSHOW FIELDS FROM `photos`[0m
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `photos` [0m
+Rendering template within layouts/application
+Rendering photos/index
+---------------a------------------
+---------------a------------------
+---------------a------------------
+---------------a------------------
+---------------a------------------
+---------------a------------------
+---------------a------------------
+---------------a------------------
+---------------a------------------
+---------------a------------------
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendered users/_user_bar (0.0ms)
+Completed in 469ms (View: 110, DB: 219) | 200 OK [http://localhost/photos]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PhotosController#destroy (for 127.0.0.1 at 2011-04-20 14:33:54) [DELETE]
+  Parameters: {"action"=>"destroy", "_method"=>"delete", "authenticity_token"=>"6utU9bhGlkjAssqm5hHH04DFLTVM68lCN4hj/nJJ96I=", "id"=>"10", "controller"=>"photos"}
+  [4;36;1mPhoto Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `photos`[0m
+  [4;35;1mPhoto Load (0.0ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.`id` = 10) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+[paperclip] Deleting attachments.
+[paperclip] deleting d:/rbor/y_film/public/system/images/10/original/user.bar.jpg
+[paperclip] deleting d:/rbor/y_film/public/system/images/10/thumb/user.bar.jpg
+[paperclip] deleting d:/rbor/y_film/public/system/images/10/gallery/user.bar.jpg
+[paperclip] deleting d:/rbor/y_film/public/system/images/10/avatar/user.bar.jpg
+  [4;35;1mPhoto Destroy (0.0ms)[0m   [0mDELETE FROM `photos` WHERE `id` = 10[0m
+  [4;36;1mSQL (15.0ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/photos
+Completed in 109ms (DB: 15) | 302 Found [http://localhost/photos/10]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PhotosController#index (for 127.0.0.1 at 2011-04-20 14:33:54) [GET]
+  Parameters: {"action"=>"index", "controller"=>"photos"}
+  [4;35;1mPhoto Load (0.0ms)[0m   [0mSELECT * FROM `photos` ORDER BY created_at DESC LIMIT 0, 5[0m
+  [4;36;1mPhoto Columns (15.0ms)[0m   [0;1mSHOW FIELDS FROM `photos`[0m
+  [4;35;1mUser Columns (16.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `photos` [0m
+Rendering template within layouts/application
+Rendering photos/index
+---------------a------------------
+---------------a------------------
+---------------a------------------
+---------------a------------------
+---------------a------------------
+---------------a------------------
+---------------a------------------
+---------------a------------------
+---------------a------------------
+---------------a------------------
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendered users/_user_bar (16.0ms)
+Completed in 313ms (View: 203, DB: 31) | 200 OK [http://localhost/photos]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PhotosController#index (for 127.0.0.1 at 2011-04-20 14:33:57) [GET]
+  Parameters: {"action"=>"index", "controller"=>"photos", "page"=>"2"}
+  [4;35;1mPhoto Load (31.0ms)[0m   [0mSELECT * FROM `photos` ORDER BY created_at DESC LIMIT 5, 5[0m
+  [4;36;1mPhoto Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `photos`[0m
+  [4;35;1mUser Columns (63.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering photos/index
+---------------a------------------
+---------------a------------------
+---------------a------------------
+---------------a------------------
+---------------a------------------
+---------------a------------------
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendered users/_user_bar (16.0ms)
+Completed in 281ms (View: 78, DB: 110) | 200 OK [http://localhost/photos?page=2]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-04-20 14:33:59) [GET]
+  Parameters: {"1301678055"=>nil}
+
+ActionController::RoutingError (No route matches "/system/images/2/thumb/55.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PhotosController#index (for 127.0.0.1 at 2011-04-20 14:34:08) [GET]
+  Parameters: {"action"=>"index", "controller"=>"photos", "page"=>"2"}
+  [4;36;1mPhoto Load (0.0ms)[0m   [0;1mSELECT * FROM `photos` ORDER BY created_at DESC LIMIT 5, 5[0m
+  [4;35;1mPhoto Columns (46.0ms)[0m   [0mSHOW FIELDS FROM `photos`[0m
+  [4;36;1mUser Columns (62.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering photos/index
+---------------a------------------
+---------------a------------------
+---------------a------------------
+---------------a------------------
+---------------a------------------
+---------------a------------------
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendered users/_user_bar (0.0ms)
+Completed in 688ms (View: 485, DB: 108) | 200 OK [http://localhost/photos?page=2]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-04-20 14:34:10) [GET]
+  Parameters: {"1301678055"=>nil}
+
+ActionController::RoutingError (No route matches "/system/images/2/thumb/55.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (1453.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (469.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PhotosController#index (for 127.0.0.1 at 2011-04-20 14:36:05) [GET]
+  Parameters: {"action"=>"index", "controller"=>"photos", "page"=>"2"}
+  [4;35;1mPhoto Load (1140.0ms)[0m   [0mSELECT * FROM `photos` ORDER BY created_at DESC LIMIT 5, 5[0m
+  [4;36;1mPhoto Columns (782.0ms)[0m   [0;1mSHOW FIELDS FROM `photos`[0m
+  [4;35;1mUser Columns (47.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (234.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering photos/index
+ERROR: compiling _run_erb_app47views47photos47index46html46erb RAISED compile error
+d:/rbor/y_film/app/views/photos/index.html.erb:35: syntax error, unexpected kENSURE, expecting kEND
+d:/rbor/y_film/app/views/photos/index.html.erb:37: syntax error, unexpected $end, expecting kEND
+Function body:           def _run_erb_app47views47photos47index46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<h1>\347\224\265\345\275\261\345\210\227\350\241\250</h1>\n"
+@output_buffer.concat "<div class=\"digg_pagination\">\n"
+@output_buffer.concat "  "; @output_buffer.concat(( will_paginate @photos ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "</div>\n"
+@output_buffer.concat "<table>\n"
+@output_buffer.concat "  <tr>\n"
+@output_buffer.concat "    <th>\346\211\200\346\234\211\344\272\272</th>\n"
+@output_buffer.concat "    <th>\346\230\257\345\220\246\344\275\234\344\270\272\345\244\264\345\203\217</th>\n"
+@output_buffer.concat "    <th>\351\242\204\350\247\210</th>\n"
+@output_buffer.concat "    <th></th>\n"
+@output_buffer.concat "    <th></th>\n"
+@output_buffer.concat "  </tr>\n"
+ @photos.each do |photo| ; @output_buffer.concat "\n"
+@output_buffer.concat "  <tr class=\""; @output_buffer.concat(( cycle('list-line-odd', 'list-line-even') ).to_s); @output_buffer.concat "\">\n"
+@output_buffer.concat "    ";  logger.info("---------------a------------------") ; @output_buffer.concat "\n"
+@output_buffer.concat "    ";  if logged_in? ; @output_buffer.concat "\n"
+@output_buffer.concat "    <td>"; @output_buffer.concat((h photo.user.login ).to_s); @output_buffer.concat "</td>\n"
+@output_buffer.concat "    ";  else ; @output_buffer.concat "\n"
+@output_buffer.concat "    <td>"; @output_buffer.concat(( "没有权限看你妹啊!" ).to_s); @output_buffer.concat "</td>\n"
+@output_buffer.concat "    ";  logger.info("---------------a------------------") ; @output_buffer.concat "\n"
+@output_buffer.concat "    <td>"; @output_buffer.concat(( photo.is_avatar ? "是":"否" ).to_s); @output_buffer.concat "</td>\n"
+@output_buffer.concat "    <td>"; @output_buffer.concat(( link_to [image_tag photo.image.url(:thumb) ,:alt =>"被GFW和谐了！"],photo).to_s); @output_buffer.concat "</td>\n"
+@output_buffer.concat "    <td>"; @output_buffer.concat(( link_to "<img src='/images/icon_edit.gif' border='0' alt='编辑'/>", edit_photo_path(photo) ).to_s); @output_buffer.concat "</td>\n"
+@output_buffer.concat "    <td>"; @output_buffer.concat(( link_to "<img src='/images/icon_delete.png' border='0' alt='删除'>", photo, :confirm => 'Are you sure?', :method => :delete ).to_s); @output_buffer.concat "</td>\n"
+@output_buffer.concat "  </tr>\n"
+ end ; @output_buffer.concat "\n"
+@output_buffer.concat "</table>\n"
+@output_buffer.concat "<div class=\"digg_pagination\">\n"
+@output_buffer.concat "  "; @output_buffer.concat(( will_paginate @photos ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "</div>\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "<br />\n"
+@output_buffer.concat "\n"
+@output_buffer.concat(( link_to  "<img src='/images/post.gif' border='0' alt='发表新帖'/>", new_photo_path ).to_s); @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: d:/rbor/y_film/app/views/photos/index.html.erb:37:in `compile!'
+g:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_view/renderable.rb:61:in `compile'
+g:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_view/renderable.rb:28:in `render'
+g:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_view/template.rb:205:in `render_template'
+g:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_view/base.rb:265:in `render'
+g:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_view/base.rb:348:in `_render_with_layout'
+g:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_view/base.rb:262:in `render'
+g:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:1250:in `render_for_file'
+g:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:951:in `render_without_benchmark'
+g:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:51:in `render'
+g:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+g:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+g:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+g:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:51:in `render'
+g:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:135:in `send'
+g:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:135:in `custom'
+g:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:179:in `call'
+g:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:179:in `respond'
+g:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:173:in `each'
+g:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:173:in `respond'
+g:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:107:in `respond_to'
+d:/rbor/y_film/app/controllers/photos_controller.rb:11:in `index'
+g:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:1331:in `send'
+g:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:1331:in `perform_action_without_filters'
+g:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:617:in `call_filters'
+g:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+g:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+g:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+g:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+g:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+g:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+g:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+g:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/flash.rb:146:in `perform_action'
+g:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:532:in `send'
+g:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:532:in `process_without_filters'
+g:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:606:in `process'
+g:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:391:in `process'
+g:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:386:in `call'
+g:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/routing/route_set.rb:437:in `call'
+g:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:87:in `dispatch'
+g:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:121:in `_call'
+g:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+g:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:29:in `call'
+g:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:29:in `call'
+g:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+g:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:9:in `cache'
+g:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:28:in `call'
+g:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+g:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/string_coercion.rb:25:in `call'
+g:/ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/head.rb:9:in `call'
+g:/ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/methodoverride.rb:24:in `call'
+g:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/params_parser.rb:15:in `call'
+g:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/session/cookie_store.rb:93:in `call'
+g:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/failsafe.rb:26:in `call'
+g:/ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+g:/ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `synchronize'
+g:/ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+g:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:114:in `call'
+g:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/reloader.rb:34:in `run'
+g:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:108:in `call'
+g:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/cgi_process.rb:44:in `dispatch_cgi'
+g:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:101:in `dispatch_cgi'
+g:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:27:in `dispatch'
+g:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/bin/../lib/mongrel/rails.rb:76:in `process'
+g:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+g:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/bin/../lib/mongrel/rails.rb:74:in `process'
+g:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/bin/../lib/mongrel.rb:159:in `process_client'
+g:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/bin/../lib/mongrel.rb:158:in `each'
+g:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/bin/../lib/mongrel.rb:158:in `process_client'
+g:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/bin/../lib/mongrel.rb:285:in `run'
+g:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/bin/../lib/mongrel.rb:285:in `initialize'
+g:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/bin/../lib/mongrel.rb:285:in `new'
+g:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/bin/../lib/mongrel.rb:285:in `run'
+g:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/bin/../lib/mongrel.rb:268:in `initialize'
+g:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/bin/../lib/mongrel.rb:268:in `new'
+g:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/bin/../lib/mongrel.rb:268:in `run'
+g:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/bin/../lib/mongrel/configurator.rb:282:in `run'
+g:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/bin/../lib/mongrel/configurator.rb:281:in `each'
+g:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/bin/../lib/mongrel/configurator.rb:281:in `run'
+g:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/bin/mongrel_rails:128:in `run'
+g:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/bin/../lib/mongrel/command.rb:212:in `run'
+g:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/bin/mongrel_rails:281
+g:/ruby/bin/mongrel_rails:19:in `load'
+g:/ruby/bin/mongrel_rails:19
+
+ActionView::TemplateError (compile error
+d:/rbor/y_film/app/views/photos/index.html.erb:35: syntax error, unexpected kENSURE, expecting kEND
+d:/rbor/y_film/app/views/photos/index.html.erb:37: syntax error, unexpected $end, expecting kEND) on line #35 of app/views/photos/index.html.erb:
+32: <br />
+33: 
+34: <%= link_to  "<img src='/images/post.gif' border='0' alt='发表新帖'/>", new_photo_path %>
+
+    app/views/photos/index.html.erb:37:in `compile!'
+    app/controllers/photos_controller.rb:11:in `index'
+
+Rendered rescues/_trace (969.0ms)
+Rendered rescues/_request_and_response (125.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PhotosController#index (for 127.0.0.1 at 2011-04-20 14:36:29) [GET]
+  Parameters: {"action"=>"index", "controller"=>"photos", "page"=>"2"}
+  [4;35;1mPhoto Load (0.0ms)[0m   [0mSELECT * FROM `photos` ORDER BY created_at DESC LIMIT 5, 5[0m
+  [4;36;1mPhoto Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `photos`[0m
+  [4;35;1mUser Columns (16.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering photos/index
+---------------a------------------
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+---------------a------------------
+---------------a------------------
+---------------a------------------
+---------------a------------------
+---------------a------------------
+Rendered users/_user_bar (0.0ms)
+Completed in 203ms (View: 125, DB: 16) | 200 OK [http://localhost/photos?page=2]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-04-20 14:36:31) [GET]
+  Parameters: {"1301678055"=>nil}
+
+ActionController::RoutingError (No route matches "/system/images/2/thumb/55.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#destroy (for 127.0.0.1 at 2011-04-20 14:36:33) [GET]
+  Parameters: {"action"=>"destroy", "controller"=>"sessions"}
+Redirected to http://localhost:3000/
+Completed in 47ms (DB: 0) | 302 Found [http://localhost/logout]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2011-04-20 14:36:34) [GET]
+  Parameters: {"action"=>"index", "controller"=>"users"}
+Rendering template within layouts/application
+Rendering users/index
+Rendered users/_user_bar (0.0ms)
+Completed in 0ms (View: 0, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PhotosController#index (for 127.0.0.1 at 2011-04-20 14:36:36) [GET]
+  Parameters: {"action"=>"index", "controller"=>"photos"}
+  [4;36;1mPhoto Load (16.0ms)[0m   [0;1mSELECT * FROM `photos` ORDER BY created_at DESC LIMIT 0, 5[0m
+  [4;35;1mPhoto Columns (16.0ms)[0m   [0mSHOW FIELDS FROM `photos`[0m
+  [4;36;1mUser Columns (15.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;36;1mSQL (141.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `photos` [0m
+Rendering template within layouts/application
+Rendering photos/index
+---------------a------------------
+---------------a------------------
+---------------a------------------
+---------------a------------------
+---------------a------------------
+---------------a------------------
+---------------a------------------
+---------------a------------------
+---------------a------------------
+---------------a------------------
+Rendered users/_user_bar (0.0ms)
+Completed in 297ms (View: 47, DB: 188) | 200 OK [http://localhost/photos]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PhotosController#new (for 127.0.0.1 at 2011-04-20 14:36:40) [GET]
+  Parameters: {"action"=>"new", "controller"=>"photos"}
+  [4;35;1mPhoto Columns (47.0ms)[0m   [0mSHOW FIELDS FROM `photos`[0m
+Rendering template within layouts/application
+Rendering photos/new
+Rendered photos/_form (203.0ms)
+Rendered users/_user_bar (0.0ms)
+Completed in 453ms (View: 375, DB: 47) | 200 OK [http://localhost/photos/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PhotosController#create (for 127.0.0.1 at 2011-04-20 14:38:14) [POST]
+  Parameters: {"photo"=>{"image_url"=>"", "screenwrite"=>"", "language"=>"", "title"=>"", "director_id"=>"", "country_id"=>"", "starring"=>"", "length"=>"", "published_at(1i)"=>"2011", "description"=>"", "published_at(2i)"=>"4", "is_avatar"=>"0", "published_at(3i)"=>"20", "published_at(4i)"=>"06", "image"=>#<File:G:/DOCUME~1/R/LOCALS~1/Temp/RackMultipart.376.0>, "published_at(5i)"=>"36"}, "action"=>"create", "authenticity_token"=>"W/ZZI0qENpYQROKXSuN1sKNOufHACX9AuH9j/YPvDaI=", "controller"=>"photos"}
+  [4;36;1mPhoto Columns (235.0ms)[0m   [0;1mSHOW FIELDS FROM `photos`[0m
+[paperclip] G:/PROGRA~1/ImageMagick-6.5.6-Q8/identify -format %wx%h "G:/DOCUME~1/R/LOCALS~1/Temp/stream110420-376-1wmkc4i-0.jpg[0]" 2>NUL
+[paperclip] G:/PROGRA~1/ImageMagick-6.5.6-Q8/convert "G:/DOCUME~1/R/LOCALS~1/Temp/stream110420-376-1wmkc4i-0.jpg[0]" -resize "100" "G:/DOCUME~1/R/LOCALS~1/Temp/stream110420-376-1wmkc4i-0110420-376-1m6cd0w-0" 2>NUL
+[paperclip] G:/PROGRA~1/ImageMagick-6.5.6-Q8/identify -format %wx%h "G:/DOCUME~1/R/LOCALS~1/Temp/stream110420-376-1wmkc4i-0.jpg[0]" 2>NUL
+[paperclip] G:/PROGRA~1/ImageMagick-6.5.6-Q8/convert "G:/DOCUME~1/R/LOCALS~1/Temp/stream110420-376-1wmkc4i-0.jpg[0]" -resize "150" "G:/DOCUME~1/R/LOCALS~1/Temp/stream110420-376-1wmkc4i-0110420-376-5ac3nu-0" 2>NUL
+[paperclip] G:/PROGRA~1/ImageMagick-6.5.6-Q8/identify -format %wx%h "G:/DOCUME~1/R/LOCALS~1/Temp/stream110420-376-1wmkc4i-0.jpg[0]" 2>NUL
+[paperclip] G:/PROGRA~1/ImageMagick-6.5.6-Q8/convert "G:/DOCUME~1/R/LOCALS~1/Temp/stream110420-376-1wmkc4i-0.jpg[0]" -resize "200" "G:/DOCUME~1/R/LOCALS~1/Temp/stream110420-376-1wmkc4i-0110420-376-osktfu-0" 2>NUL
+  [4;35;1mSQL (31.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mPhoto Create (203.0ms)[0m   [0;1mINSERT INTO `photos` (`image_file_size`, `updated_at`, `screenwrite`, `title`, `language`, `director_id`, `image_content_type`, `image_remote_url`, `country_id`, `description`, `length`, `starring`, `is_avatar`, `user_id`, `published_at`, `image_updated_at`, `created_at`, `image_file_name`) VALUES(84906, '2011-04-20 06:38:24', '', '', '', NULL, 'image/jpeg', NULL, NULL, '', NULL, '', 0, NULL, '2011-04-20 06:36:00', '2011-04-20 06:38:14', '2011-04-20 06:38:24', '777z.jpg')[0m
+[paperclip] Saving attachments.
+[paperclip] saving d:/rbor/y_film/public/system/images/10/thumb/777z.jpg
+[paperclip] saving d:/rbor/y_film/public/system/images/10/gallery/777z.jpg
+[paperclip] saving d:/rbor/y_film/public/system/images/10/avatar/777z.jpg
+[paperclip] saving d:/rbor/y_film/public/system/images/10/original/777z.jpg
+  [4;35;1mSQL (31.0ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/photos/10
+Completed in 10937ms (DB: 500) | 302 Found [http://localhost/photos]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PhotosController#show (for 127.0.0.1 at 2011-04-20 14:38:25) [GET]
+  Parameters: {"action"=>"show", "id"=>"10", "controller"=>"photos"}
+  [4;36;1mPhoto Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `photos`[0m
+  [4;35;1mPhoto Load (63.0ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.`id` = 10) [0m
+  [4;36;1mPhoto Load (16.0ms)[0m   [0;1mSELECT * FROM `photos` ORDER BY created_at DESC LIMIT 0, 15[0m
+  [4;35;1mUser Columns (31.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (31.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering photos/show
+Rendered photos/_jz (47.0ms)
+Rendered users/_user_bar (15.0ms)
+Completed in 453ms (View: 172, DB: 157) | 200 OK [http://localhost/photos/10]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-04-20 14:38:26) [GET]
+  Parameters: {"1301678055"=>nil}
+
+ActionController::RoutingError (No route matches "/system/images/2/thumb/55.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PhotosController#new (for 127.0.0.1 at 2011-04-20 14:38:31) [GET]
+  Parameters: {"action"=>"new", "controller"=>"photos"}
+  [4;35;1mPhoto Columns (32.0ms)[0m   [0mSHOW FIELDS FROM `photos`[0m
+Rendering template within layouts/application
+Rendering photos/new
+Rendered photos/_form (375.0ms)
+Rendered users/_user_bar (0.0ms)
+Completed in 453ms (View: 375, DB: 32) | 200 OK [http://localhost/photos/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PhotosController#create (for 127.0.0.1 at 2011-04-20 14:38:52) [POST]
+  Parameters: {"photo"=>{"image_url"=>"", "screenwrite"=>"", "language"=>"", "title"=>"", "director_id"=>"", "country_id"=>"", "starring"=>"", "length"=>"", "published_at(1i)"=>"2011", "description"=>"", "published_at(2i)"=>"4", "is_avatar"=>"0", "published_at(3i)"=>"20", "published_at(4i)"=>"06", "image"=>#<File:G:/DOCUME~1/R/LOCALS~1/Temp/RackMultipart.376.0>, "published_at(5i)"=>"38"}, "action"=>"create", "authenticity_token"=>"W/ZZI0qENpYQROKXSuN1sKNOufHACX9AuH9j/YPvDaI=", "controller"=>"photos"}
+  [4;36;1mPhoto Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `photos`[0m
+[paperclip] G:/PROGRA~1/ImageMagick-6.5.6-Q8/identify -format %wx%h "G:/DOCUME~1/R/LOCALS~1/Temp/stream110420-376-1u0tpw5-0.JPG[0]" 2>NUL
+[paperclip] G:/PROGRA~1/ImageMagick-6.5.6-Q8/convert "G:/DOCUME~1/R/LOCALS~1/Temp/stream110420-376-1u0tpw5-0.JPG[0]" -resize "100" "G:/DOCUME~1/R/LOCALS~1/Temp/stream110420-376-1u0tpw5-0110420-376-1wdu8br-0" 2>NUL
+[paperclip] G:/PROGRA~1/ImageMagick-6.5.6-Q8/identify -format %wx%h "G:/DOCUME~1/R/LOCALS~1/Temp/stream110420-376-1u0tpw5-0.JPG[0]" 2>NUL
+[paperclip] G:/PROGRA~1/ImageMagick-6.5.6-Q8/convert "G:/DOCUME~1/R/LOCALS~1/Temp/stream110420-376-1u0tpw5-0.JPG[0]" -resize "150" "G:/DOCUME~1/R/LOCALS~1/Temp/stream110420-376-1u0tpw5-0110420-376-fxakui-0" 2>NUL
+[paperclip] G:/PROGRA~1/ImageMagick-6.5.6-Q8/identify -format %wx%h "G:/DOCUME~1/R/LOCALS~1/Temp/stream110420-376-1u0tpw5-0.JPG[0]" 2>NUL
+[paperclip] G:/PROGRA~1/ImageMagick-6.5.6-Q8/convert "G:/DOCUME~1/R/LOCALS~1/Temp/stream110420-376-1u0tpw5-0.JPG[0]" -resize "200" "G:/DOCUME~1/R/LOCALS~1/Temp/stream110420-376-1u0tpw5-0110420-376-ubexth-0" 2>NUL
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+Rendering template within layouts/application
+Rendering photos/new
+Rendered photos/_form (125.0ms)
+Rendered users/_user_bar (0.0ms)
+Completed in 14390ms (View: 172, DB: 0) | 200 OK [http://localhost/photos]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PhotosController#create (for 127.0.0.1 at 2011-04-20 14:39:33) [POST]
+  Parameters: {"photo"=>{"image_url"=>"", "screenwrite"=>"", "language"=>"", "title"=>"", "director_id"=>"", "country_id"=>"", "starring"=>"", "length"=>"", "published_at(1i)"=>"2011", "description"=>"", "published_at(2i)"=>"4", "published_at(3i)"=>"20", "published_at(4i)"=>"06", "image"=>#<File:G:/DOCUME~1/R/LOCALS~1/Temp/RackMultipart.376.1>, "published_at(5i)"=>"38"}, "action"=>"create", "authenticity_token"=>"W/ZZI0qENpYQROKXSuN1sKNOufHACX9AuH9j/YPvDaI=", "controller"=>"photos"}
+  [4;35;1mPhoto Columns (16.0ms)[0m   [0mSHOW FIELDS FROM `photos`[0m
+[paperclip] G:/PROGRA~1/ImageMagick-6.5.6-Q8/identify -format %wx%h "G:/DOCUME~1/R/LOCALS~1/Temp/stream110420-376-kanz44-0.jpg[0]" 2>NUL
+[paperclip] G:/PROGRA~1/ImageMagick-6.5.6-Q8/convert "G:/DOCUME~1/R/LOCALS~1/Temp/stream110420-376-kanz44-0.jpg[0]" -resize "100" "G:/DOCUME~1/R/LOCALS~1/Temp/stream110420-376-kanz44-0110420-376-phr6qx-0" 2>NUL
+[paperclip] G:/PROGRA~1/ImageMagick-6.5.6-Q8/identify -format %wx%h "G:/DOCUME~1/R/LOCALS~1/Temp/stream110420-376-kanz44-0.jpg[0]" 2>NUL
+[paperclip] G:/PROGRA~1/ImageMagick-6.5.6-Q8/convert "G:/DOCUME~1/R/LOCALS~1/Temp/stream110420-376-kanz44-0.jpg[0]" -resize "150" "G:/DOCUME~1/R/LOCALS~1/Temp/stream110420-376-kanz44-0110420-376-1q3jpl7-0" 2>NUL
+[paperclip] G:/PROGRA~1/ImageMagick-6.5.6-Q8/identify -format %wx%h "G:/DOCUME~1/R/LOCALS~1/Temp/stream110420-376-kanz44-0.jpg[0]" 2>NUL
+[paperclip] G:/PROGRA~1/ImageMagick-6.5.6-Q8/convert "G:/DOCUME~1/R/LOCALS~1/Temp/stream110420-376-kanz44-0.jpg[0]" -resize "200" "G:/DOCUME~1/R/LOCALS~1/Temp/stream110420-376-kanz44-0110420-376-1swwpaq-0" 2>NUL
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mPhoto Create (31.0ms)[0m   [0mINSERT INTO `photos` (`image_file_size`, `updated_at`, `screenwrite`, `title`, `language`, `director_id`, `image_content_type`, `image_remote_url`, `country_id`, `description`, `length`, `starring`, `is_avatar`, `user_id`, `published_at`, `image_updated_at`, `created_at`, `image_file_name`) VALUES(66517, '2011-04-20 06:39:36', '', '', '', NULL, 'image/jpeg', NULL, NULL, '', NULL, '', NULL, NULL, '2011-04-20 06:38:00', '2011-04-20 06:39:33', '2011-04-20 06:39:36', 'http_imgload5.jpg')[0m
+[paperclip] Saving attachments.
+[paperclip] saving d:/rbor/y_film/public/system/images/11/thumb/http_imgload5.jpg
+[paperclip] saving d:/rbor/y_film/public/system/images/11/gallery/http_imgload5.jpg
+[paperclip] saving d:/rbor/y_film/public/system/images/11/avatar/http_imgload5.jpg
+[paperclip] saving d:/rbor/y_film/public/system/images/11/original/http_imgload5.jpg
+  [4;36;1mSQL (15.0ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/photos/11
+Completed in 2640ms (DB: 62) | 302 Found [http://localhost/photos]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PhotosController#show (for 127.0.0.1 at 2011-04-20 14:39:36) [GET]
+  Parameters: {"action"=>"show", "id"=>"11", "controller"=>"photos"}
+  [4;35;1mPhoto Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `photos`[0m
+  [4;36;1mPhoto Load (0.0ms)[0m   [0;1mSELECT * FROM `photos` WHERE (`photos`.`id` = 11) [0m
+  [4;35;1mPhoto Load (0.0ms)[0m   [0mSELECT * FROM `photos` ORDER BY created_at DESC LIMIT 0, 15[0m
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering photos/show
+Rendered photos/_jz (32.0ms)
+Rendered users/_user_bar (0.0ms)
+Completed in 141ms (View: 47, DB: 0) | 200 OK [http://localhost/photos/11]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-04-20 14:39:37) [GET]
+  Parameters: {"1301678055"=>nil}
+
+ActionController::RoutingError (No route matches "/system/images/2/thumb/55.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PhotosController#show (for 127.0.0.1 at 2011-04-20 14:39:42) [GET]
+  Parameters: {"action"=>"show", "id"=>"2", "controller"=>"photos"}
+  [4;36;1mPhoto Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `photos`[0m
+  [4;35;1mPhoto Load (0.0ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.`id` = 2) [0m
+  [4;36;1mPhoto Load (0.0ms)[0m   [0;1mSELECT * FROM `photos` ORDER BY created_at DESC LIMIT 0, 15[0m
+  [4;35;1mUser Columns (16.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering photos/show
+
+ActionView::TemplateError (undefined method `strftime' for nil:NilClass) on line #32 of app/views/photos/show.html.erb:
+29: 
+30:     <span>
+31:       <span class="p1">Published at:</span>
+32:       <%=h @photo.published_at.strftime("%Y-%m-%d") %>
+33:     </span>
+34:     <br />
+35: 
+
+    app/views/photos/show.html.erb:32
+    app/controllers/photos_controller.rb:26:in `show'
+
+Rendered rescues/_trace (125.0ms)
+Rendered rescues/_request_and_response (47.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PhotosController#show (for 127.0.0.1 at 2011-04-20 14:39:52) [GET]
+  Parameters: {"action"=>"show", "id"=>"10", "controller"=>"photos"}
+  [4;35;1mPhoto Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `photos`[0m
+  [4;36;1mPhoto Load (0.0ms)[0m   [0;1mSELECT * FROM `photos` WHERE (`photos`.`id` = 10) [0m
+  [4;35;1mPhoto Load (16.0ms)[0m   [0mSELECT * FROM `photos` ORDER BY created_at DESC LIMIT 0, 15[0m
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering photos/show
+Rendered photos/_jz (15.0ms)
+Rendered users/_user_bar (0.0ms)
+Completed in 266ms (View: 47, DB: 16) | 200 OK [http://localhost/photos/10]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-04-20 14:39:53) [GET]
+  Parameters: {"1301678055"=>nil}
+
+ActionController::RoutingError (No route matches "/system/images/2/thumb/55.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PhotosController#show (for 127.0.0.1 at 2011-04-20 14:39:55) [GET]
+  Parameters: {"action"=>"show", "id"=>"8", "controller"=>"photos"}
+  [4;36;1mPhoto Columns (15.0ms)[0m   [0;1mSHOW FIELDS FROM `photos`[0m
+  [4;35;1mPhoto Load (0.0ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.`id` = 8) [0m
+  [4;36;1mPhoto Load (0.0ms)[0m   [0;1mSELECT * FROM `photos` ORDER BY created_at DESC LIMIT 0, 15[0m
+  [4;35;1mUser Columns (31.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (16.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering photos/show
+Rendered photos/_jz (31.0ms)
+Rendered users/_user_bar (0.0ms)
+Completed in 188ms (View: 47, DB: 62) | 200 OK [http://localhost/photos/8]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-04-20 14:39:56) [GET]
+  Parameters: {"1301678055"=>nil}
+
+ActionController::RoutingError (No route matches "/system/images/2/thumb/55.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PhotosController#show (for 127.0.0.1 at 2011-04-20 14:39:58) [GET]
+  Parameters: {"action"=>"show", "id"=>"5", "controller"=>"photos"}
+  [4;35;1mPhoto Columns (15.0ms)[0m   [0mSHOW FIELDS FROM `photos`[0m
+  [4;36;1mPhoto Load (16.0ms)[0m   [0;1mSELECT * FROM `photos` WHERE (`photos`.`id` = 5) [0m
+  [4;35;1mPhoto Load (0.0ms)[0m   [0mSELECT * FROM `photos` ORDER BY created_at DESC LIMIT 0, 15[0m
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering photos/show
+
+ActionView::TemplateError (undefined method `strftime' for nil:NilClass) on line #32 of app/views/photos/show.html.erb:
+29: 
+30:     <span>
+31:       <span class="p1">Published at:</span>
+32:       <%=h @photo.published_at.strftime("%Y-%m-%d") %>
+33:     </span>
+34:     <br />
+35: 
+
+    app/views/photos/show.html.erb:32
+    app/controllers/photos_controller.rb:26:in `show'
+
+Rendered rescues/_trace (110.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PhotosController#show (for 127.0.0.1 at 2011-04-20 14:40:03) [GET]
+  Parameters: {"action"=>"show", "id"=>"5", "controller"=>"photos"}
+  [4;36;1mPhoto Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `photos`[0m
+  [4;35;1mPhoto Load (0.0ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.`id` = 5) [0m
+  [4;36;1mPhoto Load (0.0ms)[0m   [0;1mSELECT * FROM `photos` ORDER BY created_at DESC LIMIT 0, 15[0m
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering photos/show
+
+ActionView::TemplateError (undefined method `strftime' for nil:NilClass) on line #32 of app/views/photos/show.html.erb:
+29: 
+30:     <span>
+31:       <span class="p1">Published at:</span>
+32:       <%=h @photo.published_at.strftime("%Y-%m-%d") %>
+33:     </span>
+34:     <br />
+35: 
+
+    app/views/photos/show.html.erb:32
+    app/controllers/photos_controller.rb:26:in `show'
+
+Rendered rescues/_trace (125.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PhotosController#show (for 127.0.0.1 at 2011-04-20 14:40:10) [GET]
+  Parameters: {"action"=>"show", "id"=>"7", "controller"=>"photos"}
+  [4;35;1mPhoto Columns (16.0ms)[0m   [0mSHOW FIELDS FROM `photos`[0m
+  [4;36;1mPhoto Load (0.0ms)[0m   [0;1mSELECT * FROM `photos` WHERE (`photos`.`id` = 7) [0m
+  [4;35;1mPhoto Load (15.0ms)[0m   [0mSELECT * FROM `photos` ORDER BY created_at DESC LIMIT 0, 15[0m
+  [4;36;1mUser Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering photos/show
+
+ActionView::TemplateError (undefined method `strftime' for nil:NilClass) on line #32 of app/views/photos/show.html.erb:
+29: 
+30:     <span>
+31:       <span class="p1">Published at:</span>
+32:       <%=h @photo.published_at.strftime("%Y-%m-%d") %>
+33:     </span>
+34:     <br />
+35: 
+
+    app/views/photos/show.html.erb:32
+    app/controllers/photos_controller.rb:26:in `show'
+
+Rendered rescues/_trace (109.0ms)
+Rendered rescues/_request_and_response (16.0ms)
+Rendering rescues/layout (internal_server_error)
