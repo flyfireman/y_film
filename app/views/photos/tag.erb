@@ -1,0 +1,19 @@
+<% @cc.each do |photo| %>
+<hr />
+<tr>
+  <td><%=  link_to [image_tag photo.image.url(:thumb) ,:alt =>"被GFW和谐了！"],photo %></td>
+</tr>
+<% end %>
+<div class="digg_pagination">
+  <%= will_paginate @cc %>
+</div>
+
+<br />
+
+
+<br />
+
+
+<br />
+
+<%= link_to 'Back', photos_path %>

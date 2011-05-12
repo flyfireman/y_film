@@ -3,6 +3,8 @@ class Photo < ActiveRecord::Base
   belongs_to :director
   belongs_to :country
   belongs_to :user
+  #=======添加标签@￥%……&
+  acts_as_taggable
   #……………………
   has_attached_file :image,
                       :default_url   => "/images/rails.png",
@@ -45,7 +47,7 @@ class Photo < ActiveRecord::Base
   end
   #===============================其他代码===================
   #new attr
-  attr_accessor :image_url
+  attr_accessor :image_url,:tag,:tag_cloud
   before_validation :download_remote_image, :if => :image_url_provided?
 
   validates_presence_of :image_remote_url, :if => :image_url_provided?, :message => '地址不合法'

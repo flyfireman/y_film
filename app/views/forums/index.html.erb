@@ -10,7 +10,7 @@
 
 <% for forum in @forums %>
   <tr>
-    <td class='forum'><b><%=link_to forum.name, forum %></b><br \>
+    <td class='forum'><b><%=link_to forum.name, forum %></b><br />
       <%=h forum.description %></td>
     <td><%= forum.topics_count %></td>
     <td><%= forum.replies_count + forum.topics_count %></td>

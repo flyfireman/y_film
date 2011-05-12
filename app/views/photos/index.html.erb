@@ -5,31 +5,46 @@
 <table>
   <tr>
     <th>所有人</th>
-    <th>是否作为头像</th>
     <th>预览</th>
+    <th>标签</th>
     <th></th>
     <th></th>
   </tr>
-<% @photos.each do |photo| %>
-  <tr class="<%= cycle('list-line-odd', 'list-line-even') %>">
-    <% logger.info("---------------a------------------") %>
-    <% if logged_in? %>
-    <td><%=h photo.user.login %></td>
-    <% else %>
-    <td><%= "没有权限看你妹啊!" %></td>
-    <% end %>
-    <% logger.info("---------------a------------------") %>
-    <td><%= photo.is_avatar ? "是":"否" %></td>
-    <td><%= link_to [image_tag photo.image.url(:thumb) ,:alt =>"被GFW和谐了！"],photo%></td>
-    <td><%= link_to "<img src='/images/icon_edit.gif' border='0' alt='编辑'/>", edit_photo_path(photo) %></td>
-    <td><%= link_to "<img src='/images/icon_delete.png' border='0' alt='删除'>", photo, :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
-<% end %>
+  <% @photos.each do |photo| %>
+    <tr class="<%= cycle('list-line-odd', 'list-line-even') %>">
+      <% logger.info("---------------a------------------") %>
+      <% if logged_in? %>
+        <td><%=h photo.user.login %></td>
+      <% else %>
+        <td><%= "没有权限看你妹啊!" %></td>
+      <% end %>
+      <% logger.info("---------------a------------------") %>
+      <td><%= link_to [image_tag photo.image.url(:thumb) ,:alt =>"被GFW和谐了！"],photo%></td>
+      <td><%= photo.tag_list.to_s %></td>
+      <% if logged_in? %>
+        <td><%= link_to "<img src='/images/icon_edit.gif' border='0' alt='编辑'/>", edit_photo_path(photo) %></td>
+        <td><%= link_to "<img src='/images/icon_delete.png' border='0' alt='删除'>", photo, :confirm => 'Are you sure?', :method => :delete %></td>
+      <% else %>
+        <td></td>
+        <td></td>
+      <% end %>
+    </tr>
+  <% end %>
 </table>
 <div class="digg_pagination">
   <%= will_paginate @photos %>
 </div>
+<br />
+<div style="padding:20px">
+  <h2>标签-->坑爹的:</h2>
+  <% tag_cloud @tags, %w(css1 css2 css3 css4) do |tag, css_class| %>
+    <%= link_to tag.name, {:action => :tag, :id => tag.name }, :class => css_class %>
+  <% end %>
+</div>
 
 <br />
-
-<%= link_to  "<img src='/images/post.gif' border='0' alt='发表新帖'/>", new_photo_path %>
+<% if logged_in? %>
+  <%= link_to  "<img src='/images/post.gif' border='0' alt='发表新帖'/>", new_photo_path %>
+<% else %>
+  <%=  "<img src='/images/maninred60x60.png' border='0' alt='路过'/>" %>
+<% end %>

@@ -3,31 +3,25 @@ ActionController::Routing::Routes.draw do |map|
 
   map.resources :countries
 
-
-
   map.resources :posts
 
-
-
-  #map.resources :posts
-
- map.resources :forums, :has_many => :topics
- map.resources :topics, :has_many => :replies, 
-                         :member =>{ :create => :post }
- map.online '/search', :controller => 'search', :action => 'index'
+  map.resources :forums, :has_many => :topics
+  map.resources :topics, :has_many => :replies,
+    :member =>{ :create => :post }
+  map.online '/search', :controller => 'search', :action => 'index'
 
   map.resources :products
 
  
   
-  map.root :controller => :users
+  map.root :controller => :photos
   map.logout '/logout', :controller => 'sessions', :action => 'destroy'
   map.login '/login', :controller => 'sessions', :action => 'new'
   map.register '/register', :controller => 'users', :action => 'create'
   map.signup '/signup', :controller => 'users', :action => 'new'
   map.resources :users
   
-  map.resources :photos
+  map.resources :photos,:collection => {:tag => :get }
 
   map.resource :session
 

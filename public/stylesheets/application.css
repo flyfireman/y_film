@@ -10,7 +10,8 @@ body {
 }
 
 a img {
-    border: none;
+    border: 1px dashed red;
+
 }
 
 a {
@@ -25,7 +26,7 @@ a:hover {
 a:focus{
     outline:none
 }
-h1 {
+h1,h2{
     color:#bdfffd;
     font-size: 24px;
     font-family: YouYuan,SimSun,"Microsoft YaHei",Helvetica,"sans-serif";
@@ -321,7 +322,7 @@ div#navbar ul a:link, a:visited { color: #FFF; }
 div#navbar ul a:hover { color: #333; background-color: #FFF;}
 
 div#content {
-    text-align:left;
+    text-align: left;
     margin: 0 auto 24px auto;
     padding: 5px 16px 8px 16px;
     width: 800px;
@@ -564,20 +565,25 @@ td.forum{
 }
 
 .clearfix:after {
-clear:both;
-content:".";
-display:block;
-height:0;
-visibility:hidden;
+    clear:both;
+    content:".";
+    display:block;
+    height:0;
+    visibility:hidden;
 }
 .clearfix {
-display:inline-block;
+    display:inline-block;
 }
 .clearfix {
-/*display:block;*/
+    /*display:block;*/
 }
 
 .subject {
-/*float:left;*/
-width:415px;
+    /*float:left;*/
+    width:415px;
 }
+
+.css1 { font-size: 1.0em; }
+.css2 { font-size: 1.2em; }
+.css3 { font-size: 1.4em; }
+.css4 { font-size: 1.6em; }

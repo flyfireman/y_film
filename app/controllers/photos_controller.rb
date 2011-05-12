@@ -2,27 +2,40 @@ class PhotosController < ApplicationController
   # GET /photos
   # GET /photos.xml
   def index
-   # @photos = Photo.all
-  @photos = Photo.paginate(:page => params[:page],
-        :per_page => params[:pre_page] || 5,
-        :include => :user,
-       # :conditions => "published = true",
-        :order=>"created_at DESC")
+    # @photos = Photo.all
+    @photos = Photo.paginate(:page => params[:page],
+      :per_page => params[:pre_page] || 5,
+      :include => :user,
+      # :conditions => "published = true",
+      :order=>"created_at DESC")
+    tag_cloud
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @photos }
     end
   end
+  #tag method
+  def tag_cloud
+    @tags = Photo.tag_counts
+  end
 
+  def tag
+    @photos= Photo.find_tagged_with(params[:id])
+    @cc = @photos.paginate(:page => params[:page],
+      :per_page => params[:pre_page] || 5,
+      :include => :user,
+      # :conditions => "published = true",
+      :order=>"created_at DESC")
+  end
   # GET /photos/1
   # GET /photos/1.xml
   def show
     @photo = Photo.find(params[:id])
-     @photos = Photo.paginate(:page => params[:page],
-        :per_page => params[:pre_page] || 15,
-        :include => :user,
-       # :conditions => "published = true",
-        :order=>"created_at DESC")
+    @photos = Photo.paginate(:page => params[:page],
+      :per_page => params[:pre_page] || 15,
+      :include => :user,
+      # :conditions => "published = true",
+      :order=>"created_at DESC")
     respond_to do |format|
       format.html # show.html.erb
       format.xml  { render :xml => @photo }
